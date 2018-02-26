@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.26)  25 FEB 2018 18:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.26)  27 FEB 2018 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -162,6 +162,74 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks23
+\ex@=\dimen124
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen125
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count101
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count102
+\leftroot@=\count103
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count104
+\DOTSCASE@=\count105
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box32
+\strutbox@=\box33
+\big@size=\dimen126
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count106
+\c@MaxMatrixCols=\count107
+\dotsspace@=\muskip10
+\c@parentequation=\count108
+\dspbrk@lvl=\count109
+\tag@help=\toks24
+\row@=\count110
+\column@=\count111
+\maxfields@=\count112
+\andhelp@=\toks25
+\eqnshift@=\dimen127
+\alignsep@=\dimen128
+\tagshift@=\dimen129
+\tagwidth@=\dimen130
+\totwidth@=\dimen131
+\lineht@=\dimen132
+\@envbody=\toks26
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
 
 LaTeX Warning: Unused global option(s):
     [epsfig].
@@ -169,32 +237,32 @@ LaTeX Warning: Unused global option(s):
 (./lenzi_edoardo_laurea_2018.aux)
 \openout1 = `lenzi_edoardo_laurea_2018.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count101
-\scratchdimen=\dimen124
-\scratchbox=\box32
-\nofMPsegments=\count102
-\nofMParguments=\count103
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count104
-\MPscratchDim=\dimen125
-\MPnumerator=\count105
-\makeMPintoPDFobject=\count106
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count113
+\scratchdimen=\dimen133
+\scratchbox=\box34
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen134
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
+\everyMPtoPDFconversion=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -276,7 +344,7 @@ e
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-\c@lstlisting=\count107
+\c@lstlisting=\count119
 
 (./Chapters/initial_page.tex
 Package epstopdf Info: Source file: <Sources/logo_unitn_black_center.eps>
@@ -303,13 +371,16 @@ sed on input line 7.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <24.88> on input line 27.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <20.74> on input line 27.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 27.
-) [1
+LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Sources/logo_unitn_black
 _center-eps-converted-to.pdf>]
@@ -330,24 +401,14 @@ Enter file name:
 
  [1
 
-] (./Chapters/summary.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 6.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 6.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 6.
-)
+] (./Chapters/summary.tex)
 (./Chapters/chapter1.tex
 Chapter 1.
 [2
 
 ] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-)
-Underfull \vbox (badness 1688) has occurred while \output is active []
-
- [3]
+) [3]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
@@ -380,10 +441,24 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 ))
 (./Chapters/chapter2.tex
 Chapter 2.
-[4] (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+
+Underfull \vbox (badness 2653) has occurred while \output is active []
+
+ [4]
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-Overfull \hbox (14.53761pt too wide) in paragraph at lines 64--65
+<Sources/Img/c02_01.png, id=33, 320.19624pt x 223.83624pt>
+File: Sources/Img/c02_01.png Graphic file (type png)
+
+<use Sources/Img/c02_01.png>
+Package pdftex.def Info: Sources/Img/c02_01.png used on input line 80.
+(pdftex.def)             Requested size: 176.10846pt x 123.1103pt.
+
+Underfull \vbox (badness 2065) has occurred while \output is active []
+
+ [5]
+Overfull \hbox (14.53761pt too wide) in paragraph at lines 94--95
 \OT1/cmr/m/n/10.95 Nell'ipotesi in cui ab-bia una riga nel dump cos-ti-tuita da
 lla tu-pla $(\OML/cmm/m/it/10.95 a;  b;  c\OT1/cmr/m/n/10.95 )$ e vo-lessi trov
 are $\OML/cmm/m/it/10.95 relatedness\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a; 
@@ -392,51 +467,50 @@ d\OT1/cmr/m/n/10.95 )$
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [5]
+) [6 <./Sources/Img/c02_01.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [7]
+Underfull \vbox (badness 8132) has occurred while \output is active []
 
- [7])
+ [8]
+[9])
 No file lenzi_edoardo_laurea_2018.bbl.
-(./Chapters/attachments.tex [8]
+(./Chapters/attachments.tex [10]
 Appendix A.
-[9
+[11
 
 ]
 Appendix B.
-) [10
+) [12
 
-] (./lenzi_edoardo_laurea_2018.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./lenzi_edoardo_laurea_2018.aux) ) 
 Here is how much of TeX's memory you used:
- 6404 strings out of 495028
- 87800 string characters out of 6181497
- 247065 words of memory out of 5000000
- 9506 multiletter control sequences out of 15000+600000
- 12062 words of font info for 42 fonts, out of 8000000 for 9000
+ 7325 strings out of 495028
+ 98168 string characters out of 6181497
+ 257158 words of memory out of 5000000
+ 10387 multiletter control sequences out of 15000+600000
+ 16568 words of font info for 62 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 47i,7n,76p,734b,2104s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on lenzi_edoardo_laurea_2018.pdf (12 pages, 274159 bytes).
+ 47i,18n,76p,734b,2102s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb>
+Output written on lenzi_edoardo_laurea_2018.pdf (14 pages, 294025 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 110 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

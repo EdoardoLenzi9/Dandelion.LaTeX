@@ -1,0 +1,22 @@
+\contentsline {chapter}{Sommario}{2}
+\contentsline {chapter}{\numberline {1}Client C$\#$}{2}
+\contentsline {section}{\numberline {1.1}Dandelion}{2}
+\contentsline {section}{\numberline {1.2}Struttura Generale}{2}
+\contentsline {section}{\numberline {1.3}Il Client}{2}
+\contentsline {section}{\numberline {1.4}Testing}{4}
+\contentsline {section}{\numberline {1.5}Documentazione}{4}
+\contentsline {section}{\numberline {1.6}Nuget}{4}
+\contentsline {chapter}{\numberline {2}Calcolo della Relatedness}{4}
+\contentsline {section}{\numberline {2.1}Implementazione Iniziale}{4}
+\contentsline {subsection}{\numberline {2.1.1}Il Dump}{4}
+\contentsline {subsubsection}{Esempio}{5}
+\contentsline {subsection}{\numberline {2.1.2}Il Codice Nativo}{5}
+\contentsline {subsection}{\numberline {2.1.3}Osservazioni}{8}
+\contentsline {subsubsection}{Stima della Memoria Allocata}{8}
+\contentsline {chapter}{Bibliografia}{8}
+\contentsline {chapter}{\numberline {A}Titolo primo allegato}{9}
+\contentsline {section}{\numberline {A.1}Titolo}{9}
+\contentsline {subsection}{\numberline {A.1.1}Sottotitolo}{9}
+\contentsline {chapter}{\numberline {B}Titolo secondo allegato}{10}
+\contentsline {section}{\numberline {B.1}Titolo}{10}
+\contentsline {subsection}{\numberline {B.1.1}Sottotitolo}{10}

@@ -1,0 +1,124 @@
+\chapter{Client C$\#$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dandelion}
+Dandelion \'e un servizio online fornito da SpazioDati che mette a disposizione dell'utente servizi di analisi semantica testuale; 
+grazie ad esso \'e possibile, dato un testo, estrarne le entit\'a semantiche principali (\textit{Entity Extraction}), trovare la lingua in cui \'e stato 
+scritto (\textit{Language Detection}), classificarlo secondo modelli definiti dall'utente stesso (\textit{Text Classification}) e analizzarne la semantica 
+per capirne i sentimenti che l'autore ci vuole trasmettere (\textit{Sentiment Analysis}). 
+
+Dandelion ha in oltre delle RESTful-API che permettono di confrontare due testi generando un indice di similitudine fra i due (\textit{Text Similarity}) e
+un motore di ricerca di entit\'a di Wikipedia (\textit{Wikisearch}), nel caso si voglia trovare il titolo di un contenuto senza conoscerlo a priori.
+
+%\subsection{Entity Extraction}
+%\subsection{Text Similarity}
+%\subsection{Text Classification}
+%\subsection{Language Detection}
+%\subsection{Sentiment Analysis}
+%\subsection{Wikisearch}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Struttura Generale}
+
+Per l'implementazione si \'e cercato di seguire le best practices, dettate dalle linee guida Microsoft, per la stesura del codice.
+Sono stati adottati, come pattern di programmazione, dependency injection, MVC (per quanto possibile) e TDD, appoggiandosi a librerie esterne Nuget quali 
+Newtonsoft.Json e SimpleInjector. I metodi sono asincroni e le property thread-safe.
+
+La solution \'e stata partizionata in vari progetti; il progetto Business contiene la business-logic 
+(comprendente servizi, metodi estensione, l'implementazione del client e un wrapper del Container di SimpleInjector) e utilizza i modelli di Domain.
+
+In Test sono contenute le classi di testing e le fixture XUnit, mentre in Documentation sono presenti i file generati dal tool Wyam per la documentazione.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Il Client}
+
+Dalla documentazione ufficale della API di Dandelion si evince che ogni end-point richiede uno o pi\'u testi ed una serie di parametri alcuni obbligatori ed altri 
+opzionali; 
+pertanto sono stati creati dei modelli, coerenti con tali definizioni, che, passati in argomento a dei servizi, ritornano i DTO delle risposte degli end-point di Dandelion.
+
+Ogni servizio controlla che i parametri inseriti dall'utente rispettino i constraints definiti nella documentazione e costruiscono tramite il metodo ContentBuilder() 
+un dizionario di parametri e tramite UriBuilder l'URI che identifica l'end-point. 
+
+Infine il service chiama il metodo generico CallApiAsync() passandogli il content, la URI ed il metodo HTTP; 
+nel metodo di chiamata si gestiscono separatamente i metodi HTTP Get e Delete perch\'e non permettono il passaggio parametri nel boby pertanto \'e necessario fare il 
+percent-encoding del content e passarlo come query parameter. 
+Dandelion ammette sia chiamate in Get che in Post ai servizi tuttavia nel caso di Get non garantisce il corretto 
+funzionamento del servizio per testi che superano i 2000 caratteri circa; pertanto se l'utente non specifica il metodo di default viene usato Post.
+
+Se la chiamata \'e andata a buon fine il json di ritorno viene mappato in un DTO specifico, a seconda del servizio scelto, e restitiuito direttamente.
+
+\begin{lstlisting}[style=CSharpStyle]
+public Task<T> CallApiAsync<T>(string uri, List<KeyValuePair<string, string>> content, HttpMethod method = null)
+{
+    var result = new HttpResponseMessage();
+    if (method == null)
+    {
+        method = HttpMethod.Post;
+    }
+
+    if (_client.BaseAddress == null)
+    {
+        _client.BaseAddress = new Uri(Localizations.BaseUrl);
+    }
+
+    return Task.Run(async () =>
+    {
+        if (method == HttpMethod.Get)
+        {
+            string query;
+            using (var encodedContent = new FormUrlEncodedContent(content))
+            {
+                query = encodedContent.ReadAsStringAsync().Result;
+            }
+            result = await _client.GetAsync($"{uri}/?{query}");
+        }
+        else if (method == HttpMethod.Delete)
+        {
+            string query;
+            using (var encodedContent = new FormUrlEncodedContent(content))
+            {
+                query = encodedContent.ReadAsStringAsync().Result;
+            }
+            result = await _client.DeleteAsync($"{uri}/?{query}");
+        }
+        else
+        {
+            var httpContent = new HttpRequestMessage(method, uri);
+            if (content != null)
+            {
+                httpContent.Content = new FormUrlEncodedContent(content.ToArray());
+            }
+            result = await _client.SendAsync(httpContent);
+        }
+        string resultContent = await result.Content.ReadAsStringAsync();
+        if (result.StatusCode == System.Net.HttpStatusCode.RequestUriTooLong)
+        {
+            throw new ArgumentException(ErrorMessages.UriTooLong);
+        }
+        if (!result.IsSuccessStatusCode)
+        {
+            throw new Exception(resultContent); 
+        }
+        return JsonConvert.DeserializeObject<T>(resultContent);
+    });
+}
+\end{lstlisting}
+
+\section{Testing}
+La maggiorparte dei servizi \'e stata testata tramite il tool XUnit; principalmente sono stati eseguiti test di validazione, data la natura della libreria, appoggiandosi 
+ad una fixture comune per l'inizializzazione di ogni test.
+
+\'E stato usato fin da subito il servizio online Travis di testing automatico, tramite il quale \'e stato possibile validare ogni rilascio facendo 
+partire automaticamente i test con l'evento di push di git. 
+
+\section{Documentazione}
+Infine le classi e i metodi pi\'u rilevanti sono stati commentati tramite i tag XML specificati nella documentazione Microsoft e la documentazione in formato 
+HTML \'e stata generata automaticamente tramite il tool Wyam.
+
+\section{Nuget}
+La dll generata dalla compilazione della libreria \'e stata infine documentata sotto il profilo delle dipendenze, generando il file .nuspec ed inclusa nel file .nupkg
+tramite l'apposito tool fornito da Nuget. Il tutto \'e stato caricato sul portale online Nuget ed \'e ora possibile includerlo in un progetto tramite il comando cli:
+
+\begin{lstlisting}[style=TexStyle]
+$ dotnet add package SpazioDati.Dandelion
+\end{lstlisting}

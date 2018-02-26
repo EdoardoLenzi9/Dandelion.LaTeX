@@ -1,0 +1,130 @@
+% Template per Elaborato di Laurea
+% DISI - Dipartimento di Ingegneria e Scienza dell’Informazione
+
+% formato FRONTE RETRO
+\documentclass[epsfig,a4paper,11pt,titlepage,twoside,openany]{book}
+\usepackage{epsfig}
+\usepackage{plain}
+\usepackage{setspace}
+\usepackage[paperheight=29.7cm,paperwidth=21cm,outer=1.5cm,inner=2.5cm,top=2cm,bottom=2cm]{geometry} % per definizione layout
+\usepackage{titlesec} % per formato custom dei titoli dei capitoli
+%\usepackage[italian]{babel}
+\usepackage[utf8x]{inputenc} % per Linux (richiede il pacchetto unicode); lettere accentate
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstdefinestyle{CSharpStyle}{
+  frame=tb,
+  language=[Sharp]C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\lstdefinestyle{JavaStyle}{
+  frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\lstdefinestyle{TeXStyle}{
+  frame=tb,
+  language=TeX,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\singlespacing
+
+\begin{document}
+  \pagenumbering{gobble} 
+  \input{Chapters/initial_page.tex}
+  \clearpage
+  \input{Chapters/acknowledgements.tex}
+  \clearpage
+  \pagestyle{plain} % nessuna intestazione e pie pagina con numero al centro
+  % inizio numerazione pagine in numeri arabi
+  \mainmatter
+
+  %% Nel conteggio delle facciate (massimo 30) sono incluse: indice, sommario, capitoli
+  %% Dal conteggio delle facciate sono escluse: frontespizio, ringraziamenti, allegati
+
+    \tableofcontents % indice
+    \clearpage
+             
+    % gruppo per definizone di successione capitoli senza interruzione di pagina
+    \begingroup
+      % nessuna interruzione di pagina tra capitoli
+      % ridefinizione dei comandi di clear page
+      \renewcommand{\cleardoublepage}{} 
+      \renewcommand{\clearpage}{} 
+      % redefinizione del formato del titolo del capitolo
+      % da <Capitolo X> a <X Titolo capitolo>
+      
+      \titleformat{\chapter}{\normalfont\Huge\bfseries}{\thechapter}{1em}{}
+      \titlespacing*{\chapter}{0pt}{0.59in}{0.02in}
+      \titlespacing*{\section}{0pt}{0.20in}{0.02in}
+      \titlespacing*{\subsection}{0pt}{0.10in}{0.02in}
+      
+      \input{Chapters/summary.tex} %massimo 3 pagine 
+      %%   contesto e motivazioni, breve riassunto del problema affrontato, tecniche utilizzate e/o sviluppate, risultati raggiunti
+      \input{Chapters/chapter1.tex}
+      \input{Chapters/chapter2.tex}
+      %\input{Chapters/chapter3.tex}     
+    \endgroup
+
+    % bibliografia in formato bibtex
+    
+    \addcontentsline{toc}{chapter}{Bibliografia} % aggiunta del capitolo nell'indice
+    \bibliographystyle{plain} % stile con ordinamento alfabetico in funzione degli autori
+    \bibliography{biblio}
+    %% Nella bibliografia devo avere tutte le fonti consultate; va redatta in ordine alfabetico sul cognome del primo autore. 
+    %% LIBRI
+    %% Cognome e iniziale del nome autore, la data di edizione, titolo, casa editrice, eventuale numero dell’edizione. 
+    %% SITOGRAFIA
+    %% Lista di indirizzi Web disposti in ordine alfabetico. 
+    %% URL, cognome e nome dell’autore, il titolo, sottotitolo, data di ultima consultazione della risorsa (gg/mm/aaaa).
+    \titleformat{\chapter}
+        {\normalfont\Huge\bfseries}{Allegato \thechapter}{1em}{}
+    % sezione Allegati - opzionale
+    \appendix
+    \input{Chapters/attachments.tex}
+\end{document}

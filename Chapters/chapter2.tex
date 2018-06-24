@@ -1,15 +1,15 @@
 \chapter{Calcolo della Relatedness}
 
 La seconda parte del progetto riguarda l'analisi di due metodi critici (\textit{readDump()} e \textit{rel(int a, int b)}) che servono a 
-calcolare, dati gli identificativi di due entit\'a semantiche, il loro valore di correlazione (relatedness). 
+calcolare, dati gli identificativi di due entità semantiche, il loro valore di correlazione (relatedness). 
 
-Per fare ci\'o si ha a disposizione un dump dove sono salvati tutti i valori di correlazione (sopra una certa soglia minima) per ogni coppia di entit\'a. 
+Per fare ciò si ha a disposizione un dump dove sono salvati tutti i valori di correlazione (sopra una certa soglia minima) per ogni coppia di entità. 
 
 Il metodo \textit{readDump()} serve a caricare in memoria i valori del dump 
 sottoforma di \lq\lq matrice\rq\rq\ mentre il metodo \textit{rel(int a, int b)} serve a fare una ricerca nella struttura dati per poi ritornare il valore di 
-correlazione fra le entit\'a con identificativi \textit{a} e \textit{b}.
+correlazione fra le entità con identificativi \textit{a} e \textit{b}.
 
-Questa scelta implementativa, attualmente adottata, \'e sicuramente molto efficiente in termini di prestazioni ma sicuramente molto onerosa in termini di memoria; 
+Questa scelta implementativa, attualmente adottata, è sicuramente molto efficiente in termini di prestazioni ma sicuramente molto onerosa in termini di memoria; 
 pertanto il fine dell'analisi sarebbe quello di studiare/testare implementazioni alternative per ottimizzare le prestazioni e/o diminuire lo spreco di memoria.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -32,11 +32,11 @@ pertanto il fine dell'analisi sarebbe quello di studiare/testare implementazioni
 
 Leggendo le prime righe di un dump si nota che le prime cinque righe sono valori di inizializzazione mentre dalla sesta righa in poi troviamo le righe della matrice.
 Il primo numero intero, denominato \textit{max$\_$id}, indica il limite massimo che gli id delle entità possono assumere; 
-dato che gli id delle entit\'a non sono necessariamente sequenziali 
-(fra due di essi potrei avere dei \lq\lq buchi\rq\rq, degli intervalli in cui gli identificativi non sono associati ad alcuna entit\'a) 
-esiste una funzione \textit{map} che mappa (\lq\lq compatta\rq\rq) gli id delle entit\'a su altri id univoci e sequenziali. 
+dato che gli id delle entità non sono necessariamente sequenziali 
+(fra due di essi potrei avere dei \lq\lq buchi\rq\rq, degli intervalli in cui gli identificativi non sono associati ad alcuna entità) 
+esiste una funzione \textit{map} che mappa (\lq\lq compatta\rq\rq) gli id delle entità su altri id univoci e sequenziali. 
 
-Il secondo intero, denominato \textit{nodesSize} \'e il valore massimo che la funzione \textit{map} pu\'o assumere (limita il codominio della funzione).
+Il secondo intero, denominato \textit{nodesSize} è il valore massimo che la funzione \textit{map} può assumere (limita il codominio della funzione).
 
 \begin{equation}\begin{split}
     map():\ \mathbb{N} & \rightarrow \mathbb{N}\\
@@ -46,7 +46,7 @@ Il secondo intero, denominato \textit{nodesSize} \'e il valore massimo che la fu
 Continuando a leggere il dump troviamo la relatedness minima considerata \textit{minRel} (sotto la quale i valori di correlazione non vengono salvati) 
 e altri valori di configurazione quali \textit{minIntersection} e \textit{threshold} che tuttavia non ci interessano particolarmente.
 
-La funzione map in un certo senso mappa \lq\lq al contrario\rq\rq\ gli id; infatti l'id massimo verr\'a mappato su 0, il penultimo id verr\'a mappato su 1 e cos\'i via.
+La funzione map in un certo senso mappa \lq\lq al contrario\rq\rq\ gli id; infatti l'id massimo verrà mappato su 0, il penultimo id verrà mappato su 1 e così via.
 Nel caso del dump in questione abbiamo:
 
 \begin{lstlisting}[style=TeXStyle]
@@ -66,36 +66,36 @@ NodeSize = 4922289
 
 Gli id presenti nel dump non sono ordinati ma le \textit{postingList} ad essi associate lo sono.
 
-Dalla sesta riga del dump in poi inizia la definizione della matrice, ogni riga \'e composta da tre valori separati da uno spazio. 
+Dalla sesta riga del dump in poi inizia la definizione della matrice, ogni riga è composta da tre valori separati da uno spazio. 
 Ad esempio se consideriamo la riga:
 \begin{lstlisting}[style=TeXStyle]
 53676164 5 NnAwQT/ZvTVJ05MeSfcdI0rMrg1LBmUH
 \end{lstlisting}
 
-Il primo valore $a = 53676164$ \'e l'id di un entit\'a, il secondo valore $b = 5 = map(a)$ \'e il risultato della funzione map, 
-infine il terzo valore $c = NnAwQT/ZvTVJ05MeSfcdI0rMrg1LBmUH$ \'e una stringa di dimensione variabile oppure \textit{null};
-quest'ultima stringa, denominata \textit{postingList}, \'e la codifica in \textit{Base64} di un array di byte che rappresenta un dizionario chiave valore. 
+Il primo valore $a = 53676164$ è l'id di un entità, il secondo valore $b = 5 = map(a)$ è il risultato della funzione map, 
+infine il terzo valore $c = NnAwQT/ZvTVJ05MeSfcdI0rMrg1LBmUH$ è una stringa di dimensione variabile oppure \textit{null};
+quest'ultima stringa, denominata \textit{postingList}, è la codifica in \textit{Base64} di un array di byte che rappresenta un dizionario chiave valore. 
 
 \begin{center}
     \includegraphics[scale=0.55]{Sources/Img/c02_01.png}
 \end{center}
 
-In pratica una tupla $<chiave,\ valore>$ \'e codificata sull'array da una sequenza di quattro byte; quindi partizionando l'array in gruppi da 4 byte 
-ottengo, per ogni gruppo, la chiave (\'e un id \lq\lq mappato\rq\rq ) codificata sui primi tre byte ed il valore (la relatedness) definito sul quarto byte (il byte pi\'u a destra).
+In pratica una tupla $<chiave,\ valore>$ è codificata sull'array da una sequenza di quattro byte; quindi partizionando l'array in gruppi da 4 byte 
+ottengo, per ogni gruppo, la chiave (è un id \lq\lq mappato\rq\rq ) codificata sui primi tre byte ed il valore (la relatedness) definito sul quarto byte (il byte più a destra).
 
-Questa codifica, pertanto, permette di gestire set di entit\'a con id \lq\lq mappato\rq\rq\ massimo $2^{3 \cdot 8} \simeq 1,7 \cdot 10^7$ ed una scala di valori 
+Questa codifica, pertanto, permette di gestire set di entità con id \lq\lq mappato\rq\rq\ massimo $2^{3 \cdot 8} \simeq 1,7 \cdot 10^7$ ed una scala di valori 
 di correlazione appartenenti all'intervallo $[0,\ 255]$.
 
-Bisogna precisare che l'array di byte, denominato \textit{postingList}, \'e ordinato per valore crescente delle chiavi e, dato che rel(a, b) = rel(b, a),
-si \'e deciso di salvare una sola volta il valore di correlazione imponendo la relazione: $a > b$.
+Bisogna precisare che l'array di byte, denominato \textit{postingList}, è ordinato per valore crescente delle chiavi e, dato che rel(a, b) = rel(b, a),
+si è deciso di salvare una sola volta il valore di correlazione imponendo la relazione: $a > b$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Esempio}
 Nell'ipotesi in cui abbia una riga nel dump costituita dalla tupla $(a,\ b,\ c)$ e volessi trovare $relatedness(a, d)$ con $map(a) > map(d)$. 
 
-Devo cercare nella \textit{postingList c}, un gruppo di quattro byte in cui i primi tre byte corrispondano a \textit{map(d)} ed il quarto byte sar\'a il valore di correlazione voluto. 
+Devo cercare nella \textit{postingList c}, un gruppo di quattro byte in cui i primi tre byte corrispondano a \textit{map(d)} ed il quarto byte sarà il valore di correlazione voluto. 
 
-Ovviamente \'e possibile che \textit{c} sia \textit{null} (l'entit\'a con id \textit{a} non ha nessuna correlazione con entit\'a i cui id \lq\lq mappati\rq\rq\ siano inferiori a \textit{b}) oppure 
+Ovviamente è possibile che \textit{c} sia \textit{null} (l'entità con id \textit{a} non ha nessuna correlazione con entità i cui id \lq\lq mappati\rq\rq\ siano inferiori a \textit{b}) oppure 
 che nella posting non sia presente nessuna chiave corrispondente a \textit{map(d)}, in questi casi $relatedness(a,d) = 0$. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -218,7 +218,7 @@ Il metodo \textit{readDump()} legge riga per riga il dump e restituisce un'istan
 La funzione map viene salvata in un array di interi (\textit{data.map}) mentre la matrice con le correlazioni viene salvata in un 
 array bidimensionale di byte (\textit{data.matrix}).
 
-Il metodo \textit{rel(int a, int b)} invece calcola la funzione \textit{map} sugli id \textit{a} e \textit{b} dopodich\'e fa una binary search sulla postingList 
+Il metodo \textit{rel(int a, int b)} invece calcola la funzione \textit{map} sugli id \textit{a} e \textit{b} dopodichè fa una binary search sulla postingList 
 ottenuta da matrix[map(a)] (assumendo $map(a) > map(b)$). Infine se la ricerca binaria ha successo il valore di relatedness ottenuto va riscalato su una scala di valori 
 $[0, 255]$, convertito in float e riscalato nuovamente in base al valore di relatedness minima considerata (per escludere i valori al di sotto della relatedness minima,
 che non verranno mai usati).  
@@ -236,16 +236,16 @@ return data.configuredMinRel + byteRel * (1 - data.configuredMinRel);
 \subsection{Osservazioni}
 Considerato che il metodo readDump() viene chiamato una sola volta per allocare in memoria la struttura dati nel server, 
 non ci sono particolari vincoli temporali per la sua esecuzione; per quanto riguarda il calcolo della relatedness invece 
-l'algoritmo dev'essere il pi\'u performane possibile.
+l'algoritmo dev'essere il più performane possibile.
 
 Il codice nativo per il calcolo della relatedness costa $O(lg_2(n))$ (con $n=nodeSize$) per la ricerca binaria e O(1) per quanto riguarda le 
 istruzioni precedenti e successive a quest'ultima.
 
-Tolto un piccolo refact del codice che portebbe ad evitare tre moltiplicazione per ciclo nella binary search (non \'e necessario dividere e poi moltiplicare per 
+Tolto un piccolo refact del codice che portebbe ad evitare tre moltiplicazione per ciclo nella binary search (non è necessario dividere e poi moltiplicare per 
 RelatednessMatrix.EL$\_$SIZE), non sembra si possono migliorare di molto le prestazioni dell'algoritmo senza cambiare struttura dati.
 
 Una via percorribile per non \lq\lq pagare\rq\rq\ $O(lg_2(n))$ per la binary search potrebbe essere quella di allocare direttamente in memoria la matrice 
-completa (in questo caso avrei un algoritmo di tempo costante O(1)). Questa soluzione per\'o andrebbe a peggiorare drasticamente lo spreco di memoria.
+completa (in questo caso avrei un algoritmo di tempo costante O(1)). Questa soluzione però andrebbe a peggiorare drasticamente lo spreco di memoria.
 Infatti nell'implementazione attuale la matrice ha dimensione massima $nodeSize \otimes nodeSize$ ma le righe hanno dimensione variabile e 
 non occupano quindi sempre $(nodeSize -1) \cdot 4\ Byte$.
 
@@ -261,18 +261,18 @@ L'implementazione attuale alloca in memoria per l'array di interi map circa:
 \end{split}\end{equation}
 (arrotondando e senza tenere conto di fattori secondari come i 32 byte occupati da overhead e puntatore).
 \end{center}
-Per la matrice invece possiamo assumere che, su una macchina a 64 bit, avr\'o il $57\%$ di righe a null ($0.57 \cdot 4\cdot 10^6 \cdot 8\ Byte = 18\ MB$) ed il 
+Per la matrice invece possiamo assumere che, su una macchina a 64 bit, avrò il $57\%$ di righe a null ($0.57 \cdot 4\cdot 10^6 \cdot 8\ Byte = 18\ MB$) ed il 
 restante $43\%$ di righe con mediamente 404 valori di relatedness codificati su 4 Byte ($0.43 \cdot 4 \cdot 10^6 \cdot 404 \cdot 4\ Byte = 2.8\ GB$). 
 
-Quindi in totale potremmo stimare che solo questo dump occupa quasi 3 GB (notare che esiste un dump per ogni lingua supportata da Dandelion e che questo \'e uno 
-dei dump pi\'u piccoli).
+Quindi in totale potremmo stimare che solo questo dump occupa quasi 3 GB (notare che esiste un dump per ogni lingua supportata da Dandelion e che questo è uno 
+dei dump più piccoli).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Stima della Matrice Completa}
 Se allocassimo in memoria una matrice di Byte completa, di dimensioni $nodeSize \otimes nodeSize$, essa occuperebbe $(4 \cdot 10^6)^2 = 1.6 \cdot 10^{13}\ Byte = 16\ TB$.
 Pur considerando che esistono strutture dati particolarmente ottimizzate per gestire array di grandi dimensioni con pochi valori al loro interno (teniamo presente che
-pi\'u della met\'a dei valori nella matrice non saranno valorizzati), come SparseArray e SuperArrayList, bisogna tener presente che spesso tali strutture dati 
-si basano su liste; in questo caso per\'o difficilmente si otterrebbero prestazioni migliori di quelle dell'implementazione attuale dato che il tempo di lookup 
+più della metà dei valori nella matrice non saranno valorizzati), come SparseArray e SuperArrayList, bisogna tener presente che spesso tali strutture dati 
+si basano su liste; in questo caso però difficilmente si otterrebbero prestazioni migliori di quelle dell'implementazione attuale dato che il tempo di lookup 
 sarebbe sempre $O(lg_2(noseSize))$. 
 
 In conclusione, a meno di uno spreco di memoria ulteriore, difficilmente otterremo buoni risultati mantenendo come struttura dati di riferimento la matrice. 
@@ -283,7 +283,7 @@ Una via praticabile potrebbe essere quella di vedere il problema al contrario, c
 per minimizzare lo spreco di memoria potrei pensare di allocare 256 array in cui storicizzo tutte le coppie di id che hanno la stessa relatedness. 
 In questo modo eliminerei la ridondanza costituita da valori uguali di relatedness salvati nel dump migliaia di volte.
 
-Ci si accorge subito che anche questa via non \'e praticabile dato che per risparmiare 1 Byte devo storicizzare 8 Byte per le coppie di id di tipo intero. 
+Ci si accorge subito che anche questa via non è praticabile dato che per risparmiare 1 Byte devo storicizzare 8 Byte per le coppie di id di tipo intero. 
 Andrei ad occupare $0.43 \cdot 4 \cdot 10^6 \cdot 404 \cdot 2 \cdot 4 = 5.6 GB$, il doppio rispetto all'implementazione nativa, senza contare che 
 le performance peggiorerebbero.
 
@@ -304,9 +304,9 @@ e nodo di arrivo. Dovrei quindi usare una struttura dati del tipo:
     }
 \end{lstlisting}
 
-Tuttavia in questo modo sprecherei memoria perch\'e il puntatore al nodo successivo (ipotizzando di lavorare su una macchina a 64 bit) peserebbe pi\'u dell'identificativo 
+Tuttavia in questo modo sprecherei memoria perchè il puntatore al nodo successivo (ipotizzando di lavorare su una macchina a 64 bit) peserebbe più dell'identificativo 
 del nodo stesso. Al che potrei sostituire il puntatore con un intero ma anche in questo caso avrei il dizionario $< Id,\ Relatedness >$ che pesa 5 Byte mentre nella 
-postingList pesa 4 Byte perch\'e chiave e valore sono accorpati. Infine se seguissi la stessa politica di codifica del dizionario della postingList 
+postingList pesa 4 Byte perchè chiave e valore sono accorpati. Infine se seguissi la stessa politica di codifica del dizionario della postingList 
 di fatto sarei tornato all'implementazione iniziale senza trarre alcun giovamento, se non lo svantaggio agguintivo di non poter accedere in O(1) ad un nodo arbitrario. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -315,8 +315,8 @@ Sembra che l'unica via praticabile per mantenere tutti i dati in memoria, diminu
 che mappi gli id concatenati sul valore della relatedness; se la funzione fosse ben ottimizzata otterrei in O(1) la relatedness (guadagno prestazionale)
 e potenzialmente potrebbe occupare meno memoria della matrice iniziale.
 
-Purtroppo \'e molto difficile stimare a priori lo spazio occupato da un Hash Map, 
-il modo pi\'u rapido \'e confrontare con dei benchmark l'implementazione nativa contro quella basata su Hash Map.
+Purtroppo è molto difficile stimare a priori lo spazio occupato da un Hash Map, 
+il modo più rapido è confrontare con dei benchmark l'implementazione nativa contro quella basata su Hash Map.
 
 \subsection{Codice}
 \begin{lstlisting}[style=JavaStyle]

@@ -3,29 +3,30 @@
 
 \addcontentsline{toc}{chapter}{Sommario} % da aggiungere comunque all'indice
 
-Il progetto di tesi consiste in una prima parte riguardante l'implementazione di un client in C$\#$, finalizzato allo scopo di includere 
-in una libreria metodi plug$\&$play per chiamare automaticamente le RESTful-API del servizio online Dandelion. 
+Il progetto di tesi consiste principalmente in tre parti separate, ogniuna delle quali legata al servizio online Dandelion, che verrà brevemente introdotto nelle prossime pagine. 
 
-Durante lo sviluppo il codice \'e stato regolarmente caricato su GitHub per una periodica revisione da parte del team di SpazioDati; 
-per rendere lo sviluppo pi\'u efficiente si \'e cercato di seguire i principi del TDD, affidandosi al servizio online Travian 
-per validare automaticamente ogni rilascio. 
+Il primo capitolo ha lo scopo di introdurre al lettore gli applicativi, le tecnologie ed i servizi usati durante il progetto di tesi, descrivendoli sommariamente; 
+nei tre capitoli successivi, invece, si entrerà maggiormente nel dettaglio del progetto descrivendo i tre ambiti fondamentali su cui si è focalizzata la tesi.
 
-Una volta completata la libreria, \'e stata stilata la documentazione (esportata in html tramite il tool Wyam) e caricata la dll su Nuget; 
-pertanto la libreria \'e ora facilmente integrabile in qualsiasi progetto C$\#$.
+La prima parte del progetto consiste nell'implementazione di un client in C$\#$, finalizzato allo scopo di creare una libreria di metodi \lq\lq plug$\&$play\rq\rq\ 
+per chiamare automaticamente le RESTful-API del servizio Dandelion. 
 
-La seconda parte del progetto di tesi riguarda sempre il servizio Dandelion di SpazioDati ma, questa volta, una parte del codice back-end.
-Partendo dall'implementazione attualmente in uso si sono studiate delle implementazioni alternative per massimizzare la velocit\'a dell'algoritmo e minimizzare 
+Durante lo sviluppo il codice è stato regolarmente caricato online, sulla piattaforma GitHub, per agevolare la periodica revisione del codice effettuata dal team di SpazioDati (creatore di Dandelion); 
+per rendere lo sviluppo più efficiente si è cercato di seguire i principi del TDD (Test Driven Development), affidandosi al servizio di testing automatico Travian 
+per validare automaticamente ogni pull-request su GitHub. 
+
+Una volta completata la libreria è l'annessa documentazione è stata compilata la dll e resa pubblica su Nuget; 
+pertanto la libreria è ora facilmente integrabile in qualsiasi progetto C$\#$.
+
+La seconda parte del progetto riguarda l'analisi e il test di un algoritmo presente nel backend di Dandelion al fine di ottimizzarlo. 
+Il task nasce dalla necessità pratica di ridurre la memoria necessaria alle macchine di produzione di SpazioDati per eseguire l'algoritmo senza subire cali prestazionali.
+Partendo dall'implementazione attualmente in uso si sono studiate delle implementazioni alternative per massimizzare la velocità dell'algoritmo e minimizzare 
 la memoria occupata dalle strutture dati di appoggio dell'algoritmo. 
 
-...
+L'ultima parte gravita attorno al progetto StrepHit di Wikidata, un progetto nato un anno fa in FBK ed approvato dalla comunity di Wikidata. 
+Il progetto nasce per arricchire i database di Wikidata con riferimenti a fonti esterne (tendenzialmente altri siti web) in modo da dare all'utente, fruitore dell'enciclopedia, informazioni sempre più corrette,
+validate anche da un sito esterno e non più solo dalla comunity di Wikipedia/Wikidata.
 
-Al termine dell'esperienza si \'e concluso che ...
-%TODO conclusioni, metodologie e tecniche usate, i dati elaborati 
-%  contesto e motivazioni 
-%  breve riassunto del problema affrontato
-%  tecniche utilizzate e/o sviluppate
-%  risultati raggiunti, sottolineando il contributo personale del laureando/a
-
-
-
-
+Il progetto è fortemente legato a Dandelion perchè nelle logiche interne dello script di StrepHit si fa largo uso dei servizi offerti da Dandelion per l'analisi testuale delle pagine dei siti esterni.
+L'ultima attività consiste nell'implementazione di uno script in python (varsione 2.7) utile ad arricchire un dataset di quickstatements aggiungendo riferimenti a proprietà di Wikidata.
+Per fare ciò è stato necessario studiare il linguaggio python ed il funzionamento generale di Wikidata per poi realizzare uno script capace di interfacciarsi con l'endpoint SPARQL di Wikidata.

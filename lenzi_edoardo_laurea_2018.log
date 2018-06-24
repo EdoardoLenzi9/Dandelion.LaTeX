@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.26)  27 FEB 2018 16:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  24 JUN 2018 20:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -234,7 +234,11 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 LaTeX Warning: Unused global option(s):
     [epsfig].
 
-(./lenzi_edoardo_laurea_2018.aux)
+(./lenzi_edoardo_laurea_2018.aux
+
+LaTeX Warning: Label `sommario' multiply defined.
+
+)
 \openout1 = `lenzi_edoardo_laurea_2018.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
@@ -249,8 +253,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
 LaTeX Font Info:    ... okay on input line 79.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
 LaTeX Font Info:    ... okay on input line 79.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
 \scratchdimen=\dimen133
@@ -346,13 +349,13 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \c@lstlisting=\count119
 
-(./Chapters/initial_page.tex
+(./Chapters/frontispiece.tex
 Package epstopdf Info: Source file: <Sources/logo_unitn_black_center.eps>
-(epstopdf)                    date: 2015-07-30 09:07:55
+(epstopdf)                    date: 2018-06-24 18:07:04
 (epstopdf)                    size: 316347 bytes
 (epstopdf)             Output file: <Sources/logo_unitn_black_center-eps-conver
 ted-to.pdf>
-(epstopdf)                    date: 2015-09-10 12:22:38
+(epstopdf)                    date: 2018-06-24 18:07:04
 (epstopdf)                    size: 84556 bytes
 (epstopdf)             Command: <repstopdf --outfile=Sources/logo_unitn_black_c
 enter-eps-converted-to.pdf Sources/logo_unitn_black_center.eps>
@@ -383,23 +386,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Sources/logo_unitn_black
-_center-eps-converted-to.pdf>]
+_center-eps-converted-to.pdf>] (./Chapters/acknowledgments.tex
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)) [2
 
-! LaTeX Error: File `Chapters/acknowledgements.tex' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
-
-Enter file name: 
-[2
-
-
-
-] (./lenzi_edoardo_laurea_2018.toc)
+]
+(./lenzi_edoardo_laurea_2018.toc)
 \tf@toc=\write3
 \openout3 = `lenzi_edoardo_laurea_2018.toc'.
 
  [1
+
+
 
 ] (./Chapters/summary.tex)
 (./Chapters/chapter1.tex
@@ -445,9 +444,6 @@ Chapter 2.
 Underfull \vbox (badness 2653) has occurred while \output is active []
 
  [4]
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-)
 <Sources/Img/c02_01.png, id=33, 320.19624pt x 223.83624pt>
 File: Sources/Img/c02_01.png Graphic file (type png)
 
@@ -478,42 +474,49 @@ Underfull \vbox (badness 8132) has occurred while \output is active []
 Underfull \vbox (badness 2150) has occurred while \output is active []
 
  [10])
+(./Chapters/conclusion.tex
+Underfull \vbox (badness 1009) has occurred while \output is active []
+
+ [11])
 No file lenzi_edoardo_laurea_2018.bbl.
-(./Chapters/attachments.tex [11]
+(./Chapters/attachments.tex [12]
 Appendix A.
-[12
+[13
 
 ]
 Appendix B.
-) [13
+) [14
 
-] (./lenzi_edoardo_laurea_2018.aux) ) 
+] (./lenzi_edoardo_laurea_2018.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7343 strings out of 495028
- 98389 string characters out of 6181497
- 256158 words of memory out of 5000000
- 10405 multiletter control sequences out of 15000+600000
+ 7349 strings out of 495028
+ 98512 string characters out of 6181497
+ 257924 words of memory out of 5000000
+ 10406 multiletter control sequences out of 15000+600000
  16568 words of font info for 62 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  47i,18n,76p,734b,2102s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msbm10.pfb>
-Output written on lenzi_edoardo_laurea_2018.pdf (15 pages, 296410 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on lenzi_edoardo_laurea_2018.pdf (16 pages, 300986 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 116 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

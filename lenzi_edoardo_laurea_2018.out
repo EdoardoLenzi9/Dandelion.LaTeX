@@ -1,0 +1,32 @@
+\BOOKMARK [0][-]{chapter*.2}{Sommario}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Introduzione}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Dandelion}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{GitHub e Travis}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Docker}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{Prometheus e Grafana}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.5}{Wikidata e StrepHit}{chapter.1}% 8
+\BOOKMARK [2][-]{subsection.1.5.1}{SPARQL}{section.1.5}% 9
+\BOOKMARK [0][-]{subsection.1.5.1}{Client C}{}% 10
+\BOOKMARK [0][-]{chapter.2}{Client C}{}% 11
+\BOOKMARK [1][-]{section.2.1}{Dandelion}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{Struttura Generale}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Il Client}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.4}{Testing}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.5}{Documentazione}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.6}{Nuget}{chapter.2}% 17
+\BOOKMARK [0][-]{chapter.3}{Calcolo della Relatedness}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Implementazione Iniziale}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.1.1}{Il Dump}{section.3.1}% 20
+\BOOKMARK [2][-]{subsection.3.1.2}{Il Codice Nativo}{section.3.1}% 21
+\BOOKMARK [2][-]{subsection.3.1.3}{Osservazioni}{section.3.1}% 22
+\BOOKMARK [1][-]{section.3.2}{Implementazione con Hash Map}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.2.1}{Codice}{section.3.2}% 24
+\BOOKMARK [0][-]{chapter.4}{Conclusioni}{}% 25
+\BOOKMARK [0][-]{chapter.4}{Bibliografia}{}% 26
+\BOOKMARK [0][-]{appendix.A}{Titolo primo allegato}{}% 27
+\BOOKMARK [1][-]{section.A.1}{Titolo}{appendix.A}% 28
+\BOOKMARK [2][-]{subsection.A.1.1}{Sottotitolo}{section.A.1}% 29
+\BOOKMARK [0][-]{appendix.B}{Titolo secondo allegato}{}% 30
+\BOOKMARK [1][-]{section.B.1}{Titolo}{appendix.B}% 31
+\BOOKMARK [2][-]{subsection.B.1.1}{Sottotitolo}{section.B.1}% 32

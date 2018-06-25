@@ -1,0 +1,37 @@
+\contentsline {chapter}{Sommario}{2}{chapter*.2}
+\contentsline {chapter}{Introduzione}{2}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Introduzione}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Dandelion}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}GitHub e Travis}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Docker}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}Prometheus e Grafana}{4}{section.1.4}
+\contentsline {section}{\numberline {1.5}Wikidata e StrepHit}{4}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}SPARQL}{5}{subsection.1.5.1}
+\contentsline {chapter}{Client C}{5}{subsection.1.5.1}
+\contentsline {chapter}{\numberline {2}Client C}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Dandelion}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Struttura Generale}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Il Client}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}Testing}{6}{section.2.4}
+\contentsline {section}{\numberline {2.5}Documentazione}{6}{section.2.5}
+\contentsline {section}{\numberline {2.6}Nuget}{6}{section.2.6}
+\contentsline {chapter}{\numberline {3}Calcolo della Relatedness}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Implementazione Iniziale}{7}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Il Dump}{7}{subsection.3.1.1}
+\contentsline {subsubsection}{Esempio}{8}{subsubsection*.3}
+\contentsline {subsection}{\numberline {3.1.2}Il Codice Nativo}{8}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Osservazioni}{11}{subsection.3.1.3}
+\contentsline {subsubsection}{Stima della Memoria Allocata}{11}{subsubsection*.4}
+\contentsline {subsubsection}{Stima della Matrice Completa}{11}{subsubsection*.5}
+\contentsline {subsubsection}{Stima del problema inverso}{12}{subsubsection*.6}
+\contentsline {subsubsection}{Stima implementazione di un grafo}{12}{subsubsection*.7}
+\contentsline {section}{\numberline {3.2}Implementazione con Hash Map}{12}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Codice}{12}{subsection.3.2.1}
+\contentsline {chapter}{\numberline {4}Conclusioni}{14}{chapter.4}
+\contentsline {chapter}{Bibliografia}{14}{chapter.4}
+\contentsline {chapter}{\numberline {A}Titolo primo allegato}{15}{appendix.A}
+\contentsline {section}{\numberline {A.1}Titolo}{15}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Sottotitolo}{15}{subsection.A.1.1}
+\contentsline {chapter}{\numberline {B}Titolo secondo allegato}{16}{appendix.B}
+\contentsline {section}{\numberline {B.1}Titolo}{16}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}Sottotitolo}{16}{subsection.B.1.1}

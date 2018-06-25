@@ -15,6 +15,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{hyperref} 
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -74,6 +75,24 @@
   tabsize=3
 }
 
+\lstdefinestyle{YmlStyle}{
+  frame=tb,
+  language=TeX,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
 \singlespacing
 
 \begin{document}
@@ -110,8 +129,8 @@
       %%   contesto e motivazioni, breve riassunto del problema affrontato, tecniche utilizzate e/o sviluppate, risultati raggiunti
       \input{Chapters/chapter1.tex}
       \input{Chapters/chapter2.tex}
-      %\input{Chapters/chapter3.tex}     
-      %\input{Chapters/chapter4.tex}     
+      \input{Chapters/chapter3.tex}     
+      \input{Chapters/chapter4.tex}     
       \input{Chapters/conclusion.tex}     
     \endgroup
 

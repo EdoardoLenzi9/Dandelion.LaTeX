@@ -1,15 +1,21 @@
-\chapter{Client C$\#$}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduzione}
 \section{Dandelion}
+
 Dandelion è un servizio online fornito da SpazioDati che mette a disposizione dell'utente servizi di analisi semantica testuale; 
 grazie ad esso è possibile, dato un testo, estrarne le entità semantiche principali (\textit{Entity Extraction}), trovare la lingua in cui è stato 
 scritto (\textit{Language Detection}), classificarlo secondo modelli definiti dall'utente stesso (\textit{Text Classification}) e analizzarne la semantica 
 per capire i sentimenti che l'autore ci vuole trasmettere (\textit{Sentiment Analysis}). 
 
-Dandelion ha in oltre delle RESTful-API che permettono di confrontare due testi generando un indice di similitudine fra i due (\textit{Text Similarity}) e
+Dandelion ha anche altre due RESTful-API che permettono di confrontare due testi generando un indice di similitudine fra i due (\textit{Text Similarity}) e
 un motore di ricerca di entità di Wikipedia (\textit{Wikisearch}), nel caso si voglia trovare il titolo di un contenuto senza conoscerlo a priori.
 
+L'enciclopedia alla base di Dandelion è Wikipedia, anche se a volte fra i due si colloca come mediatore dbpedia, un progetto italiano per l'estrazione di 
+informazioni semi-strutturate da Wikipedia. 
+
+Per poter usare gli end-point di Dandelion basta registrarsi sul portale dedicato e generare un token che andrà inserito come query parameter nelle chiamate https alle API;
+la documentazione delle API è disponibile all'indirizzo: https://dandelion.eu/docs/.
+
+[TODO descrizione più dettagliata di Dandelion]
 %\subsection{Entity Extraction}
 %\subsection{Text Similarity}
 %\subsection{Text Classification}
@@ -17,110 +23,88 @@ un motore di ricerca di entità di Wikipedia (\textit{Wikisearch}), nel caso si 
 %\subsection{Sentiment Analysis}
 %\subsection{Wikisearch}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Struttura Generale}
+\section{GitHub e Travis}
+Per il versioning del codice si è scelto di usare il software git, appoggiandosi alla piattaforma GitHub per creare repository pubbliche. 
 
-Per l'implementazione si è cercato di seguire le best practices, dettate dalle linee guida Microsoft, per la stesura del codice.
-Sono stati adottati, come pattern di programmazione, dependency injection, MVC (per quanto possibile) e TDD, appoggiandosi a librerie esterne Nuget quali 
-Newtonsoft.Json e SimpleInjector. I metodi sono asincroni e le property thread-safe.
+Le repository riguardanti il progetto di tesi sono:
 
-La solution è stata partizionata in vari progetti; il progetto Business contiene la business-logic 
-(comprendente servizi, metodi estensione, l'implementazione del client e un wrapper del Container di SimpleInjector) e utilizza i modelli di Domain.
+\begin{itemize}
+    \item Repository contenente il testo della tesi scritto in \LaTeX\ (\url{https://github.com/EdoardoLenzi9/Dandelion.LaTeX}) \\
+    \item Repository contenente lo script in Python per il progetto StrepHit (\url{https://github.com/EdoardoLenzi9/Wikipedia.StrepHit}) \\
+    \item Repository contenente il codice Java con le varie implementazioni dell'algoritmo per il calcolo della relatedness (la seconda parte del progetto) (\url{https://github.com/EdoardoLenzi9/Dandelion.Relatedness}) \\
+    \item Repository contenente il codice sorgente del client C$\#$ (\url{https://github.com/EdoardoLenzi9/SpazioDati.Dandelion-eu})\\
+\end{itemize} 
 
-In Test sono contenute le classi di testing e le fixture XUnit, mentre in Documentation sono presenti i file generati dal tool Wyam per la documentazione.
+Per quanto riguarda il testing automatico è stata scelta la piattaforma Travis che permette di agganciare una repository GitHub su cui eseguire automaticamente i test 
+ad ogni commit. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Il Client}
+Per fare ciò è necessario inserire nella repository un file di configurazione chiamato .travis.yml con i comandi necessari ad eseguire i test. 
 
-Dalla documentazione ufficale delle API di Dandelion si evince che ogni end-point richiede uno o più testi ed una serie di parametri alcuni obbligatori ed altri 
-opzionali; 
-pertanto sono stati creati dei modelli, coerenti con tali definizioni, che, passati in argomento a dei servizi, ritornano i DTO delle risposte degli end-point di Dandelion.
+Per esempio nel caso del client C$\#$ il file yml contiene le seguenti istruzioni:
 
-Ogni servizio controlla che i parametri inseriti dall'utente rispettino i constraints definiti nella documentazione e costruisce, tramite i metodi \textit{ContentBuilder} e  
-\textit{UriBuilder}, un dizionario di parametri e l'URI che identifica l'end-point. 
+\begin{lstlisting}[style=YmlStyle]
+    language: csharp
+    dist: trusty
+    mono: none
+    dotnet: 2.0.3
 
-Infine il servizio chiama il metodo generico \textit{CallApiAsync}, passandogli il content, la URI ed il metodo HTTP; 
-nel metodo di chiamata si è scelto di gestire separatamente i metodi HTTP GET e DELETE dato che essi non permettono il passaggio parametri nel boby 
-della chiamata HTTP. Pertanto è stato necessario inviare il content come query parameter facendone il percent-encoding.
+    install:
+    - dotnet restore
 
-Dandelion ammette sia chiamate in GET che in POST ai servizi, tuttavia nel caso del metodo GET non è garantito il corretto 
-funzionamento del servizio per testi che superano i 2000 caratteri circa; pertanto nel caso in cui l'utente non specifichi il metodo HTTP, di default verrà
-usato il metodo POST.
-
-Se la chiamata è andata a buon fine il JSON di ritorno viene mappato in un DTO specifico, a seconda del servizio scelto, e restitiuito direttamente all'utente.
-
-\begin{lstlisting}[style=CSharpStyle]
-public Task<T> CallApiAsync<T>(string uri, List<KeyValuePair<string, string>> content, HttpMethod method = null)
-{
-    var result = new HttpResponseMessage();
-    if (method == null)
-    {
-        method = HttpMethod.Post;
-    }
-
-    if (_client.BaseAddress == null)
-    {
-        _client.BaseAddress = new Uri(Localizations.BaseUrl);
-    }
-
-    return Task.Run(async () =>
-    {
-        if (method == HttpMethod.Get)
-        {
-            string query;
-            using (var encodedContent = new FormUrlEncodedContent(content))
-            {
-                query = encodedContent.ReadAsStringAsync().Result;
-            }
-            result = await _client.GetAsync($"{uri}/?{query}");
-        }
-        else if (method == HttpMethod.Delete)
-        {
-            string query;
-            using (var encodedContent = new FormUrlEncodedContent(content))
-            {
-                query = encodedContent.ReadAsStringAsync().Result;
-            }
-            result = await _client.DeleteAsync($"{uri}/?{query}");
-        }
-        else
-        {
-            var httpContent = new HttpRequestMessage(method, uri);
-            if (content != null)
-            {
-                httpContent.Content = new FormUrlEncodedContent(content.ToArray());
-            }
-            result = await _client.SendAsync(httpContent);
-        }
-        string resultContent = await result.Content.ReadAsStringAsync();
-        if (result.StatusCode == System.Net.HttpStatusCode.RequestUriTooLong)
-        {
-            throw new ArgumentException(ErrorMessages.UriTooLong);
-        }
-        if (!result.IsSuccessStatusCode)
-        {
-            throw new Exception(resultContent); 
-        }
-        return JsonConvert.DeserializeObject<T>(resultContent);
-    });
-}
+    script:
+    - dotnet build
+    - dotnet test SpazioDati.Dandelion.Test/SpazioDati.Dandelion.Test.csproj
 \end{lstlisting}
 
-\section{Testing}
-La maggiorparte dei servizi è stata testata tramite il tool XUnit; principalmente sono stati eseguiti test di validazione, data la natura della libreria, appoggiandosi 
-ad una fixture comune a tutti i test per l'inizializzazione dei servizi.
-
-è stato usato fin da subito il servizio online di testing automatico Travis, tramite il quale è stato possibile validare ogni rilascio facendo 
-partire automaticamente i test con l'evento di push di Git. 
-
-\section{Documentazione}
-Infine le classi e i metodi più rilevanti sono stati commentati tramite i tag XML specificati nella documentazione Microsoft e la documentazione in formato 
-HTML è stata generata automaticamente tramite il tool Wyam.
-
-\section{Nuget}
-La dll generata dalla compilazione della libreria è stata infine documentata sotto il profilo delle dipendenze, generando il file .nuspec, ed inclusa nel file .nupkg
-tramite l'apposito tool fornito da Nuget. Il tutto è stato caricato sul portale online Nuget ed è ora possibile includerlo in un progetto tramite il comando cli:
-
-\begin{lstlisting}[style=TexStyle]
-$ dotnet add package SpazioDati.Dandelion
+Mentre per lo script in python la sintassi è la seguente:
+\begin{lstlisting}[style=YmlStyle]
+    language: python
+    python: 
+      - "2.7"
+    # command to install dependencies
+    install:
+      - pip install -r requirements.txt
+    # command to run tests
+    script:
+      - python test.py
 \end{lstlisting}
+
+Come si nota dalle righe sopra, basta specificare il linguaggio, la versione ed i comandi (Travis esegue i test in ambiente Linux, quindi i comandi devono essere eseguibili in una bash-shell Linux) 
+per installare e lanciare i test.
+
+\section{Docker}
+Per la seconda parte del progetto è stato usato Docker per creare un ambiente "chiuso", ad hoc, dove poter testare al meglio gli algoritmi senza doversi preoccupare di fattori esterni che potrebbero falsare 
+il risultato del test. 
+
+Docker permette di creare un'immagine a partire da un file di testo chiamato \lq\lq Dockerfile\rq\rq\ il quale contiene tutte le informazioni per eseguire la build dell'immagine; in pratica 
+il Docker file è una sorta di descrittore dello stato di una macchina virtuale che genera una macchina virtuale persistente chiamata immagine. L'immagine può essere istanziata, divenendo un container 
+il quale però non è più persistente. Una delle caratteristiche più utili di Docker è la semplicità con cui è possibile interfacciare container diversi condividendo aree di memoria sul disco e porte TCP.
+
+Per esempio l'idea di base per monitorare le prestazioni dell'algoritmo e l'allocazione di memoria nel Docker è quella di eseguire il file jar compilato, dentro un container, con un particolare javaagent chiamato 
+\href{https://github.com/prometheus/jmx_exporter}{jmx-exporter}; l'exporter si occupa di monitorare l'applicativo e di esportare in tempo reale delle metrics che vengono esposte in un server locale su una porta a scelta.
+Parallelamente al primo container vengono istanziate altre due immagini, scaricate da \href{https://hub.docker.com/}{hub.docker}, chiamate prom/prometheus e grafana/grafana le quali permettono di filtrare le metrics 
+generate dall'exporter e di visualizzarle direttamente su dei grafici. 
+
+Per il setup dell'ambiente è stato creata un'immagine a partire dal seguente Dockerfile:
+
+\begin{lstlisting}[style=YmlStyle]
+    FROM openjdk:latest
+    COPY . /usr/src/dandelion
+    WORKDIR /usr/src/dandelion
+    CMD ["java", "-Xmx6144m", "-javaagent:./lib/jmx_prometheus_javaagent-0.3.1.jar=8080:./lib/configs.yaml", "-jar", "/usr/src/dandelion/dist/Dandelion.jar"]
+\end{lstlisting}
+
+Sostanzialmente l'immagine viene edificata sopra un'altra immagine chiamata \href{https://hub.docker.com/_/openjdk/}{openjdk}, scaricata da \href{https://hub.docker.com/}{hub.docker}, contenente 
+un'implementazione open source di Java SE (Java Platform, Standard Edition) a partire dalla versione 7. 
+La direttiva COPY serve per copiare, al momento della build dell'immagine, tutto il contenuto della cartella contenente dentro l'ambiente virtuale alla path specificata (/usr/src/dandelion); mentre WORKDIR specifica 
+la path della \textit{working directory} da cui partirà il container docker. 
+Infine la direttiva CMD lancia il .jar generato dalla compilazione con il tool ant e setta come javaagent jmx-exporter (l'opzione -Xmx6144m serve solamente a specificare la massima allocazione di memoria heap, fino ad un massimo di 6GB).   
+
+\section{Prometheus e Grafana}
+[TODO]
+
+\section{Wikidata e StrepHit}
+[TODO]
+
+\subsection{SPARQL}
+[TODO]

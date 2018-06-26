@@ -1,3 +1,4 @@
+
 \chapter{Introduzione}
 \section{Dandelion}
 
@@ -61,10 +62,8 @@ Mentre per lo script in python la sintassi è la seguente:
     language: python
     python: 
       - "2.7"
-    # command to install dependencies
     install:
       - pip install -r requirements.txt
-    # command to run tests
     script:
       - python test.py
 \end{lstlisting}
@@ -77,34 +76,60 @@ Per la seconda parte del progetto è stato usato Docker per creare un ambiente "
 il risultato del test. 
 
 Docker permette di creare un'immagine a partire da un file di testo chiamato \lq\lq Dockerfile\rq\rq\ il quale contiene tutte le informazioni per eseguire la build dell'immagine; in pratica 
-il Docker file è una sorta di descrittore dello stato di una macchina virtuale che genera una macchina virtuale persistente chiamata immagine. L'immagine può essere istanziata, divenendo un container 
-il quale però non è più persistente. Una delle caratteristiche più utili di Docker è la semplicità con cui è possibile interfacciare container diversi condividendo aree di memoria sul disco e porte TCP.
+il Dockerfile è una sorta di descrittore dello stato di una macchina virtuale che genera, una volta lanciata la build, una macchina virtuale persistente chiamata immagine. L'immagine può essere istanziata, divenendo un container 
+il quale però non è più persistente (qualsiasi modifica allo stato della vm verrà perso una volta chiuso il container). Una delle caratteristiche più utili di Docker è la semplicità con cui è possibile interfacciare container diversi condividendo aree di memoria sul disco e porte TCP.
 
-Per esempio l'idea di base per monitorare le prestazioni dell'algoritmo e l'allocazione di memoria nel Docker è quella di eseguire il file jar compilato, dentro un container, con un particolare javaagent chiamato 
-\href{https://github.com/prometheus/jmx_exporter}{jmx-exporter}; l'exporter si occupa di monitorare l'applicativo e di esportare in tempo reale delle metrics che vengono esposte in un server locale su una porta a scelta.
-Parallelamente al primo container vengono istanziate altre due immagini, scaricate da \href{https://hub.docker.com/}{hub.docker}, chiamate prom/prometheus e grafana/grafana le quali permettono di filtrare le metrics 
-generate dall'exporter e di visualizzarle direttamente su dei grafici. 
-
-Per il setup dell'ambiente è stato creata un'immagine a partire dal seguente Dockerfile:
+L'idea di base per monitorare le prestazioni dell'algoritmo e stata quella di compilare il progetto Java con il tool ant ed esportare il file Dandelion.jar; è seguita la creazione di un Dockerfile basato sull'immagine openjdk, 
+scaricata da \href{https://hub.docker.com/}{hub.docker}, contenente un'implementazione open source di Java SE (Java Platform, Standard Edition) a partire dalla versione 7. 
 
 \begin{lstlisting}[style=YmlStyle]
     FROM openjdk:latest
     COPY . /usr/src/dandelion
     WORKDIR /usr/src/dandelion
-    CMD ["java", "-Xmx6144m", "-javaagent:./lib/jmx_prometheus_javaagent-0.3.1.jar=8080:./lib/configs.yaml", "-jar", "/usr/src/dandelion/dist/Dandelion.jar"]
+    CMD ["java", "-javaagent:./lib/jmx_prometheus_javaagent-0.3.1.jar=8080:./lib/configs.yaml", "-jar", "/usr/src/dandelion/dist/Dandelion.jar"]
 \end{lstlisting}
 
-Sostanzialmente l'immagine viene edificata sopra un'altra immagine chiamata \href{https://hub.docker.com/_/openjdk/}{openjdk}, scaricata da \href{https://hub.docker.com/}{hub.docker}, contenente 
-un'implementazione open source di Java SE (Java Platform, Standard Edition) a partire dalla versione 7. 
-La direttiva COPY serve per copiare, al momento della build dell'immagine, tutto il contenuto della cartella contenente dentro l'ambiente virtuale alla path specificata (/usr/src/dandelion); mentre WORKDIR specifica 
-la path della \textit{working directory} da cui partirà il container docker. 
-Infine la direttiva CMD lancia il .jar generato dalla compilazione con il tool ant e setta come javaagent jmx-exporter (l'opzione -Xmx6144m serve solamente a specificare la massima allocazione di memoria heap, fino ad un massimo di 6GB).   
+La prima direttiva FROM specifica l'immagine di base su cui verrà edificata una nuova immagine, le successive due direttive COPY e WORKDIR servono rispettivamente a copiare tutto il contenuto della cartella corrente 
+dentro l'ambiente virtuale alla path specificata (/usr/src/dandelion) e a settare quest'ultima come \textit{working directory} da cui partirà il container docker. 
+Infine la direttiva CMD specifica il comando che verrà eseguito una volta finito il setup dell'ambiente, in questo caso viene eseguito Dandelion.jar con un particolare javaagent chiamato jmx;
+questo javaagent è un exporter che si occupa di monitorare l'applicativo e di esportare in tempo reale le relative metrics che vengono esposte in un server locale su una porta a scelta (8080 in questo caso).
+
+Per evitare di buildare il Dockerfile ogni volta che modifichiamo il codice sorgente Java è possibile mappare la cartella corrente con la working directory dell'immagine tramite l'opzione -v che crea un volume condiviso;
+tramite l'opzione -p invece è possibile mappare una porta tcp interna al docker su una esterna.
+
+\begin{lstlisting}[style=YmlStyle]
+    docker run -it -p 8080:8080 -v <current-dir>.:<docker-working-dir> \
+    --name dandelion-volume dandelion-container
+\end{lstlisting}
 
 \section{Prometheus e Grafana}
-[TODO]
+Parallelamente al primo container vengono istanziate altre due immagini, scaricate da \href{https://hub.docker.com/}{hub.docker}, chiamate prom/prometheus e grafana/grafana le quali permettono di filtrare le metrics 
+generate dall'exporter e di visualizzarle direttamente su dei grafici. 
+
+\subsection{Prometheus}
+\href{https://prometheus.io/}{Prometheus} è un applicativo open source rilasciato sotto Apache 2 License su GitHub, permette di salvare in memoria e/o sul disco le metrics raccolte da un exporter e mette a disposizione 
+un linguaggio di query che permette di filtrare le metrics a piacimento. È anche possibile rappresentare i risultati delle query direttamente su dei grafici statici tuttavia per questo aspetto si è scelto di usare Grafana.
+
+\subsection{Grafana}
+\href{https://grafana.com/}{Grafana} è anch'essa un software open source volto alla creazione di dashboard dinamiche tipicamente consistenti in grafici e widget di monitoraggio di vario tipo, funzionalmente molto completi 
+e gradevoli sotto il profilo estetico. Grafana è nativamente predisposta per integrarsi con Prometheus, basta indicare la porta tcp su cui è settato Prometheus e la query che si vuole visualizzare.   
 
 \section{Wikidata e StrepHit}
-[TODO]
+Wikidata è un progetto gratuito e open source legato a Wikipedia che mette a disposizione dell'utente un knowledge base accessibile sia dal portale wikidata.org che tramite un end-point SPARQL.
+I dati presenti nel knowledge base sono dati strutturati secondo le logiche del semantic web e adottano, quindi, il framework RDF (Resource Description Framework) proposto da W3C. 
+
+Questo servizio rende possibile l'interazione con 
+il knowledge basedi Wikidata direttamente tramite query veicolate da chiamate http ad un end-point SPARQL ed è facilmente integrabile con qualsiasi altro knowledge base di terze parti che segua gli stessi schemi e modelli RDF.
+
+\href{https://www.mediawiki.org/wiki/StrepHit}{StrepHit} è un progetto nato l'anno scorso, seguito da un team in FBK coordinato da Marco Fossati; il progetto prevedeva la creazione di un applicativo scritto prevalentemente 
+in python capace di analizzare testi e tradurli in Wikidata statements (o quickstatements).  
+
+\href{https://www.mediawiki.org/wiki/StrepHit}{Quickstatemens} è un tool scritto da Magnus Manske che definisce un linguaggio volto a descrivere/modificare elementi Wikidata. Questo linguaggio è ormai diventato uno standard 
+per quanto riguarda Wikidata tant'è che la nomenclatura degli elementi del knowledge base seguono gli standard dettati da Quickstatements.
 
 \subsection{SPARQL}
-[TODO]
+\href{https://www.w3.org/TR/sparql11-query/}{SPARQL} è il linguaggio di query definito da W3C per RDF. Le query sono molto affini al SQL, infatti ne condividono molte key-word, la differenza sta nel fatto che i dati ora 
+seguono i modelli RDF pertanto avranno sempre un item, una property e un value.
+
+Wikidata mette a disposizione \href{https://query.wikidata.org/}{un'interfaccia} che permette di lanciare manualmente query SPARQL sul knowledge base
+e un \href{https://query.wikidata.org/bigdata/namespace/wdq/sparql?query={SPARQL}}{end-point} per contattare lo stesso servizio con chiamate http. 

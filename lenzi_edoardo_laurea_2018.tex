@@ -16,6 +16,15 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{hyperref} 
+\usepackage{xcolor}
+\usepackage{color,soul}
+\usepackage[bottom]{footmisc}
+
+\usepackage{graphicx} % Required for including images
+\usepackage[font=small,labelfont=bf]{caption} 
+\definecolor{customLightGray}{RGB}{239, 240, 241}
+\DeclareRobustCommand{\code}[1]{{\sethlcolor{customLightGray}\hl{#1}}}
+\DeclareRobustCommand{\u}[0]{{\textunderscore}}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -93,6 +102,60 @@
   tabsize=3
 }
 
+\lstdefinestyle{QuickstatementsStyle}{
+  frame=tb,
+  language=TeX,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\lstdefinestyle{SPARQLStyle}{
+  frame=tb,
+  language=TeX,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\lstdefinestyle{jsonStyle}{
+  frame=tb,
+  language=TeX,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
 \singlespacing
 
 \begin{document}
@@ -126,6 +189,7 @@
       \titlespacing*{\subsection}{0pt}{0.10in}{0.02in}
       
       \input{Chapters/summary.tex} %massimo 3 pagine 
+      \addcontentsline{toc}{chapter}{Sommario} % da aggiungere comunque all'indice
       %%   contesto e motivazioni, breve riassunto del problema affrontato, tecniche utilizzate e/o sviluppate, risultati raggiunti
       \input{Chapters/chapter1.tex}
       \input{Chapters/chapter2.tex}

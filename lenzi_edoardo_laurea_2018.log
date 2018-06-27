@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  26 JUN 2018 20:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  27 JUN 2018 08:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,7 +527,7 @@ enter-eps-converted-to.pdf Sources/logo_unitn_black_center.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=150, 293.095pt x 126.
+<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=127, 293.095pt x 126.
 4725pt>
 File: Sources/logo_unitn_black_center-eps-converted-to.pdf Graphic file (type p
 df)
@@ -569,35 +569,34 @@ l.166   \clearpage
 
 
 
-] [2]
-(./Chapters/summary.tex) (./Chapters/chapter1.tex
-Chapter 1.
-[3
-
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 33.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+(./Chapters/summary.tex) [2
+
+] (./Chapters/chapter1.tex
+Chapter 1.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
@@ -630,8 +629,13 @@ File: lstlang3.sty 2013/08/26 1.5b listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-) [4] [5])
-(./Chapters/chapter2.tex
+) [3] [4]
+Overfull \hbox (3.36287pt too wide) in paragraph at lines 112--116
+[]\OT1/cmr/m/n/10.95 Infine la di-ret-tiva []CMD speci-fica il co-mando che ver
+r^^Ra es-e-guito una volta finito il setup dell'ambiente,
+ []
+
+[5]) [6] (./Chapters/chapter2.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -649,31 +653,28 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 3.
 
-[6] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-)
-Underfull \vbox (badness 1688) has occurred while \output is active []
+) [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7])
-(./Chapters/chapter3.tex
+ [8])
+[9] (./Chapters/chapter3.tex
 Chapter 3.
-[8] <Sources/Img/c02_01.png, id=350, 320.19624pt x 223.83624pt>
+[10] <Sources/Img/c02_01.png, id=410, 320.19624pt x 223.83624pt>
 File: Sources/Img/c02_01.png Graphic file (type png)
 
 <use Sources/Img/c02_01.png>
-Package pdftex.def Info: Sources/Img/c02_01.png used on input line 80.
+Package pdftex.def Info: Sources/Img/c02_01.png used on input line 81.
 (pdftex.def)             Requested size: 176.10846pt x 123.1103pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 81.
+(caption)                particular \caption on input line 82.
 See the caption package documentation for explanation.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-Overfull \hbox (14.53761pt too wide) in paragraph at lines 95--96
+Overfull \hbox (14.53761pt too wide) in paragraph at lines 96--97
 \OT1/cmr/m/n/10.95 Nell'ipotesi in cui ab-bia una riga nel dump cos-ti-tuita da
 lla tu-pla $(\OML/cmm/m/it/10.95 a;  b;  c\OT1/cmr/m/n/10.95 )$ e vo-lessi trov
 are $\OML/cmm/m/it/10.95 relatedness\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a; 
@@ -682,89 +683,146 @@ d\OT1/cmr/m/n/10.95 )$
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [10 <./Sources/Img/c02_01.png (PNG copy)>]
+) [11 <./Sources/Img/c02_01.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-[12] [13]
-Underfull \vbox (badness 2150) has occurred while \output is active []
+ [12]
+Underfull \vbox (badness 2310) has occurred while \output is active []
 
- [14])
-(./Chapters/chapter4.tex
+ [13]
+[14] [15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16])
+[17] (./Chapters/chapter4.tex
 Chapter 4.
 
-Overfull \hbox (13.82617pt too wide) in paragraph at lines 18--19
-[]\OT1/cmr/m/n/10.95 Segue la pro-priet^^Ra che in-ter-essa mag-gior-mente S854
- "http://www.nndb.com/people/031/000097737/"
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 9.
+
+
+Overfull \hbox (13.82617pt too wide) in paragraph at lines 20--21
+[]\OT1/cmr/m/n/10.95 Segue la pro-priet^^Ra che in-ter-essa mag-gior-mente []S8
+54[] [][][]"http://www.nndb.com/people/031/000097737/"
  []
 
-[15] [16] <Sources/Img/c04_01.png, id=662, 847.165pt x 585.18625pt>
+[18]
+Overfull \hbox (3.96992pt too wide) in paragraph at lines 76--78
+[]\OT1/cmr/m/n/10.95 In SPARQL us-are una ricerca per stringa ^^Re cer-ta-mente
+ una forzatura perch^^Re soli-ta-mente si conoscono
+ []
+
+<Sources/Img/c04_01.png, id=694, 847.165pt x 585.18625pt>
 File: Sources/Img/c04_01.png Graphic file (type png)
 
 <use Sources/Img/c04_01.png>
-Package pdftex.def Info: Sources/Img/c04_01.png used on input line 86.
+Package pdftex.def Info: Sources/Img/c04_01.png used on input line 92.
 (pdftex.def)             Requested size: 483.69687pt x 334.11324pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 87.
+(caption)                particular \caption on input line 93.
 See the caption package documentation for explanation.
 
-[17 <./Sources/Img/c04_01.png>] [18]) (./Chapters/conclusion.tex)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+[20 <./Sources/Img/c04_01.png>]) [21] (./Chapters/conclusion.tex) [22]
 No file lenzi_edoardo_laurea_2018.bbl.
-(./Chapters/attachments.tex [19]
-Appendix A.
-[20
-
-]
-Appendix B.
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 217.
- [21
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 217.
+(./Chapters/attachments.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
  (./lenzi_edoardo_laurea_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
 Package rerunfilecheck Info: File `lenzi_edoardo_laurea_2018.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: E0FDFB4536F4236AE6EC7C70D5A1E82A;2208.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 217.
+(rerunfilecheck)             Checksum: 2720E2959E563A7104DCA55E37A8869E;1873.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
  ) 
 Here is how much of TeX's memory you used:
- 13209 strings out of 495028
- 188248 string characters out of 6181497
- 364664 words of memory out of 5000000
- 15765 multiletter control sequences out of 15000+600000
- 19547 words of font info for 74 fonts, out of 8000000 for 9000
+ 13207 strings out of 495028
+ 188197 string characters out of 6181497
+ 364577 words of memory out of 5000000
+ 15766 multiletter control sequences out of 15000+600000
+ 20908 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 47i,18n,76p,734b,2149s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
-st, replaced by a fixed one
+ 48i,18n,76p,736b,2868s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lenzi_edoardo_laurea_2018.pdf (23 pages, 408274 bytes).
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on lenzi_edoardo_laurea_2018.pdf (24 pages, 450569 bytes).
 PDF statistics:
- 862 PDF objects out of 1000 (max. 8388607)
- 809 compressed objects within 9 object streams
- 440 named destinations out of 1000 (max. 500000)
- 312 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 888 PDF objects out of 1000 (max. 8388607)
+ 832 compressed objects within 9 object streams
+ 435 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 

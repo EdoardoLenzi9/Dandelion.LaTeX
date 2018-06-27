@@ -5,35 +5,42 @@
 \section{Struttura Generale}
 
 Per l'implementazione si è cercato di seguire le best practices, dettate dalle linee guida Microsoft, per la stesura del codice.
-Sono stati adottati, come pattern di programmazione, dependency injection, MVC (per quanto possibile) e TDD, appoggiandosi a librerie esterne Nuget quali 
-Newtonsoft.Json e SimpleInjector. I metodi sono asincroni e le property thread-safe.
+Sono stati adottati, come pattern di programmazione, dependency injection, MVC (per quanto possibile) e TDD, appoggiandosi a librerie esterne Nuget\footnote{
+    \textbf{Nuget} è un package manager per .NET. \href{https://www.nuget.org/}{Sito ufficiale}
+} quali 
+\href{https://www.nuget.org/packages/newtonsoft.json/}{Newtonsoft.Json} e \href{https://www.nuget.org/packages/SimpleInjector/}{SimpleInjector}. I metodi sono asincroni e le property thread-safe.
 
 La solution è stata partizionata in vari progetti; il progetto Business contiene la business-logic 
 (comprendente servizi, metodi estensione, l'implementazione del client e un wrapper del Container di SimpleInjector) e utilizza i modelli di Domain.
 
-In Test sono contenute le classi di testing e le fixture XUnit, mentre in Documentation sono presenti i file generati dal tool Wyam per la documentazione.
+In Test sono contenute le classi di testing e le fixture XUnit\footnote{
+    \textbf{XUnit} è una libreria \href{https://www.nuget.org/packages/xunit/}{Nuget} che mette a disposizione un tool per eseguire unit test. \href{https://github.com/xunit/xunit}{Repository GitHub}    
+}, mentre in Documentation sono presenti i file generati dal tool Wyam\footnote{
+    \textbf{Wyam} è un tool che permette l'esportazione della documentazione del codice C$\#$ 
+    (sottoforma di \href{https://docs.microsoft.com/en-us/dotnet/csharp/codedoc}{tag xml}) in pagine html. \href{https://wyam.io/}{Sito ufficiale}
+} per la documentazione.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Il Client}
 
-Dalla documentazione ufficale delle API di Dandelion si evince che ogni end-point richiede uno o più testi ed una serie di parametri alcuni obbligatori ed altri 
+Dalla documentazione ufficale delle API di Dandelion si evince che ogni end-point richiede uno o più testi da analizzare ed una serie di parametri, alcuni obbligatori ed altri 
 opzionali; 
 pertanto sono stati creati dei modelli, coerenti con tali definizioni, che, passati in argomento a dei servizi, ritornano i DTO delle risposte degli end-point di Dandelion.
 
-Ogni servizio controlla che i parametri inseriti dall'utente rispettino i constraints definiti nella documentazione e costruisce, tramite i metodi \textit{ContentBuilder} e  
-\textit{UriBuilder}, un dizionario di parametri e l'URI che identifica l'end-point. 
+Ogni servizio controlla che i parametri inseriti dall'utente rispettino i constraints definiti nella documentazione e costruisce, tramite i metodi \code{ContentBuilder()} e  
+\code{UriBuilder()}, un dizionario di parametri e l'URI che identifica l'end-point. 
 
-Infine il servizio chiama il metodo generico \textit{CallApiAsync}, passandogli il content, la URI ed il metodo HTTP; 
+Infine il servizio chiama il metodo generico \code{CallApiAsync()}, passandogli il content, la URI ed il metodo HTTP; 
 nel metodo di chiamata si è scelto di gestire separatamente i metodi HTTP GET e DELETE dato che essi non permettono il passaggio parametri nel boby 
-della chiamata HTTP. Pertanto è stato necessario inviare il content come query parameter facendone il percent-encoding.
+della chiamata. Pertanto è stato necessario inviare il content come query parameter facendone il percent-encoding.
 
-Dandelion ammette sia chiamate in GET che in POST ai servizi, tuttavia nel caso del metodo GET non è garantito il corretto 
-funzionamento del servizio per testi che superano i 2000 caratteri circa; pertanto nel caso in cui l'utente non specifichi il metodo HTTP, di default verrà
+Dandelion ammette sia chiamate GET che POST ai servizi, tuttavia nel caso del metodo GET non è garantito il corretto 
+funzionamento del servizio per testi che superano i 2000 caratteri; pertanto nel caso in cui l'utente non specifichi il metodo HTTP, di default verrà
 usato il metodo POST.
 
 Se la chiamata è andata a buon fine il JSON di ritorno viene mappato in un DTO specifico, a seconda del servizio scelto, e restitiuito direttamente all'utente.
 
-\begin{lstlisting}[style=CSharpStyle]
+\begin{lstlisting}[style=CSharpStyle, caption=Metodo generico del client per le chiamate HTTP]
 public Task<T> CallApiAsync<T>(string uri, List<KeyValuePair<string, string>> content, HttpMethod method = null)
 {
     var result = new HttpResponseMessage();

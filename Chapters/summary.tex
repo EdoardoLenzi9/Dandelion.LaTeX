@@ -1,8 +1,19 @@
 \chapter*{Sommario} % senza numerazione
 \label{sommario}
 
-Il progetto di tesi è il frutto di un tirocinio presso SpazioDati ed una successiva collaborazione al progetto Wikidata StrepHit. La tesi consiste principalmente in tre parti separate, ogniuna delle quali è
-legata al servizio online Dandelion (creato da SpazioDati), che verrà brevemente introdotto nelle prossime pagine. 
+Il progetto di tesi è il frutto di un tirocinio presso SpazioDati\footnote{
+    \textbf{SpazioDati} è un'azienda con una sede operativa a Trento ed una a Firenze che si occupa principalmente di tecnologie Big Data e Semantic Web.
+    Come riportato sul loro sito \href{https://spaziodati.eu/it/}{spaziodati.eu} stanno costruendo un knowledge-graph di alta qualità, accessibile attraverso delle semplici API 
+    su \href{https://dandelion.eu/}{dandelion.eu}.
+}
+ed una successiva collaborazione al progetto Wikidata StrepHit\footnote{
+    \textbf{StrepHit} è un progetto di \href{https://www.wikidata.org/wiki/Wikidata:Main_Page}{Wikidata} nato l'anno scorso con il fine di implementare uno \href{https://www.mediawiki.org/wiki/StrepHit}{script} 
+    capace di analizzare testi e tradurli in Wikidata statements (o \href{https://www.wikidata.org/wiki/Help:QuickStatements}{QuickStatements}). 
+}. 
+
+La tesi si divide principalmente in tre parti separate, ogniuna delle quali legata al servizio online Dandelion\footnote{
+    \textbf{Dandelion} è un servizio online fornito da SpazioDati che mette a disposizione dell'utente servizi di analisi semantica testuale.
+}, che verrà brevemente introdotto nelle prossime pagine. 
 
 Il primo capitolo ha lo scopo di introdurre, al lettore, gli applicativi, le tecnologie ed i servizi usati durante il progetto di tesi, descrivendoli sommariamente; 
 nei tre capitoli successivi, invece, si entrerà maggiormente nel dettaglio del progetto descrivendo i tre ambiti fondamentali su cui si è focalizzata la tesi.
@@ -10,11 +21,11 @@ nei tre capitoli successivi, invece, si entrerà maggiormente nel dettaglio del 
 La prima parte del progetto consiste nell'implementazione di un client in C$\#$, finalizzato allo scopo di creare una libreria di metodi \lq\lq plug$\&$play\rq\rq\ 
 per chiamare automaticamente le RESTful-API del servizio Dandelion. 
 
-Durante lo sviluppo il codice è stato regolarmente caricato online, sulla piattaforma GitHub, per agevolare la periodica revisione del codice effettuata dal team di SpazioDati; 
-per rendere lo sviluppo più efficiente si è cercato di seguire i principi del TDD (Test Driven Development), affidandosi al servizio di testing automatico Travis 
+Durante lo sviluppo il codice è stato regolarmente caricato online, sulla piattaforma \href{https://github.com/}{GitHub}, per agevolare la periodica revisione del codice effettuata dal team di SpazioDati; 
+per rendere lo sviluppo più efficiente si è cercato di seguire i principi del TDD (Test Driven Development), affidandosi al servizio di testing automatico \href{https://www.travis-ci.com/}{Travis} 
 per validare automaticamente ogni pull-request su GitHub. 
 
-Una volta completata la libreria e l'annessa documentazione è stata compilata la dll e resa pubblica su Nuget; 
+Una volta completata la libreria e l'annessa documentazione è stata compilata la dll e resa pubblica su \href{https://www.nuget.org/}{Nuget}; 
 pertanto la libreria è ora facilmente integrabile in qualsiasi progetto C$\#$.
 
 La seconda parte del progetto riguarda l'analisi e il test di un algoritmo presente nel backend di Dandelion al fine di ottimizzarlo. 
@@ -22,10 +33,13 @@ Il task nasce dalla necessità pratica di ridurre la memoria necessaria alle mac
 Partendo dall'implementazione attualmente in uso si sono studiate delle implementazioni alternative per massimizzare la velocità dell'algoritmo e minimizzare 
 la memoria occupata dalle strutture dati di appoggio dell'algoritmo. 
 
-L'ultima parte gravita attorno al progetto StrepHit di Wikidata, un progetto nato un anno fa in FBK ed approvato dalla comunity di Wikidata. 
+L'ultima parte gravita attorno al progetto StrepHit di Wikidata, un progetto nato un anno fa in \href{https://www.fbk.eu/it/}{FBK} ed approvato dalla comunity di Wikidata. 
 Il progetto nasce per arricchire i database di Wikidata con riferimenti a fonti esterne (tendenzialmente altri siti web) in modo da dare all'utente, fruitore dell'enciclopedia, informazioni sempre più corrette,
-validate anche da un sito esterno e non più solo dalla comunity di Wikipedia/Wikidata.
+validate anche da un siti esterni e non più solo dalla comunity di Wikipedia/Wikidata.
 
 Il progetto è fortemente legato a Dandelion perchè nelle logiche interne dello script di StrepHit si fa largo uso dei servizi offerti da Dandelion per l'analisi testuale delle pagine dei siti esterni.
-L'ultima attività consiste nell'implementazione di uno script in python (versione 2.7) utile ad arricchire un dataset di quickstatements aggiungendo riferimenti a proprietà di Wikidata.
-Per fare ciò è stato necessario studiare il linguaggio python ed il funzionamento generale di Wikidata per poi realizzare uno script capace di interfacciarsi con l'endpoint SPARQL di Wikidata.
+L'ultima attività consiste nell'implementazione di uno script in Python (versione 2.7) utile ad arricchire un dataset di quickstatements aggiungendo riferimenti a proprietà di Wikidata.
+Per fare ciò è stato necessario studiare il linguaggio Python ed il funzionamento generale di Wikidata per poi realizzare uno script capace di interfacciarsi con l'endpoint SPARQL\footnote{
+    Wikidata si basa su un knowledge base \href{https://www.w3.org/RDF/}{RDF} e mette a disposizione un end-point per eseguire query su quest'ultimo; \href{https://www.w3.org/TR/rdf-sparql-query/}{SPARQL} 
+    è il linguaggio di query definito da \href{https://www.w3.org/}{W3C} per il framework RDF, adottato da questo end-point.
+} di Wikidata.

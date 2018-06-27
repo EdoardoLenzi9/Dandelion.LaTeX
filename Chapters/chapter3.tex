@@ -1,13 +1,13 @@
 \chapter{Calcolo della Relatedness}
 
-La seconda parte del progetto riguarda l'analisi di due metodi critici (\textit{readDump()} e \textit{rel(int a, int b)}) che servono a 
+La seconda parte del progetto riguarda l'analisi di due metodi critici (\code{readDump()} e \code{rel(int a, int b)}) che servono a 
 calcolare, dati gli identificativi di due entità semantiche, il loro valore di correlazione (relatedness). 
 
 Per fare ciò si ha a disposizione un dump dove sono salvati tutti i valori di correlazione (sopra una certa soglia minima) per ogni coppia di entità. 
 
-Il metodo \textit{readDump()} serve a caricare in memoria i valori del dump 
-sottoforma di \lq\lq matrice\rq\rq\ mentre il metodo \textit{rel(int a, int b)} serve a fare una ricerca nella struttura dati per poi ritornare il valore di 
-correlazione fra le entità con identificativi \textit{a} e \textit{b}.
+Il metodo \code{readDump()} serve a caricare in memoria i valori del dump 
+sottoforma di \lq\lq matrice\rq\rq\ mentre il metodo \code{rel(int a, int b)} serve a fare una ricerca nella struttura dati per poi ritornare il valore di 
+correlazione fra le entità con identificativi \code{a} e \code{b}.
 
 Questa scelta implementativa, attualmente adottata, è sicuramente molto efficiente in termini di prestazioni ma sicuramente molto onerosa in termini di memoria; 
 pertanto il fine dell'analisi sarebbe quello di studiare/testare implementazioni alternative per ottimizzare le prestazioni e/o diminuire lo spreco di memoria.  
@@ -17,7 +17,7 @@ pertanto il fine dell'analisi sarebbe quello di studiare/testare implementazioni
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Il Dump}
-\begin{lstlisting}[style=TeXStyle]
+\begin{lstlisting}[style=TeXStyle, caption=Estratto del dump]
 53676192
 4922289
 0.01
@@ -49,11 +49,12 @@ e altri valori di configurazione quali \textit{minIntersection} e \textit{thresh
 La funzione map in un certo senso mappa \lq\lq al contrario\rq\rq\ gli id; infatti l'id massimo verrà mappato su 0, il penultimo id verrà mappato su 1 e così via.
 Nel caso del dump in questione abbiamo:
 
-\begin{lstlisting}[style=TeXStyle]
+\begin{lstlisting}[style=TeXStyle, caption=Esempio di funzione map e postingList]
 MaxId = 53676192
 NodeSize = 4922289
 
    ID		        MAP(ID)    POSTINGLIST
+...
 53676158    ->      7           null
 53676159    ->      6           FW/I...
 53676164    ->      5           NnAw...
@@ -68,7 +69,7 @@ Gli id presenti nel dump non sono ordinati ma le \textit{postingList} ad essi as
 
 Dalla sesta riga del dump in poi inizia la definizione della matrice, ogni riga è composta da tre valori separati da uno spazio. 
 Ad esempio se consideriamo la riga:
-\begin{lstlisting}[style=TeXStyle]
+\begin{lstlisting}[style=TeXStyle, caption=Riga del dump]
 53676164 5 NnAwQT/ZvTVJ05MeSfcdI0rMrg1LBmUH
 \end{lstlisting}
 
@@ -78,7 +79,7 @@ quest'ultima stringa, denominata \textit{postingList}, è la codifica in \textit
 
 \begin{center}
     \includegraphics[scale=0.55]{Sources/Img/c02_01.png}
-    \captionof{figure}{Some here}
+    \captionof{figure}{Encoding del dizionario nella postingList}
 \end{center}
 
 In pratica una tupla $<chiave,\ valore>$ è codificata sull'array da una sequenza di quattro byte; quindi partizionando l'array in gruppi da 4 byte 
@@ -102,7 +103,7 @@ che nella posting non sia presente nessuna chiave corrispondente a \textit{map(d
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Il Codice Nativo}
 
-\begin{lstlisting}[style=JavaStyle]
+\begin{lstlisting}[style=JavaStyle, caption=Implentazione nativa]
 // STRUTTURA DATI
 public class RelatednessMatrix {
     public int[] map;
@@ -215,16 +216,16 @@ public RelatednessMatrix readDump() throws Exception {
 }
 \end{lstlisting}
 
-Il metodo \textit{readDump()} legge riga per riga il dump e restituisce un'istanza di RelatednessMatrix valorizzata. 
-La funzione map viene salvata in un array di interi (\textit{data.map}) mentre la matrice con le correlazioni viene salvata in un 
-array bidimensionale di byte (\textit{data.matrix}).
+Il metodo \code{readDump()} legge riga per riga il dump e restituisce un'istanza di RelatednessMatrix valorizzata. 
+La funzione map viene salvata in un array di interi (\code{data.map}) mentre la matrice con le correlazioni viene salvata in un 
+array bidimensionale di byte (\code{data.matrix}).
 
-Il metodo \textit{rel(int a, int b)} invece calcola la funzione \textit{map} sugli id \textit{a} e \textit{b} dopodichè fa una binary search sulla postingList 
+Il metodo \code{rel(int a, int b)} invece calcola la funzione \code{map} sugli id \code{a} e \code{b} dopodichè fa una binary search sulla postingList 
 ottenuta da matrix[map(a)] (assumendo $map(a) > map(b)$). Infine se la ricerca binaria ha successo il valore di relatedness ottenuto va riscalato su una scala di valori 
 $[0, 255]$, convertito in float e riscalato nuovamente in base al valore di relatedness minima considerata (per escludere i valori al di sotto della relatedness minima,
 che non verranno mai usati).  
 
-\begin{lstlisting}[style=JavaStyle]
+\begin{lstlisting}[style=JavaStyle, caption=Conversione della relatedness da byte a float]
 byte by = array[pos * RelatednessMatrix.EL_SIZE + 3]; //considero il quarto byte 
 int byint = by + 128;   //scalo di 128 valori per ottenere una relatedness in [0, 255]
 
@@ -235,7 +236,7 @@ return data.configuredMinRel + byteRel * (1 - data.configuredMinRel);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Osservazioni}
-Considerato che il metodo readDump() viene chiamato una sola volta per allocare in memoria la struttura dati nel server, 
+Considerato che il metodo \code{readDump()} viene chiamato una sola volta per allocare in memoria la struttura dati nel server, 
 non ci sono particolari vincoli temporali per la sua esecuzione; per quanto riguarda il calcolo della relatedness invece 
 l'algoritmo dev'essere il più performane possibile.
 
@@ -320,7 +321,7 @@ Purtroppo è molto difficile stimare a priori lo spazio occupato da un Hash Map,
 il modo più rapido è confrontare con dei benchmark l'implementazione nativa contro quella basata su Hash Map.
 
 \subsection{Codice}
-\begin{lstlisting}[style=JavaStyle]
+\begin{lstlisting}[style=JavaStyle, caption=Implentazione con HashMap]
 public float Relatedness(int a, int b) throws Exception {
     if (a == b) {
         return 1f;
@@ -401,3 +402,5 @@ public RelatednessHashMap ReadDump(String dump) throws Exception {
     }
 }
 \end{lstlisting}
+
+[\textbf{TODO} implementazione alternativa fastutils e metrics di Prometheus e Grafana]

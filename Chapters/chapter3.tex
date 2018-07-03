@@ -30,7 +30,7 @@ pertanto il fine dell'analisi sarebbe quello di studiare/testare implementazioni
 ...
 \end{lstlisting}
 
-Leggendo le prime righe di un dump si nota che le prime cinque righe sono valori di inizializzazione mentre dalla sesta righa in poi troviamo le righe della matrice.
+Leggendo le prime righe di un dump si nota che le prime cinque righe sono valori di inizializzazione mentre dalla sesta riga in poi troviamo le righe della matrice.
 Il primo numero intero, denominato \textit{max$\_$id}, indica il limite massimo che gli id delle entità possono assumere; 
 dato che gli id delle entità non sono necessariamente sequenziali 
 (fra due di essi potrei avere dei \lq\lq buchi\rq\rq, degli intervalli in cui gli identificativi non sono associati ad alcuna entità) 
@@ -238,12 +238,12 @@ return data.configuredMinRel + byteRel * (1 - data.configuredMinRel);
 \subsection{Osservazioni}
 Considerato che il metodo \code{readDump()} viene chiamato una sola volta per allocare in memoria la struttura dati nel server, 
 non ci sono particolari vincoli temporali per la sua esecuzione; per quanto riguarda il calcolo della relatedness invece 
-l'algoritmo dev'essere il più performane possibile.
+l'algoritmo dev'essere il più performante possibile.
 
 Il codice nativo per il calcolo della relatedness costa $O(lg_2(n))$ (con $n=nodeSize$) per la ricerca binaria e O(1) per quanto riguarda le 
 istruzioni precedenti e successive a quest'ultima.
 
-Tolto un piccolo refact del codice che portebbe ad evitare tre moltiplicazione per ciclo nella binary search (non è necessario dividere e poi moltiplicare per 
+Tolta una piccola modifica al codice che portebbe ad evitare tre moltiplicazione per ciclo nella binary search (non è necessario dividere e poi moltiplicare per 
 RelatednessMatrix.EL$\_$SIZE), non sembra si possono migliorare di molto le prestazioni dell'algoritmo senza cambiare struttura dati.
 
 Una via percorribile per non \lq\lq pagare\rq\rq\ $O(lg_2(n))$ per la binary search potrebbe essere quella di allocare direttamente in memoria la matrice 

@@ -38,7 +38,7 @@ Dandelion ammette sia chiamate GET che POST ai servizi, tuttavia nel caso del me
 funzionamento del servizio per testi che superano i 2000 caratteri; pertanto nel caso in cui l'utente non specifichi il metodo HTTP, di default verrà
 usato il metodo POST.
 
-Se la chiamata è andata a buon fine il JSON di ritorno viene mappato in un DTO specifico, a seconda del servizio scelto, e restitiuito direttamente all'utente.
+Se la chiamata è andata a buon fine il JSON di ritorno viene mappato in un DTO specifico, a seconda del servizio scelto, e restituito direttamente all'utente.
 
 \begin{lstlisting}[style=CSharpStyle, caption=Metodo generico del client per le chiamate HTTP]
 public Task<T> CallApiAsync<T>(string uri, List<KeyValuePair<string, string>> content, HttpMethod method = null)
@@ -98,7 +98,7 @@ public Task<T> CallApiAsync<T>(string uri, List<KeyValuePair<string, string>> co
 \end{lstlisting}
 
 \section{Testing}
-La maggiorparte dei servizi è stata testata tramite il tool XUnit; principalmente sono stati eseguiti test di validazione, data la natura della libreria, appoggiandosi 
+La maggior parte dei servizi è stata testata tramite il tool XUnit; principalmente sono stati eseguiti test di validazione, data la natura della libreria, appoggiandosi 
 ad una fixture comune a tutti i test per l'inizializzazione dei servizi.
 
 è stato usato fin da subito il servizio online di testing automatico Travis, tramite il quale è stato possibile validare ogni rilascio facendo 

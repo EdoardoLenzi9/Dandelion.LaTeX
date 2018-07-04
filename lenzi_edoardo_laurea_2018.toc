@@ -34,3 +34,4 @@
 \contentsline {subsection}{\numberline {4.2.1}Struttura del progetto}{20}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Algoritmo}{20}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Refresh delle URL}{21}{subsection.4.2.3}
+\contentsline {chapter}{Bibliografia}{23}{subsection.4.2.3}

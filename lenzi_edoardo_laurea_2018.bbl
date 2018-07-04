@@ -1,0 +1,84 @@
+\begin{thebibliography}{10}
+
+\bibitem{api}
+\textbf{Application Programming Interface (API)}.
+\newblock
+  \href{https://it.wikipedia.org/wiki/Application_programming_interface}{https://it.wikipedia.org/wiki/Application$\_$programming$\_$interface}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata alle API.
+
+\bibitem{dandelion}
+\textbf{Dandelion}.
+\newblock \href{https://dandelion.eu/}{https://dandelion.eu}.
+\newblock Home page del progetto.
+
+\bibitem{fbk}
+\textbf{Fondazione Bruno Kessler (FBK)}.
+\newblock \href{https://www.fbk.eu/it/}{https://www.fbk.eu/it}.
+\newblock Pagina ufficiale.
+
+\bibitem{github}
+\textbf{GitHub}.
+\newblock \href{https://github.com/}{https://github.com}.
+\newblock Pagina ufficiale.
+
+\bibitem{nuget}
+\textbf{Nuget}.
+\newblock \href{https://www.nuget.org/}{https://www.nuget.org}.
+\newblock Pagina ufficiale del package manager per .NET.
+
+\bibitem{quickstatements}
+\textbf{QuickStatements}.
+\newblock
+  \href{https://www.wikidata.org/wiki/Help:QuickStatements}{https://www.wikidata.org/wiki/Help:QuickStatements}.
+\newblock Pagina Wikidata\cite{wikidata} dedicata (contentente anche la
+  descrizione completa della sintassi degli \lq\lq statements\rq\rq ).
+
+\bibitem{rest}
+\textbf{Representational State Transfer (REST)}.
+\newblock
+  \href{https://it.wikipedia.org/wiki/Representational_State_Transfer}{https://it.wikipedia.org/wiki/Representational$\_$State$\_$Transfer}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata a REST.
+
+\bibitem{rdf}
+\textbf{Resource Description Framework (RDF)}.
+\newblock \href{https://www.w3.org/RDF/}{https://www.w3.org/RDF}.
+
+\bibitem{sparql-query}
+\textbf{SPARQL Query}.
+\newblock
+  \href{https://www.w3.org/TR/rdf-sparql-query/}{https://www.w3.org/TR/rdf-sparql-query}.
+
+\bibitem{spaziodati}
+\textbf{SpazioDati}.
+\newblock \href{https://spaziodati.eu/it/}{https://spaziodati.eu/it}.
+\newblock Home page del sito ufficiale.
+
+\bibitem{strephit}
+\textbf{StrepHit}.
+\newblock
+  \href{https://www.mediawiki.org/wiki/StrepHit}{https://www.mediawiki.org/wiki/StrepHit}.
+\newblock Pagina \href{https://www.mediawiki.org/wiki/MediaWiki}{MediaWiki} con
+  tutti i dettagli del progetto.
+
+\bibitem{tdd}
+\textbf{TDD (Test Driven Development)}.
+\newblock
+  \href{https://it.wikipedia.org/wiki/Test_driven_development}{https://it.wikipedia.org/wiki/Test$\_$driven$\_$development}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata a TDD.
+
+\bibitem{w3c}
+\textbf{The World Wide Web Consortium (W3C)}.
+\newblock \href{https://www.w3.org/}{https://www.w3.org}.
+
+\bibitem{travis}
+\textbf{Travis}.
+\newblock \href{https://www.travis-ci.com/}{https://www.travis-ci.com/}.
+\newblock Pagina ufficiale.
+
+\bibitem{wikidata}
+\textbf{Wikidata}.
+\newblock
+  \href{https://www.wikidata.org/wiki/Wikidata:Main_Page}{https://www.wikidata.org}.
+\newblock Main page del portale.
+
+\end{thebibliography}

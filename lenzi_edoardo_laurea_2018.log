@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  3 JUL 2018 20:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  4 JUL 2018 22:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,7 +527,7 @@ enter-eps-converted-to.pdf Sources/logo_unitn_black_center.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=127, 293.095pt x 126.
+<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=130, 293.095pt x 126.
 4725pt>
 File: Sources/logo_unitn_black_center-eps-converted-to.pdf Graphic file (type p
 df)
@@ -661,7 +661,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [8])
 [9] (./Chapters/chapter3.tex
 Chapter 3.
-[10] <Sources/Img/c02_01.png, id=410, 320.19624pt x 223.83624pt>
+[10] <Sources/Img/c02_01.png, id=438, 320.19624pt x 223.83624pt>
 File: Sources/Img/c02_01.png Graphic file (type png)
 
 <use Sources/Img/c02_01.png>
@@ -712,7 +712,7 @@ Overfull \hbox (3.96992pt too wide) in paragraph at lines 76--78
  una forzatura perch^^Re soli-ta-mente si conoscono
  []
 
-<Sources/Img/c04_01.png, id=694, 847.165pt x 585.18625pt>
+<Sources/Img/c04_01.png, id=723, 847.165pt x 585.18625pt>
 File: Sources/Img/c04_01.png Graphic file (type png)
 
 <use Sources/Img/c04_01.png>
@@ -729,28 +729,69 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
 [20 <./Sources/Img/c04_01.png>]) [21] (./Chapters/conclusion.tex) [22]
-No file lenzi_edoardo_laurea_2018.bbl.
-(./Chapters/attachments.tex)
+(./lenzi_edoardo_laurea_2018.bbl
+
+LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 7.
+
+
+Overfull \hbox (88.78479pt too wide) in paragraph at lines 4--8
+[]\OT1/cmr/bx/n/10.95 Application Pro-gram-ming In-ter-face (API)\OT1/cmr/m/n/1
+0.95 .  []https://it.wikipedia.org/wiki/Application$[]$programming$[]$interface
+[].
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--35
+[]\OT1/cmr/bx/n/10.95 QuickStatements\OT1/cmr/m/n/10.95 .  []https://www.wikida
+ta.org/wiki/Help:QuickStatements[].  Pag-ina
+ []
+
+
+LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 40.
+
+
+Overfull \hbox (63.16177pt too wide) in paragraph at lines 37--41
+[]\OT1/cmr/bx/n/10.95 Representational State Trans-fer (REST)\OT1/cmr/m/n/10.95
+ .  []https://it.wikipedia.org/wiki/Representational$[]$State$[]$Transfer[].
+ []
+
+
+LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 67.
+
+) (./Chapters/attachments.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
+ [23
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
  (./lenzi_edoardo_laurea_2018.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
 Package rerunfilecheck Info: File `lenzi_edoardo_laurea_2018.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 2720E2959E563A7104DCA55E37A8869E;1873.
+(rerunfilecheck)             Checksum: 960773482B0E05D78D3800D7E299F4D3;1928.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
  ) 
 Here is how much of TeX's memory you used:
- 13207 strings out of 495028
- 188197 string characters out of 6181497
- 364577 words of memory out of 5000000
- 15766 multiletter control sequences out of 15000+600000
+ 13244 strings out of 495028
+ 188610 string characters out of 6181497
+ 365011 words of memory out of 5000000
+ 15782 multiletter control sequences out of 15000+600000
  20908 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 48i,18n,76p,736b,2868s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not ex
+ 48i,18n,76p,736b,2869s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
 t, replaced by a fixed one
@@ -819,10 +860,10 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lenzi_edoardo_laurea_2018.pdf (24 pages, 450554 bytes).
+Output written on lenzi_edoardo_laurea_2018.pdf (25 pages, 460456 bytes).
 PDF statistics:
- 888 PDF objects out of 1000 (max. 8388607)
- 832 compressed objects within 9 object streams
- 435 named destinations out of 1000 (max. 500000)
- 264 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 942 PDF objects out of 1000 (max. 8388607)
+ 885 compressed objects within 9 object streams
+ 454 named destinations out of 1000 (max. 500000)
+ 272 words of extra memory for PDF output out of 10000 (max. 10000000)
 

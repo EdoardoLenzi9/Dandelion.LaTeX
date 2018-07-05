@@ -11,10 +11,18 @@
   \url{https://it.wikipedia.org/wiki/Application_programming_interface}.
 \newblock Pagina Wikipedia\cite{wikipedia} dedicata alle API.
 
+\bibitem{code-doc}
+\textbf{Code documentation}.
+\newblock \url{https://docs.microsoft.com/en-us/dotnet/csharp/codedoc}.
+
 \bibitem{dandelion}
 \textbf{Dandelion}.
 \newblock \url{https://dandelion.eu/}.
 \newblock Home page del progetto.
+
+\bibitem{dandelion-doc}
+\textbf{Dandelion API documentation}.
+\newblock \url{https://dandelion.eu/docs/}.
 
 \bibitem{entity-extraction-demo}
 \textbf{Dandelion, entity extraction demo}.
@@ -48,6 +56,11 @@
 \textbf{DBpedia}.
 \newblock \url{https://wiki.dbpedia.org/about}.
 \newblock Main page del portale.
+
+\bibitem{dependency-injection}
+\textbf{Dependency Injection}.
+\newblock \url{https://en.wikipedia.org/wiki/Dependency_injection}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata alla dependency injection.
 
 \bibitem{docker}
 \textbf{Docker}.
@@ -85,10 +98,25 @@
 \textbf{Hub Docker}.
 \newblock \url{https://hub.docker.com/}.
 
+\bibitem{inversion-of-control}
+\textbf{Inversion of control (IoC)}.
+\newblock \url{https://en.wikipedia.org/wiki/Inversion_of_control}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata a IoC.
+
 \bibitem{jmx}
 \textbf{JMX Exporter}.
 \newblock \url{https://github.com/prometheus/jmx_exporter}.
 \newblock GitHub page.
+
+\bibitem{mvc}
+\textbf{Model-View-Controller (MVC)}.
+\newblock \url{https://it.wikipedia.org/wiki/Model-view-controller}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata a MVC.
+
+\bibitem{newtonsoft-json}
+\textbf{Newtonsoft.Json}.
+\newblock \url{https://www.nuget.org/packages/newtonsoft.json/}.
+\newblock Pagina Nuget \cite{nuget} dedicata.
 
 \bibitem{nuget}
 \textbf{Nuget}.
@@ -124,6 +152,11 @@
 \bibitem{rdf}
 \textbf{Resource Description Framework (RDF)}.
 \newblock \url{https://www.w3.org/RDF/}.
+
+\bibitem{simple-injector}
+\textbf{SimpleInjector}.
+\newblock \url{https://www.nuget.org/packages/SimpleInjector/}.
+\newblock Pagina Nuget \cite{nuget} dedicata.
 
 \bibitem{sparql-end-point}
 \textbf{SPARQL endp-point}.
@@ -177,5 +210,18 @@
 \textbf{Wikimedia}.
 \newblock \url{https://www.wikimedia.org/}.
 \newblock Main page del portale.
+
+\bibitem{wyam}
+\textbf{Wyam}.
+\newblock \url{https://wyam.io/}.
+
+\bibitem{xunit}
+\textbf{XUnit}.
+\newblock \url{https://www.nuget.org/packages/xunit/}.
+\newblock Pagina Nuget \cite{nuget} dedicata.
+
+\bibitem{xunit-repo}
+\textbf{XUnit GitHub repository}.
+\newblock \url{https://github.com/xunit/xunit}.
 
 \end{thebibliography}

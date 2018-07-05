@@ -107,12 +107,12 @@ La prima direttiva \code{FROM} specifica l'immagine di base su cui verrà edific
 tutto il contenuto della cartella corrente dentro l'ambiente virtuale alla path specificata (\textit{/usr/src/dandelion}) e a settare quest'ultima come \textit{working directory} da cui 
 partirà il container docker. 
 
-Infine la direttiva \code{CMD} specifica il comando che verrà eseguito una volta finito il setup dell'ambiente, in questo caso viene eseguito \code{Dandelion.jar} con un particolare
+Infine la direttiva \code{CMD} specifica il comando che verrà eseguito una volta finito il setup dell'ambiente, in questo caso verrà lanciato \code{Dandelion.jar} con un particolare
 \code{javaagent} chiamato JMX\footnote{
     \textbf{JMX Exporter}\cite{jmx} è un progetto GitHub, open source, che fornisce un javaagent capace di esportare ed esporre metrics per il software 
     Prometheus\cite{prometheus}.
 };
-questo javaagent è un exporter che si occupa di monitorare l'applicativo e di esportare in tempo reale le relative metrics che vengono esposte in un server locale su una porta a scelta 
+questo tool è un exporter che si occupa di monitorare l'applicativo e di esportare in tempo reale le relative metrics che vengono esposte in un server locale su una porta a scelta 
 (8080 in questo caso).
 
 Per evitare di effettuare una build del \code{Dockerfile} ogni volta che modifichiamo il codice sorgente Java, è possibile mappare la cartella corrente con la working directory 
@@ -151,14 +151,15 @@ Questo servizio rende possibile l'interazione con il knowledge base direttamente
     https://query.wikidata.org/bigdata/namespace/wdq/sparql?query={SPARQL}
 \end{lstlisting}
 
+\subsection{StrepHit}
 StrepHit\cite{strephit} è un progetto nato l'anno scorso, seguito da un team in FBK, coordinato da Marco Fossati; il progetto prevedeva la creazione di un applicativo, scritto prevalentemente 
 in Python, capace di analizzare testi e tradurli in Wikidata statements (o QuickStatements\cite{quickstatements}).  
 
-QuickStatemens è un tool, scritto da Magnus Manske, che definisce un linguaggio volto a descrivere/modificare elementi Wikidata. Questo linguaggio è ormai diventato uno standard 
+QuickStatements è un tool, scritto da Magnus Manske, che definisce un linguaggio volto a descrivere/modificare elementi Wikidata. Questo linguaggio è ormai diventato uno standard 
 per quanto riguarda Wikidata, tant'è che la nomenclatura degli elementi del knowledge base seguono gli standard dettati da Quickstatements.
 
 \subsection{SPARQL}
-SPARQL è il linguaggio di query definito da W3C per RDF. Le query sono molto affini al SQL, infatti ne condividono molte key-word, la differenza sta nel fatto che i dati ora 
+SPARQL è il linguaggio di query definito da W3C per RDF. Le query sono molto affini a quelle scritte in SQL, infatti ne condividono molte key-word, la differenza sta nel fatto che i dati ora 
 seguono i modelli RDF pertanto avranno sempre un \code{item}, una \code{property} e un \code{value}.
 
 Wikidata mette a disposizione un'interfaccia\cite{sparql-ui} che permette di lanciare manualmente query SPARQL sul knowledge base

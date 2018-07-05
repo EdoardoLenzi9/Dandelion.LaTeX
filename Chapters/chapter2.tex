@@ -5,26 +5,38 @@
 \section{Struttura Generale}
 
 Per l'implementazione si è cercato di seguire le best practices, dettate dalle linee guida Microsoft, per la stesura del codice.
-Sono stati adottati, come pattern di programmazione, dependency injection, MVC (per quanto possibile) e TDD, appoggiandosi a librerie esterne Nuget\footnote{
-    \textbf{Nuget} è un package manager per .NET. \href{https://www.nuget.org/}{Sito ufficiale}
-} quali 
-\href{https://www.nuget.org/packages/newtonsoft.json/}{Newtonsoft.Json} e \href{https://www.nuget.org/packages/SimpleInjector/}{SimpleInjector}. I metodi sono asincroni e le property thread-safe.
+Sono stati adottati, come pattern di programmazione, dependency injection\footnote{
+    \textbf{Dependency injection}\cite{dependency-injection} è un pattern di programmazione che prevede la risoluzione automatica delle dipendenze delle classi 
+    (può essere usata direttamente nel costruttore o nei metodi) tramite un injector (inversion of control).
 
-La solution è stata partizionata in vari progetti; il progetto Business contiene la business-logic 
-(comprendente servizi, metodi estensione, l'implementazione del client e un wrapper del Container di SimpleInjector) e utilizza i modelli di Domain.
+        \textbf{Inversion of control}\cite{inversion-of-control} è una macro categoria di pattern (ingloba al suo interno anche dependency injection)
+        secondo cui, in certi punti del codice, si riceve il controllo di determinate funzioni di un framework.
+}, MVC\footnote{
+    \textbf{Model-View-Controller (MVC)}\cite{mvc} è un pattern di programmazione che prevede un architettura multi-tier con una netta divisione fra modelli, 
+    business logic e interfaccia utente (in questo caso praticamente assente).
+} (per quanto possibile) e TDD, appoggiandosi a librerie esterne Nuget\footnote{
+    \textbf{Nuget}\cite{nuget} è un package manager per .NET.
+} quali \code{Newtonsoft.Json}\cite{newtonsoft-json} e \code{SimpleInjector}\cite{simple-injector}. 
 
-In Test sono contenute le classi di testing e le fixture XUnit\footnote{
-    \textbf{XUnit} è una libreria \href{https://www.nuget.org/packages/xunit/}{Nuget} che mette a disposizione un tool per eseguire unit test. \href{https://github.com/xunit/xunit}{Repository GitHub}    
-}, mentre in Documentation sono presenti i file generati dal tool Wyam\footnote{
-    \textbf{Wyam} è un tool che permette l'esportazione della documentazione del codice C$\#$ 
-    (sottoforma di \href{https://docs.microsoft.com/en-us/dotnet/csharp/codedoc}{tag xml}) in pagine html. \href{https://wyam.io/}{Sito ufficiale}
+Si è cercato di adottare il più possibile i dettami della programmazione asincrona e di rendere il client thread-safe.
+
+La solution\footnote{
+    \textbf{Solution} è un file, con estensione \code{.sln}, che serve per raggruppare più progetti C$\#$ in un unico macro contenitore.  
+} è stata partizionata in vari progetti; il progetto \code{Business} contiene la business-logic 
+(comprendente servizi, metodi estensione, l'implementazione del client e un wrapper del \code{Container} di \code{SimpleInjector}) e utilizza i modelli di \code{Domain}.
+
+In \code{Test} sono contenute le classi di testing e le fixture \code{XUnit}\footnote{
+    \textbf{XUnit}\cite{xunit-repo} è una libreria Nuget\cite{xunit} che mette a disposizione un tool per eseguire unit test.     
+}, mentre in \code{Documentation} sono presenti i file generati dal tool Wyam\footnote{
+    \textbf{Wyam}\cite{wyam} è un tool che permette l'esportazione della documentazione del codice C$\#$ 
+    (sottoforma di tag xml\cite{code-doc}) in pagine html.
 } per la documentazione.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Il Client}
 
-Dalla documentazione ufficale delle API di Dandelion si evince che ogni end-point richiede uno o più testi da analizzare ed una serie di parametri, alcuni obbligatori ed altri 
-opzionali; 
+Dalla documentazione ufficale\cite{dandelion-doc} delle API di Dandelion si evince che ogni end-point richiede uno o più testi da analizzare ed una serie di parametri, 
+alcuni obbligatori ed altri opzionali; 
 pertanto sono stati creati dei modelli, coerenti con tali definizioni, che, passati in argomento a dei servizi, ritornano i DTO delle risposte degli end-point di Dandelion.
 
 Ogni servizio controlla che i parametri inseriti dall'utente rispettino i constraints definiti nella documentazione e costruisce, tramite i metodi \code{ContentBuilder()} e  
@@ -109,9 +121,46 @@ Infine le classi e i metodi più rilevanti sono stati commentati tramite i tag X
 HTML è stata generata automaticamente tramite il tool Wyam.
 
 \section{Nuget}
-La dll generata dalla compilazione della libreria è stata infine documentata sotto il profilo delle dipendenze, generando il file .nuspec, ed inclusa nel file .nupkg
-tramite l'apposito tool fornito da Nuget. Il tutto è stato caricato sul portale online Nuget ed è ora possibile includerlo in un progetto tramite il comando cli:
+La \code{.dll} generata dalla compilazione della libreria è stata infine documentata sotto il profilo delle dipendenze, generando il file \code{.nuspec}, ed inclusa nel file 
+\code{.nupkg} tramite l'apposito tool fornito da Nuget. Il tutto è stato caricato sul portale online Nuget ed è ora possibile includerlo in un progetto tramite il comando cli:
 
-\begin{lstlisting}[style=TexStyle]
+\begin{lstlisting}[style=TexStyle, caption=Comando cli per includere il client in un progetto]    
 $ dotnet add package SpazioDati.Dandelion
+\end{lstlisting}
+
+\section{Demo}
+Per provare il client basta creare un programma cli di test:
+
+\begin{lstlisting}[style=TexStyle, caption=Creazione di un progetto demo]    
+    $ mkdir Demo && cd Demo
+    $ dotnet new console
+    $ dotnet add package SpazioDati.Dandelion
+    $ dotnet restore
+\end{lstlisting}
+
+Nel file \code{Program.cs} sostituire il seguente codice e lanciare il programma:
+\begin{lstlisting}[style=CSharpStyle, caption=Codice per chiamare Entity Extraction API]    
+    using System;
+    using System.Net.Http;
+    using Newtonsoft.Json;
+    using SpazioDati.Dandelion.Business;
+    using SpazioDati.Dandelion.Domain.Models;
+    
+    namespace Demo
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                var token = "<your-token>";
+                var text = "the quick brown fox jumps over the lazy dog";
+                var entities = DandelionUtils.GetEntitiesAsync(new EntityExtractionParameters{Token = token, Text = text, HttpMethod = HttpMethod.Post});
+                Console.WriteLine(JsonConvert.SerializeObject(entities));
+            }
+        }
+    }
+\end{lstlisting}   
+
+\begin{lstlisting}[style=TexStyle, caption=Compilare e lanciare il programma]    
+    $ dotnet run
 \end{lstlisting}

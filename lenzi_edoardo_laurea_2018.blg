@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: lenzi_edoardo_laurea_2018.aux
 The style file: plain.bst
 Database file #1: biblio.bib
-Illegal end of database file---line 294 of file biblio.bib
+Illegal end of database file---line 350 of file biblio.bib
  : }
  :  
 I'm skipping whatever remains of this entry
@@ -45,45 +45,55 @@ Warning--to sort, need author or key in docker-grafana
 Warning--to sort, need author or key in grafana
 Warning--to sort, need author or key in sparql-ui
 Warning--to sort, need author or key in sparql-end-point
-You've used 38 entries,
+Warning--to sort, need author or key in dependency-injection
+Warning--to sort, need author or key in inversion-of-control
+Warning--to sort, need author or key in mvc
+Warning--to sort, need author or key in newtonsoft-json
+Warning--to sort, need author or key in simple-injector
+Warning--to sort, need author or key in xunit-repo
+Warning--to sort, need author or key in xunit
+Warning--to sort, need author or key in wyam
+Warning--to sort, need author or key in code-doc
+Warning--to sort, need author or key in dandelion-doc
+You've used 48 entries,
             2118 wiz_defined-function locations,
-            622 strings with 7640 characters,
-and the built_in function-call counts, 6260 in all, are:
-= -- 613
-> -- 38
+            656 strings with 8688 characters,
+and the built_in function-call counts, 7904 in all, are:
+= -- 775
+> -- 48
 < -- 0
-+ -- 38
++ -- 48
 - -- 0
-* -- 192
-:= -- 700
-add.period$ -- 98
-call.type$ -- 38
-change.case$ -- 114
+* -- 242
+:= -- 882
+add.period$ -- 124
+call.type$ -- 48
+change.case$ -- 144
 chr.to.int$ -- 0
-cite$ -- 76
-duplicate$ -- 266
-empty$ -- 875
+cite$ -- 96
+duplicate$ -- 336
+empty$ -- 1105
 format.name$ -- 0
-if$ -- 1564
+if$ -- 1976
 int.to.chr$ -- 0
-int.to.str$ -- 38
+int.to.str$ -- 48
 missing$ -- 0
-newline$ -- 177
+newline$ -- 223
 num.names$ -- 0
-pop$ -- 350
+pop$ -- 442
 preamble$ -- 1
-purify$ -- 76
+purify$ -- 96
 quote$ -- 0
-skip$ -- 236
+skip$ -- 298
 stack$ -- 0
-substring$ -- 190
-swap$ -- 38
+substring$ -- 240
+swap$ -- 48
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 152
-warning$ -- 38
+type$ -- 192
+warning$ -- 48
 while$ -- 0
-width$ -- 40
-write$ -- 312
+width$ -- 50
+write$ -- 394
 (There was 1 error message)

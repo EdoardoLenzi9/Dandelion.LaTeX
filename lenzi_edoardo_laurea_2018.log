@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  5 JUL 2018 02:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  5 JUL 2018 23:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,7 +527,7 @@ enter-eps-converted-to.pdf Sources/logo_unitn_black_center.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=130, 293.095pt x 126.
+<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=138, 293.095pt x 126.
 4725pt>
 File: Sources/logo_unitn_black_center-eps-converted-to.pdf Graphic file (type p
 df)
@@ -667,7 +667,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [8])
 [9] (./Chapters/chapter3.tex
 Chapter 3.
-[10] <Sources/Img/c02_01.png, id=456, 320.19624pt x 223.83624pt>
+[10] <Sources/Img/c02_01.png, id=513, 320.19624pt x 223.83624pt>
 File: Sources/Img/c02_01.png Graphic file (type png)
 
 <use Sources/Img/c02_01.png>
@@ -718,7 +718,7 @@ Overfull \hbox (3.96992pt too wide) in paragraph at lines 76--78
  una forzatura perch^^Re soli-ta-mente si conoscono
  []
 
-<Sources/Img/c04_01.png, id=741, 847.165pt x 585.18625pt>
+<Sources/Img/c04_01.png, id=798, 847.165pt x 585.18625pt>
 File: Sources/Img/c04_01.png Graphic file (type png)
 
 <use Sources/Img/c04_01.png>
@@ -746,71 +746,85 @@ Underfull \hbox (badness 6641) in paragraph at lines 9--13
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--22
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
 []\OT1/cmr/bx/n/10.95 Dandelion, en-tity ex-trac-tion demo\OT1/cmr/m/n/10.95 . 
  []$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
 []\OT1/cmr/bx/n/10.95 Dandelion, sen-ti-ment anal-y-sis\OT1/cmr/m/n/10.95 .  []
 $\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
 []\OT1/cmr/bx/n/10.95 Dandelion, text clas-si-fi-ca-tion demo\OT1/cmr/m/n/10.95
  .  []$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--38
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
 []\OT1/cmr/bx/n/10.95 Dandelion, text sim-i-lar-ity demo\OT1/cmr/m/n/10.95 .  [
 ]$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
  []
 
 
-Underfull \hbox (badness 2245) in paragraph at lines 44--46
+Underfull \hbox (badness 2245) in paragraph at lines 52--54
 []\OT1/cmr/bx/n/10.95 Dandelion.Relatedness repos-i-tory\OT1/cmr/m/n/10.95 .  [
 ]$\OT1/cmtt/m/n/10.95 https : / / github . com / EdoardoLenzi9 / Dandelion .
  []
 
 
-Underfull \hbox (badness 2529) in paragraph at lines 114--118
-[]\OT1/cmr/bx/n/10.95 QuickStatements\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.
-95 https : / / www . wikidata . org / wiki / Help : QuickStatements$[]\OT1/cmr/
-m/n/10.95 .  Pag-ina
+LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 63.
+
+
+LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 104.
+
+
+LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 114.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--115
+[]\OT1/cmr/bx/n/10.95 Model-View-Controller (MVC)\OT1/cmr/m/n/10.95 .  []$\OT1/
+cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki /
  []
 
 [23
 
 ]
+Underfull \hbox (badness 2529) in paragraph at lines 142--146
+[]\OT1/cmr/bx/n/10.95 QuickStatements\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.
+95 https : / / www . wikidata . org / wiki / Help : QuickStatements$[]\OT1/cmr/
+m/n/10.95 .  Pag-ina
+ []
 
-LaTeX Warning: Citation `wikipedia' on page 24 undefined on input line 122.
+
+LaTeX Warning: Citation `wikipedia' on page 24 undefined on input line 150.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--123
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
 []\OT1/cmr/bx/n/10.95 Representational State Trans-fer (REST)\OT1/cmr/m/n/10.95
  .  []$\OT1/cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki /
  []
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 129--132
+Underfull \hbox (badness 1210) in paragraph at lines 162--165
 []\OT1/cmr/bx/n/10.95 SPARQL endp-point\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/1
 0.95 https : / / query . wikidata . org / bigdata / namespace / wdq / sparql ?
  []
 
 
-LaTeX Warning: Citation `sparql' on page 24 undefined on input line 136.
+LaTeX Warning: Citation `sparql' on page 24 undefined on input line 169.
 
 
-LaTeX Warning: Citation `mediawiki' on page 24 undefined on input line 155.
+LaTeX Warning: Citation `mediawiki' on page 24 undefined on input line 188.
 
 
-LaTeX Warning: Citation `wikipedia' on page 24 undefined on input line 160.
+LaTeX Warning: Citation `wikipedia' on page 24 undefined on input line 193.
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 158--161
+Underfull \hbox (badness 1436) in paragraph at lines 191--194
 []\OT1/cmr/bx/n/10.95 TDD (Test Driven De-vel-op-ment)\OT1/cmr/m/n/10.95 .  []$
 \OT1/cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki / Test _ driven _
  []
@@ -824,7 +838,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
 Package rerunfilecheck Info: File `lenzi_edoardo_laurea_2018.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 960773482B0E05D78D3800D7E299F4D3;1928.
+(rerunfilecheck)             Checksum: 67E05260D447D8AC5EBDD23E6DB6F525;2041.
 
 
 LaTeX Warning: There were undefined references.
@@ -832,15 +846,24 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
  ) 
 Here is how much of TeX's memory you used:
- 13297 strings out of 495028
- 189422 string characters out of 6181497
- 365821 words of memory out of 5000000
- 15815 multiletter control sequences out of 15000+600000
+ 13402 strings out of 495028
+ 190886 string characters out of 6181497
+ 366222 words of memory out of 5000000
+ 15878 multiletter control sequences out of 15000+600000
  20909 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  48i,18n,76p,736b,2869s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not ex
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
 t, replaced by a fixed one
@@ -899,10 +922,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lenzi_edoardo_laurea_2018.pdf (26 pages, 454000 bytes).
+Output written on lenzi_edoardo_laurea_2018.pdf (26 pages, 460624 bytes).
 PDF statistics:
- 999 PDF objects out of 1000 (max. 8388607)
- 941 compressed objects within 10 object streams
- 475 named destinations out of 1000 (max. 500000)
- 272 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1079 PDF objects out of 1200 (max. 8388607)
+ 1020 compressed objects within 11 object streams
+ 517 named destinations out of 1000 (max. 500000)
+ 288 words of extra memory for PDF output out of 10000 (max. 10000000)
 

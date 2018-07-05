@@ -3,6 +3,10 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: lenzi_edoardo_laurea_2018.aux
 The style file: plain.bst
 Database file #1: biblio.bib
+Illegal end of database file---line 294 of file biblio.bib
+ : }
+ :  
+I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in spaziodati
 Warning--to sort, need author or key in dandelion
 Warning--to sort, need author or key in wikidata
@@ -18,45 +22,68 @@ Warning--to sort, need author or key in fbk
 Warning--to sort, need author or key in rdf
 Warning--to sort, need author or key in sparql-query
 Warning--to sort, need author or key in w3c
-You've used 15 entries,
+Warning--to sort, need author or key in entity-extraction-demo
+Warning--to sort, need author or key in text-classification-demo
+Warning--to sort, need author or key in sentiment-analysis-demo
+Warning--to sort, need author or key in text-similarity-demo
+Warning--to sort, need author or key in dbpedia
+Warning--to sort, need author or key in wikimedia
+Warning--to sort, need author or key in dandelion-registration
+Warning--to sort, need author or key in git
+Warning--to sort, need author or key in latex-repo
+Warning--to sort, need author or key in strephit-repo
+Warning--to sort, need author or key in dandelion-repo
+Warning--to sort, need author or key in client-repo
+Warning--to sort, need author or key in docker
+Warning--to sort, need author or key in ant
+Warning--to sort, need author or key in open-jdk
+Warning--to sort, need author or key in hub-docker
+Warning--to sort, need author or key in jmx
+Warning--to sort, need author or key in prometheus
+Warning--to sort, need author or key in docker-prometheus
+Warning--to sort, need author or key in docker-grafana
+Warning--to sort, need author or key in grafana
+Warning--to sort, need author or key in sparql-ui
+Warning--to sort, need author or key in sparql-end-point
+You've used 38 entries,
             2118 wiz_defined-function locations,
-            552 strings with 6244 characters,
-and the built_in function-call counts, 2515 in all, are:
-= -- 249
-> -- 15
+            622 strings with 7640 characters,
+and the built_in function-call counts, 6260 in all, are:
+= -- 613
+> -- 38
 < -- 0
-+ -- 15
++ -- 38
 - -- 0
-* -- 77
-:= -- 290
-add.period$ -- 42
-call.type$ -- 15
-change.case$ -- 45
+* -- 192
+:= -- 700
+add.period$ -- 98
+call.type$ -- 38
+change.case$ -- 114
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 105
-empty$ -- 346
+cite$ -- 76
+duplicate$ -- 266
+empty$ -- 875
 format.name$ -- 0
-if$ -- 625
+if$ -- 1564
 int.to.chr$ -- 0
-int.to.str$ -- 15
+int.to.str$ -- 38
 missing$ -- 0
-newline$ -- 75
+newline$ -- 177
 num.names$ -- 0
-pop$ -- 144
+pop$ -- 350
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 76
 quote$ -- 0
-skip$ -- 83
+skip$ -- 236
 stack$ -- 0
-substring$ -- 75
-swap$ -- 15
+substring$ -- 190
+swap$ -- 38
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
-warning$ -- 15
+type$ -- 152
+warning$ -- 38
 while$ -- 0
-width$ -- 17
-write$ -- 131
-(There were 15 warnings)
+width$ -- 40
+write$ -- 312
+(There was 1 error message)

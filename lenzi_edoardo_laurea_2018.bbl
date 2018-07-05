@@ -1,84 +1,181 @@
 \begin{thebibliography}{10}
 
+\bibitem{ant}
+\textbf{Apache Ant}.
+\newblock \url{https://ant.apache.org/}.
+\newblock Pagina ufficiale.
+
 \bibitem{api}
 \textbf{Application Programming Interface (API)}.
 \newblock
-  \href{https://it.wikipedia.org/wiki/Application_programming_interface}{https://it.wikipedia.org/wiki/Application$\_$programming$\_$interface}.
+  \url{https://it.wikipedia.org/wiki/Application_programming_interface}.
 \newblock Pagina Wikipedia\cite{wikipedia} dedicata alle API.
 
 \bibitem{dandelion}
 \textbf{Dandelion}.
-\newblock \href{https://dandelion.eu/}{https://dandelion.eu}.
+\newblock \url{https://dandelion.eu/}.
 \newblock Home page del progetto.
+
+\bibitem{entity-extraction-demo}
+\textbf{Dandelion, entity extraction demo}.
+\newblock \url{https://dandelion.eu/semantic-text/entity-extraction-demo/}.
+
+\bibitem{dandelion-registration}
+\textbf{Dandelion registration page}.
+\newblock \url{https://dandelion.eu/accounts/register/}.
+
+\bibitem{sentiment-analysis-demo}
+\textbf{Dandelion, sentiment analysis}.
+\newblock \url{https://dandelion.eu/semantic-text/sentiment-analysis-demo/}.
+
+\bibitem{text-classification-demo}
+\textbf{Dandelion, text classification demo}.
+\newblock \url{https://dandelion.eu/semantic-text/text-classification-demo/}.
+
+\bibitem{text-similarity-demo}
+\textbf{Dandelion, text similarity demo}.
+\newblock \url{https://dandelion.eu/semantic-text/text-similarity-demo/}.
+
+\bibitem{latex-repo}
+\textbf{Dandelion.Latex repository}.
+\newblock \url{https://github.com/EdoardoLenzi9/Dandelion.LaTeX}.
+
+\bibitem{dandelion-repo}
+\textbf{Dandelion.Relatedness repository}.
+\newblock \url{https://github.com/EdoardoLenzi9/Dandelion.Relatedness}.
+
+\bibitem{dbpedia}
+\textbf{DBpedia}.
+\newblock \url{https://wiki.dbpedia.org/about}.
+\newblock Main page del portale.
+
+\bibitem{docker}
+\textbf{Docker}.
+\newblock \url{https://www.docker.com/}.
+\newblock Pagina ufficiale.
+
+\bibitem{strephit-repo}
+\textbf{DWikipedia.StrepHit repository}.
 
 \bibitem{fbk}
 \textbf{Fondazione Bruno Kessler (FBK)}.
-\newblock \href{https://www.fbk.eu/it/}{https://www.fbk.eu/it}.
+\newblock \url{https://www.fbk.eu/it/}.
 \newblock Pagina ufficiale.
+
+\bibitem{git}
+\textbf{Git}.
+\newblock \url{https://git-scm.com/}.
 
 \bibitem{github}
 \textbf{GitHub}.
-\newblock \href{https://github.com/}{https://github.com}.
+\newblock \url{https://github.com/}.
 \newblock Pagina ufficiale.
+
+\bibitem{docker-grafana}
+\textbf{Grafana}.
+\newblock \url{https://hub.docker.com/r/grafana/grafana/}.
+\newblock Docker image.
+
+\bibitem{grafana}
+\textbf{Grafana}.
+\newblock \url{https://grafana.com/}.
+\newblock Sito ufficiale.
+
+\bibitem{hub-docker}
+\textbf{Hub Docker}.
+\newblock \url{https://hub.docker.com/}.
+
+\bibitem{jmx}
+\textbf{JMX Exporter}.
+\newblock \url{https://github.com/prometheus/jmx_exporter}.
+\newblock GitHub page.
 
 \bibitem{nuget}
 \textbf{Nuget}.
-\newblock \href{https://www.nuget.org/}{https://www.nuget.org}.
+\newblock \url{https://www.nuget.org/}.
 \newblock Pagina ufficiale del package manager per .NET.
+
+\bibitem{open-jdk}
+\textbf{open-jdk}.
+\newblock \url{https://hub.docker.com/_/openjdk/}.
+\newblock Docker image.
+
+\bibitem{prometheus}
+\textbf{Prometheus}.
+\newblock \url{https://prometheus.io/}.
+\newblock Sito ufficiale.
+
+\bibitem{docker-prometheus}
+\textbf{Prometheus}.
+\newblock \url{https://hub.docker.com/r/prom/prometheus/}.
+\newblock Docker image.
 
 \bibitem{quickstatements}
 \textbf{QuickStatements}.
-\newblock
-  \href{https://www.wikidata.org/wiki/Help:QuickStatements}{https://www.wikidata.org/wiki/Help:QuickStatements}.
+\newblock \url{https://www.wikidata.org/wiki/Help:QuickStatements}.
 \newblock Pagina Wikidata\cite{wikidata} dedicata (contentente anche la
   descrizione completa della sintassi degli \lq\lq statements\rq\rq ).
 
 \bibitem{rest}
 \textbf{Representational State Transfer (REST)}.
-\newblock
-  \href{https://it.wikipedia.org/wiki/Representational_State_Transfer}{https://it.wikipedia.org/wiki/Representational$\_$State$\_$Transfer}.
+\newblock \url{https://it.wikipedia.org/wiki/Representational_State_Transfer}.
 \newblock Pagina Wikipedia\cite{wikipedia} dedicata a REST.
 
 \bibitem{rdf}
 \textbf{Resource Description Framework (RDF)}.
-\newblock \href{https://www.w3.org/RDF/}{https://www.w3.org/RDF}.
+\newblock \url{https://www.w3.org/RDF/}.
+
+\bibitem{sparql-end-point}
+\textbf{SPARQL endp-point}.
+\newblock
+  \url{https://query.wikidata.org/bigdata/namespace/wdq/sparql?query=<SPARQL>}.
+
+\bibitem{sparql-ui}
+\textbf{SPARQL interface}.
+\newblock \url{https://query.wikidata.org/}.
+\newblock Interfaccia online per lanciare query SPARQL\cite{sparql} su
+  Wikidata\cite{wikidata}.
 
 \bibitem{sparql-query}
 \textbf{SPARQL Query}.
-\newblock
-  \href{https://www.w3.org/TR/rdf-sparql-query/}{https://www.w3.org/TR/rdf-sparql-query}.
+\newblock \url{https://www.w3.org/TR/rdf-sparql-query/}.
 
 \bibitem{spaziodati}
 \textbf{SpazioDati}.
-\newblock \href{https://spaziodati.eu/it/}{https://spaziodati.eu/it}.
+\newblock \url{https://spaziodati.eu/it/}.
 \newblock Home page del sito ufficiale.
+
+\bibitem{client-repo}
+\textbf{SpazioDati.Dandelion-eu repository}.
+\newblock \url{https://github.com/EdoardoLenzi9/SpazioDati.Dandelion-eu}.
 
 \bibitem{strephit}
 \textbf{StrepHit}.
-\newblock
-  \href{https://www.mediawiki.org/wiki/StrepHit}{https://www.mediawiki.org/wiki/StrepHit}.
-\newblock Pagina \href{https://www.mediawiki.org/wiki/MediaWiki}{MediaWiki} con
-  tutti i dettagli del progetto.
+\newblock \url{https://www.mediawiki.org/wiki/StrepHit}.
+\newblock Pagina MediaWiki\cite{mediawiki} con tutti i dettagli del progetto.
 
 \bibitem{tdd}
 \textbf{TDD (Test Driven Development)}.
-\newblock
-  \href{https://it.wikipedia.org/wiki/Test_driven_development}{https://it.wikipedia.org/wiki/Test$\_$driven$\_$development}.
+\newblock \url{https://it.wikipedia.org/wiki/Test_driven_development}.
 \newblock Pagina Wikipedia\cite{wikipedia} dedicata a TDD.
 
 \bibitem{w3c}
 \textbf{The World Wide Web Consortium (W3C)}.
-\newblock \href{https://www.w3.org/}{https://www.w3.org}.
+\newblock \url{https://www.w3.org/}.
 
 \bibitem{travis}
 \textbf{Travis}.
-\newblock \href{https://www.travis-ci.com/}{https://www.travis-ci.com/}.
+\newblock \url{https://www.travis-ci.com/}.
 \newblock Pagina ufficiale.
 
 \bibitem{wikidata}
 \textbf{Wikidata}.
-\newblock
-  \href{https://www.wikidata.org/wiki/Wikidata:Main_Page}{https://www.wikidata.org}.
+\newblock \url{https://www.wikidata.org/wiki/Wikidata:Main_Page}.
+\newblock Main page del portale.
+
+\bibitem{wikimedia}
+\textbf{Wikimedia}.
+\newblock \url{https://www.wikimedia.org/}.
 \newblock Main page del portale.
 
 \end{thebibliography}

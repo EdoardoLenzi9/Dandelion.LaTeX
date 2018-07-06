@@ -24,11 +24,13 @@
 \BOOKMARK [2][-]{subsection.3.1.3}{Osservazioni}{section.3.1}% 24
 \BOOKMARK [1][-]{section.3.2}{Implementazione con Hash Map}{chapter.3}% 25
 \BOOKMARK [2][-]{subsection.3.2.1}{Codice}{section.3.2}% 26
-\BOOKMARK [0][-]{chapter.4}{StrepHit}{}% 27
-\BOOKMARK [1][-]{subsection.4.0.2}{Esempio di funzionamento}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.1}{SPARQL Query}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.2}{Lo script}{chapter.4}% 30
-\BOOKMARK [2][-]{subsection.4.2.1}{Struttura del progetto}{section.4.2}% 31
-\BOOKMARK [2][-]{subsection.4.2.2}{Algoritmo}{section.4.2}% 32
-\BOOKMARK [2][-]{subsection.4.2.3}{Refresh delle URL}{section.4.2}% 33
-\BOOKMARK [0][-]{subsection.4.2.3}{Bibliografia}{}% 34
+\BOOKMARK [2][-]{subsection.3.2.2}{Test}{section.3.2}% 27
+\BOOKMARK [0][-]{chapter.4}{StrepHit}{}% 28
+\BOOKMARK [1][-]{subsection.4.0.3}{Esempio di funzionamento}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.1}{SPARQL Query}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.2}{Lo script}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.2.1}{Struttura del progetto}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.2}{Algoritmo}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.3}{Refresh delle URL}{section.4.2}% 34
+\BOOKMARK [0][-]{chapter.5}{Conclusioni}{}% 35
+\BOOKMARK [0][-]{chapter.5}{Bibliografia}{}% 36

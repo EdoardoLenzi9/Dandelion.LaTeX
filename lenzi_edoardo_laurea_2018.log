@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  5 JUL 2018 23:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  6 JUL 2018 08:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,7 +527,7 @@ enter-eps-converted-to.pdf Sources/logo_unitn_black_center.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=138, 293.095pt x 126.
+<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=146, 293.095pt x 126.
 4725pt>
 File: Sources/logo_unitn_black_center-eps-converted-to.pdf Graphic file (type p
 df)
@@ -667,37 +667,27 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [8])
 [9] (./Chapters/chapter3.tex
 Chapter 3.
-[10] <Sources/Img/c02_01.png, id=513, 320.19624pt x 223.83624pt>
+[10] <Sources/Img/c02_01.png, id=522, 320.19624pt x 223.83624pt>
 File: Sources/Img/c02_01.png Graphic file (type png)
 
 <use Sources/Img/c02_01.png>
-Package pdftex.def Info: Sources/Img/c02_01.png used on input line 81.
+Package pdftex.def Info: Sources/Img/c02_01.png used on input line 86.
 (pdftex.def)             Requested size: 176.10846pt x 123.1103pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 82.
+(caption)                particular \caption on input line 87.
 See the caption package documentation for explanation.
 
-
-Overfull \hbox (14.53761pt too wide) in paragraph at lines 96--97
-\OT1/cmr/m/n/10.95 Nell'ipotesi in cui ab-bia una riga nel dump cos-ti-tuita da
-lla tu-pla $(\OML/cmm/m/it/10.95 a;  b;  c\OT1/cmr/m/n/10.95 )$ e vo-lessi trov
-are $\OML/cmm/m/it/10.95 relatedness\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a; 
-d\OT1/cmr/m/n/10.95 )$
- []
-
+[11 <./Sources/Img/c02_01.png (PNG copy)>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [11 <./Sources/Img/c02_01.png (PNG copy)>]
+) [12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-Underfull \vbox (badness 2310) has occurred while \output is active []
 
  [13]
 [14] [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4328) has occurred while \output is active []
 
  [16])
 [17] (./Chapters/chapter4.tex
@@ -718,7 +708,7 @@ Overfull \hbox (3.96992pt too wide) in paragraph at lines 76--78
  una forzatura perch^^Re soli-ta-mente si conoscono
  []
 
-<Sources/Img/c04_01.png, id=798, 847.165pt x 585.18625pt>
+<Sources/Img/c04_01.png, id=808, 847.165pt x 585.18625pt>
 File: Sources/Img/c04_01.png Graphic file (type png)
 
 <use Sources/Img/c04_01.png>
@@ -734,8 +724,9 @@ See the caption package documentation for explanation.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-[20 <./Sources/Img/c04_01.png>]) [21] (./Chapters/conclusion.tex) [22]
-(./lenzi_edoardo_laurea_2018.bbl
+[20 <./Sources/Img/c04_01.png>]) [21] (./Chapters/conclusion.tex
+Chapter 5.
+) [22] (./lenzi_edoardo_laurea_2018.bbl
 
 LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 12.
 
@@ -838,7 +829,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
 Package rerunfilecheck Info: File `lenzi_edoardo_laurea_2018.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 67E05260D447D8AC5EBDD23E6DB6F525;2041.
+(rerunfilecheck)             Checksum: D6D9F3CEC133A9AC5B13432EE8B36C80;2139.
 
 
 LaTeX Warning: There were undefined references.
@@ -847,10 +838,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
  ) 
 Here is how much of TeX's memory you used:
  13402 strings out of 495028
- 190886 string characters out of 6181497
- 366222 words of memory out of 5000000
+ 190910 string characters out of 6181497
+ 361215 words of memory out of 5000000
  15878 multiletter control sequences out of 15000+600000
- 20909 words of font info for 80 fonts, out of 8000000 for 9000
+ 20208 words of font info for 78 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  48i,18n,76p,736b,2869s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not ex
@@ -922,10 +913,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lenzi_edoardo_laurea_2018.pdf (26 pages, 460624 bytes).
+Output written on lenzi_edoardo_laurea_2018.pdf (26 pages, 462420 bytes).
 PDF statistics:
- 1079 PDF objects out of 1200 (max. 8388607)
- 1020 compressed objects within 11 object streams
- 517 named destinations out of 1000 (max. 500000)
- 288 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1089 PDF objects out of 1200 (max. 8388607)
+ 1030 compressed objects within 11 object streams
+ 519 named destinations out of 1000 (max. 500000)
+ 304 words of extra memory for PDF output out of 10000 (max. 10000000)
 

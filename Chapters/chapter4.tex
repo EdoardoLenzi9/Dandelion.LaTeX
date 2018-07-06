@@ -1,7 +1,7 @@
 \chapter{StrepHit}
 \label{cha:strephit}
-La terza parte del progetto consiste nell'implementazione di uno script in Python (versione 2.7) che, dato in input un dataset di QuickStatements, deve restituire in output un nuovo dataset
-di QuickStatements arricchito di nuovi riferimenti.
+La terza parte del progetto consiste nell'implementazione di uno script in Python (versione 2.7) che, dato in input un dataset di QuickStatements, deve restituire in output il dataset
+arricchito con nuovi riferimenti.
 
 Ogni riga del dataset di input presenta una proprietà \href{https://www.wikidata.org/wiki/Property:P854}{reference URL} (P854) con l'URL di riferimento della risorsa, lo 
 script deve eseguire una query SPARQL per trovare l'item nel knowledge base che corrisponde al dominio della URL e la proprietà di tale item che definisce lo schema della URL in questione.

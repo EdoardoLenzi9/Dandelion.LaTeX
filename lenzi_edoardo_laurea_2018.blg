@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: lenzi_edoardo_laurea_2018.aux
 The style file: plain.bst
 Database file #1: biblio.bib
-Illegal end of database file---line 350 of file biblio.bib
+Illegal end of database file---line 356 of file biblio.bib
  : }
  :  
 I'm skipping whatever remains of this entry
@@ -55,45 +55,46 @@ Warning--to sort, need author or key in xunit
 Warning--to sort, need author or key in wyam
 Warning--to sort, need author or key in code-doc
 Warning--to sort, need author or key in dandelion-doc
-You've used 48 entries,
+Warning--to sort, need author or key in lucene
+You've used 49 entries,
             2118 wiz_defined-function locations,
-            656 strings with 8688 characters,
-and the built_in function-call counts, 7904 in all, are:
-= -- 775
-> -- 48
+            660 strings with 8802 characters,
+and the built_in function-call counts, 8072 in all, are:
+= -- 792
+> -- 49
 < -- 0
-+ -- 48
++ -- 49
 - -- 0
-* -- 242
-:= -- 882
-add.period$ -- 124
-call.type$ -- 48
-change.case$ -- 144
+* -- 247
+:= -- 901
+add.period$ -- 127
+call.type$ -- 49
+change.case$ -- 147
 chr.to.int$ -- 0
-cite$ -- 96
-duplicate$ -- 336
-empty$ -- 1105
+cite$ -- 98
+duplicate$ -- 343
+empty$ -- 1128
 format.name$ -- 0
-if$ -- 1976
+if$ -- 2018
 int.to.chr$ -- 0
-int.to.str$ -- 48
+int.to.str$ -- 49
 missing$ -- 0
-newline$ -- 223
+newline$ -- 228
 num.names$ -- 0
-pop$ -- 442
+pop$ -- 452
 preamble$ -- 1
-purify$ -- 96
+purify$ -- 98
 quote$ -- 0
-skip$ -- 298
+skip$ -- 303
 stack$ -- 0
-substring$ -- 240
-swap$ -- 48
+substring$ -- 245
+swap$ -- 49
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 192
-warning$ -- 48
+type$ -- 196
+warning$ -- 49
 while$ -- 0
-width$ -- 50
-write$ -- 394
+width$ -- 51
+write$ -- 403
 (There was 1 error message)

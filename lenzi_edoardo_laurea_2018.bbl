@@ -108,6 +108,11 @@
 \newblock \url{https://github.com/prometheus/jmx_exporter}.
 \newblock GitHub page.
 
+\bibitem{lucene}
+\textbf{Lucene}.
+\newblock \url{https://it.wikipedia.org/wiki/Lucene}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata a Lucene.
+
 \bibitem{mvc}
 \textbf{Model-View-Controller (MVC)}.
 \newblock \url{https://it.wikipedia.org/wiki/Model-view-controller}.

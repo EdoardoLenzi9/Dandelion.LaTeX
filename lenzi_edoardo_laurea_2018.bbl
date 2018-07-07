@@ -69,11 +69,16 @@
 
 \bibitem{strephit-repo}
 \textbf{DWikipedia.StrepHit repository}.
+\newblock \url{https://github.com/EdoardoLenzi9/Wikipedia.StrepHit}.
 
 \bibitem{fbk}
 \textbf{Fondazione Bruno Kessler (FBK)}.
 \newblock \url{https://www.fbk.eu/it/}.
 \newblock Pagina ufficiale.
+
+\bibitem{P1630}
+\textbf{"Formatter URL" Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P1630}.
 
 \bibitem{git}
 \textbf{Git}.
@@ -118,15 +123,35 @@
 \newblock \url{https://it.wikipedia.org/wiki/Model-view-controller}.
 \newblock Pagina Wikipedia\cite{wikipedia} dedicata a MVC.
 
+\bibitem{Q207628}
+\textbf{"Musical composition", Wikidata item}.
+\newblock \url{https://www.wikidata.org/wiki/Q207628}.
+
 \bibitem{newtonsoft-json}
 \textbf{Newtonsoft.Json}.
 \newblock \url{https://www.nuget.org/packages/newtonsoft.json/}.
 \newblock Pagina Nuget \cite{nuget} dedicata.
 
+\bibitem{P1263}
+\textbf{"NNDB people ID", Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P1263}.
+
+\bibitem{Q1373513}
+\textbf{"NNDB", Wikidata item}.
+\newblock \url{https://www.wikidata.org/wiki/Q1373513}.
+
 \bibitem{nuget}
 \textbf{Nuget}.
 \newblock \url{https://www.nuget.org/}.
 \newblock Pagina ufficiale del package manager per .NET.
+
+\bibitem{P106}
+\textbf{"Occupation", Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P106}.
+
+\bibitem{P856}
+\textbf{"Official website" Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P856}.
 
 \bibitem{open-jdk}
 \textbf{open-jdk}.
@@ -143,11 +168,31 @@
 \newblock \url{https://hub.docker.com/r/prom/prometheus/}.
 \newblock Docker image.
 
+\bibitem{click}
+\textbf{Python Click library}.
+\newblock \url{http://click.pocoo.org/5/}.
+
+\bibitem{unittest}
+\textbf{Python unittest library}.
+\newblock \url{https://docs.python.org/2/library/unittest.html}.
+
+\bibitem{virtualenv}
+\textbf{Python virtualenv}.
+\newblock \url{https://virtualenv.pypa.io/en/stable/}.
+
 \bibitem{quickstatements}
 \textbf{QuickStatements}.
 \newblock \url{https://www.wikidata.org/wiki/Help:QuickStatements}.
 \newblock Pagina Wikidata\cite{wikidata} dedicata (contentente anche la
-  descrizione completa della sintassi degli \lq\lq statements\rq\rq ).
+  descrizione completa della sintassi degli \qt{statements}).
+
+\bibitem{Q193660}
+\textbf{"Ramon Llull", Wikidata item}.
+\newblock \url{https://www.wikidata.org/wiki/Q193660}.
+
+\bibitem{P854}
+\textbf{"Reference URL", Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P854}.
 
 \bibitem{rest}
 \textbf{Representational State Transfer (REST)}.
@@ -158,12 +203,16 @@
 \textbf{Resource Description Framework (RDF)}.
 \newblock \url{https://www.w3.org/RDF/}.
 
+\bibitem{P813}
+\textbf{"Retrieved", Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P813}.
+
 \bibitem{simple-injector}
 \textbf{SimpleInjector}.
 \newblock \url{https://www.nuget.org/packages/SimpleInjector/}.
 \newblock Pagina Nuget \cite{nuget} dedicata.
 
-\bibitem{sparql-end-point}
+\bibitem{sparql-endpoint}
 \textbf{SPARQL endp-point}.
 \newblock
   \url{https://query.wikidata.org/bigdata/namespace/wdq/sparql?query=<SPARQL>}.
@@ -186,6 +235,10 @@
 \bibitem{client-repo}
 \textbf{SpazioDati.Dandelion-eu repository}.
 \newblock \url{https://github.com/EdoardoLenzi9/SpazioDati.Dandelion-eu}.
+
+\bibitem{P248}
+\textbf{"Stated in", Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P248}.
 
 \bibitem{strephit}
 \textbf{StrepHit}.

@@ -14,7 +14,7 @@ L'enciclopedia alla base di Dandelion è Wikipedia, anche se a volte fra i due s
     \textbf{DBpedia}\cite{dbpedia} è un progetto che ha portato alla creazione di un OKG (Open Knowledge Graph) edificato su informazioni estratte da progetti Wikimedia\cite{wikimedia}. 
 }, un progetto italiano per l'estrazione di informazioni semi-strutturate da progetti Wikimedia. 
 
-Per poter usare gli end-point di Dandelion basta registrarsi\cite{dandelion-registration} sul portale dedicato e generare un token che andrà inserito come query parameter nelle 
+Per poter usare gli endpoint di Dandelion basta registrarsi\cite{dandelion-registration} sul portale dedicato e generare un token che andrà inserito come query parameter nelle 
 chiamate https alle API\footnote{
     La documentazione delle \textbf{API di Dandelion} è disponibile all'indirizzo: \href{https://dandelion.eu/docs/}{https://dandelion.eu/docs/}.
 }.
@@ -80,7 +80,7 @@ per installare e lanciare i test.
 
 \section{Docker}
 Per la seconda parte del progetto è stato usato Docker\footnote{
-    \textbf{Docker}\cite{docker} è un progetto open source, cross-platform, che funge da \lq\lq container platform provider\rq\rq\; 
+    \textbf{Docker}\cite{docker} è un progetto open source, cross-platform, che funge da \qt{container platform provider}; 
     permette il deployment automatico di applicativi dentro ambienti virtuali chiamati container.
 } per creare un ambiente "chiuso", ad hoc, dove poter testare al meglio gli algoritmi senza doversi preoccupare di fattori esterni che potrebbero falsare 
 il risultato del test. 
@@ -140,14 +140,14 @@ funzionalmente molto completi e gradevoli sotto il profilo estetico.
 Grafana è nativamente predisposta per integrarsi con Prometheus, basta indicare la porta tcp su cui è settato Prometheus e la query che si desidera visualizzare.   
 
 \section{Wikidata e StrepHit}
-Wikidata è un progetto gratuito e open source legato a Wikipedia che mette a disposizione dell'utente un knowledge base accessibile sia dal portale wikidata.org che tramite un end-point SPARQL.
+Wikidata è un progetto gratuito e open source legato a Wikipedia che mette a disposizione dell'utente un knowledge base accessibile sia dal portale wikidata.org che tramite un endpoint SPARQL.
 
 I dati presenti nel knowledge base sono dati strutturati secondo le logiche del semantic web e adottano, quindi, il framework RDF (Resource Description Framework) proposto da W3C; 
 pertanto è facilmente integrabile con qualsiasi altro knowledge base di terze parti che segua gli stessi schemi e modelli RDF.
 
-Questo servizio rende possibile l'interazione con il knowledge base direttamente esponendo un end-point che accetta query SPARQL, veicolate da chiamate http. 
+Questo servizio rende possibile l'interazione con il knowledge base direttamente esponendo un endpoint che accetta query SPARQL, veicolate da chiamate http. 
 
-\begin{lstlisting}[style=YmlStyle, caption=SPARQL end-point]
+\begin{lstlisting}[style=YmlStyle, caption=SPARQL endpoint]
     https://query.wikidata.org/bigdata/namespace/wdq/sparql?query={SPARQL}
 \end{lstlisting}
 
@@ -163,4 +163,4 @@ SPARQL è il linguaggio di query definito da W3C per RDF. Le query sono molto af
 seguono i modelli RDF pertanto avranno sempre un \code{item}, una \code{property} e un \code{value}.
 
 Wikidata mette a disposizione un'interfaccia\cite{sparql-ui} che permette di lanciare manualmente query SPARQL sul knowledge base
-e un end-point\cite{sparql-end-point} per contattare lo stesso servizio con chiamate http. 
+e un endpoint\cite{sparql-endpoint} per contattare lo stesso servizio con chiamate http. 

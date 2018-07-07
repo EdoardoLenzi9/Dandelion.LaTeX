@@ -35,12 +35,12 @@ In \code{Test} sono contenute le classi di testing e le fixture \code{XUnit}\foo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Il Client}
 
-Dalla documentazione ufficale\cite{dandelion-doc} delle API di Dandelion si evince che ogni end-point richiede uno o più testi da analizzare ed una serie di parametri, 
+Dalla documentazione ufficale\cite{dandelion-doc} delle API di Dandelion si evince che ogni endpoint richiede uno o più testi da analizzare ed una serie di parametri, 
 alcuni obbligatori ed altri opzionali; 
-pertanto sono stati creati dei modelli, coerenti con tali definizioni, che, passati in argomento a dei servizi, ritornano i DTO delle risposte degli end-point di Dandelion.
+pertanto sono stati creati dei modelli, coerenti con tali definizioni, che, passati in argomento a dei servizi, ritornano i DTO delle risposte degli endpoint di Dandelion.
 
 Ogni servizio controlla che i parametri inseriti dall'utente rispettino i constraints definiti nella documentazione e costruisce, tramite i metodi \code{ContentBuilder()} e  
-\code{UriBuilder()}, un dizionario di parametri e l'URI che identifica l'end-point. 
+\code{UriBuilder()}, un dizionario di parametri e l'URI che identifica l'endpoint. 
 
 Infine il servizio chiama il metodo generico \code{CallApiAsync()}, passandogli il content, la URI ed il metodo HTTP; 
 nel metodo di chiamata si è scelto di gestire separatamente i metodi HTTP GET e DELETE dato che essi non permettono il passaggio parametri nel boby 

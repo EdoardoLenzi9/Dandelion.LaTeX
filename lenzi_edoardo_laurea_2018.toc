@@ -32,7 +32,7 @@
 \contentsline {subsection}{\numberline {3.2.2}Test}{17}{subsection.3.2.2}
 \contentsline {chapter}{\numberline {4}StrepHit}{18}{chapter.4}
 \contentsline {subsection}{\numberline {4.0.3}Esempio di funzionamento}{18}{subsection.4.0.3}
-\contentsline {section}{\numberline {4.1}SPARQL Query}{18}{section.4.1}
+\contentsline {section}{\numberline {4.1}SPARQL Query}{19}{section.4.1}
 \contentsline {section}{\numberline {4.2}Lo script}{20}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Struttura del progetto}{20}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Algoritmo}{20}{subsection.4.2.2}

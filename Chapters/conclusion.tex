@@ -1,7 +1,33 @@
-Al termine dell'esperienza si è concluso che ...
-[\textbf{TODO}]
-%TODO conclusioni, metodologie e tecniche usate, i dati elaborati 
-%  contesto e motivazioni 
-%  breve riassunto del problema affrontato
-%  tecniche utilizzate e/o sviluppate
-%  risultati raggiunti, sottolineando il contributo personale del laureando/a
+\chapter{Conclusioni}
+Personalmente ritengo che l'esperienza di tesi sia stata molto positiva in quanto ho avuto la possibilità di entrare in contatto con diverse realtà lavorative fuori dal comune; 
+sotto il profilo tecnico questo progetto mi ha portato ad apprendere molte nuove tecnologie che non conoscevo e a rafforzare conoscenze pregresse.
+
+La prima parte, se pur non particolarmente complessa, è stata interessante perchè riguardava l'intero ciclo di vita di una libreria, dall'implementazione alla pubblicazione;
+mi ha dato modo di rafforzare le nozioni di programmazione in C$\#$ e di seguire, per la prima volta, il deploy di una libreria su Nuget. 
+La libreria è funzionante e ad oggi conta un centinaio di download, risultato sicuramente positivo.
+
+La seconda parte si è rivelata, alla fine, un'analisi fine a se stessa, non si sono ottenuti risultati utili per poter ottimizzare l'algoritmo esistente;
+nonostante ciò la ritengo personalmente un'esperienza positiva dato che mi ha permesso di provare svariate nuove tecnologie molto utili, prima fra tutte Docker. 
+
+Mi ha colpito molto l'elevata complessità insita nel problema della valutazione prestazionale di un processo; 
+infatti nel corso dell'analisi sono stati provati svariati javaagent, per monitorare il processo, che regolarmente risultavano inattendibili, 
+in parte per l'interazione con altri processi e in parte per il ridotto scope di visibilità del software di monitoraggio stesso 
+(senza contare la presenza di svariati fattori aleatori come l'azione del Garbage Collector).
+
+Altra cosa che mi ha sorpreso molto è stato l'incredibile calo prestazionale della funzione hash all'aumentare delle dimensioni del dominio, tanto che la computazione dell'hash stesso 
+richiedeva più tempo della ricerca binaria.
+
+Penso sia comunque possibile trovare un'implementazione migliore dell'attuale; sarebbe un interessante spunto di ricerca ulteriore valutare se sia possibile creare una 
+funzione hash ad hoc per questo problema; sarebbe anche interessante valutare implementazioni basate su strutture dati salvate su disco anzichè in memoria 
+(database, indici di Lucene\cite{lucene}, ecc.), anche se sicuramente i tempi di risposta aumenterebbero di qualche ordine di grandezza per il solo accesso al disco. 
+
+La terza parte mi ha permesso di conoscere il mondo di Wikidata e del semantic web più in generale, dandomi l'opportunità di contribuire, per la prima volta, 
+ad un progetto open source così rilevante.
+
+Si è ottenuto il risultato sperato, in quanto lo script funziona correttamente, tuttavia sarebbe interessante riuscire ad ottimizzare lo script visto che attualmente, 
+per computare un dataset da 500.000 righe, impiega qualche ora; 
+va da sè che spesso si hanno ritardi, anche di svariati secondi, totalmente indipendenti dallo script (connessione ad internet, tempo di attesa per le query SPARQL 
+e per il "refresh" delle URL deprecate, tramite chiamate HTTP); tolti questi punti sicuramente si possono ottimizzare le routine maggiormente usate nello script 
+per abbassare i tempi di computazione.
+
+In conclusione voglio ringraziare tutti coloro che mi hanno aiutato e seguito in questo progetto di tesi.

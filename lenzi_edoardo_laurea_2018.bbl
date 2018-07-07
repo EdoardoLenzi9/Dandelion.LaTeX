@@ -1,0 +1,285 @@
+\begin{thebibliography}{10}
+
+\bibitem{ant}
+\textbf{Apache Ant}.
+\newblock \url{https://ant.apache.org/}.
+\newblock Pagina ufficiale.
+
+\bibitem{api}
+\textbf{Application Programming Interface (API)}.
+\newblock
+  \url{https://it.wikipedia.org/wiki/Application_programming_interface}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata alle API.
+
+\bibitem{code-doc}
+\textbf{Code documentation}.
+\newblock \url{https://docs.microsoft.com/en-us/dotnet/csharp/codedoc}.
+
+\bibitem{dandelion}
+\textbf{Dandelion}.
+\newblock \url{https://dandelion.eu/}.
+\newblock Home page del progetto.
+
+\bibitem{dandelion-doc}
+\textbf{Dandelion API documentation}.
+\newblock \url{https://dandelion.eu/docs/}.
+
+\bibitem{entity-extraction-demo}
+\textbf{Dandelion, entity extraction demo}.
+\newblock \url{https://dandelion.eu/semantic-text/entity-extraction-demo/}.
+
+\bibitem{dandelion-registration}
+\textbf{Dandelion registration page}.
+\newblock \url{https://dandelion.eu/accounts/register/}.
+
+\bibitem{sentiment-analysis-demo}
+\textbf{Dandelion, sentiment analysis}.
+\newblock \url{https://dandelion.eu/semantic-text/sentiment-analysis-demo/}.
+
+\bibitem{text-classification-demo}
+\textbf{Dandelion, text classification demo}.
+\newblock \url{https://dandelion.eu/semantic-text/text-classification-demo/}.
+
+\bibitem{text-similarity-demo}
+\textbf{Dandelion, text similarity demo}.
+\newblock \url{https://dandelion.eu/semantic-text/text-similarity-demo/}.
+
+\bibitem{latex-repo}
+\textbf{Dandelion.Latex repository}.
+\newblock \url{https://github.com/EdoardoLenzi9/Dandelion.LaTeX}.
+
+\bibitem{dandelion-repo}
+\textbf{Dandelion.Relatedness repository}.
+\newblock \url{https://github.com/EdoardoLenzi9/Dandelion.Relatedness}.
+
+\bibitem{dbpedia}
+\textbf{DBpedia}.
+\newblock \url{https://wiki.dbpedia.org/about}.
+\newblock Main page del portale.
+
+\bibitem{dependency-injection}
+\textbf{Dependency Injection}.
+\newblock \url{https://en.wikipedia.org/wiki/Dependency_injection}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata alla dependency injection.
+
+\bibitem{docker}
+\textbf{Docker}.
+\newblock \url{https://www.docker.com/}.
+\newblock Pagina ufficiale.
+
+\bibitem{strephit-repo}
+\textbf{DWikipedia.StrepHit repository}.
+\newblock \url{https://github.com/EdoardoLenzi9/Wikipedia.StrepHit}.
+
+\bibitem{fbk}
+\textbf{Fondazione Bruno Kessler (FBK)}.
+\newblock \url{https://www.fbk.eu/it/}.
+\newblock Pagina ufficiale.
+
+\bibitem{P1630}
+\textbf{"Formatter URL" Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P1630}.
+
+\bibitem{git}
+\textbf{Git}.
+\newblock \url{https://git-scm.com/}.
+
+\bibitem{github}
+\textbf{GitHub}.
+\newblock \url{https://github.com/}.
+\newblock Pagina ufficiale.
+
+\bibitem{docker-grafana}
+\textbf{Grafana}.
+\newblock \url{https://hub.docker.com/r/grafana/grafana/}.
+\newblock Docker image.
+
+\bibitem{grafana}
+\textbf{Grafana}.
+\newblock \url{https://grafana.com/}.
+\newblock Sito ufficiale.
+
+\bibitem{hub-docker}
+\textbf{Hub Docker}.
+\newblock \url{https://hub.docker.com/}.
+
+\bibitem{inversion-of-control}
+\textbf{Inversion of control (IoC)}.
+\newblock \url{https://en.wikipedia.org/wiki/Inversion_of_control}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata a IoC.
+
+\bibitem{jmx}
+\textbf{JMX Exporter}.
+\newblock \url{https://github.com/prometheus/jmx_exporter}.
+\newblock GitHub page.
+
+\bibitem{lucene}
+\textbf{Lucene}.
+\newblock \url{https://it.wikipedia.org/wiki/Lucene}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata a Lucene.
+
+\bibitem{mvc}
+\textbf{Model-View-Controller (MVC)}.
+\newblock \url{https://it.wikipedia.org/wiki/Model-view-controller}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata a MVC.
+
+\bibitem{Q207628}
+\textbf{"Musical composition", Wikidata item}.
+\newblock \url{https://www.wikidata.org/wiki/Q207628}.
+
+\bibitem{newtonsoft-json}
+\textbf{Newtonsoft.Json}.
+\newblock \url{https://www.nuget.org/packages/newtonsoft.json/}.
+\newblock Pagina Nuget \cite{nuget} dedicata.
+
+\bibitem{P1263}
+\textbf{"NNDB people ID", Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P1263}.
+
+\bibitem{Q1373513}
+\textbf{"NNDB", Wikidata item}.
+\newblock \url{https://www.wikidata.org/wiki/Q1373513}.
+
+\bibitem{nuget}
+\textbf{Nuget}.
+\newblock \url{https://www.nuget.org/}.
+\newblock Pagina ufficiale del package manager per .NET.
+
+\bibitem{P106}
+\textbf{"Occupation", Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P106}.
+
+\bibitem{P856}
+\textbf{"Official website" Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P856}.
+
+\bibitem{open-jdk}
+\textbf{open-jdk}.
+\newblock \url{https://hub.docker.com/_/openjdk/}.
+\newblock Docker image.
+
+\bibitem{prometheus}
+\textbf{Prometheus}.
+\newblock \url{https://prometheus.io/}.
+\newblock Sito ufficiale.
+
+\bibitem{docker-prometheus}
+\textbf{Prometheus}.
+\newblock \url{https://hub.docker.com/r/prom/prometheus/}.
+\newblock Docker image.
+
+\bibitem{click}
+\textbf{Python Click library}.
+\newblock \url{http://click.pocoo.org/5/}.
+
+\bibitem{unittest}
+\textbf{Python unittest library}.
+\newblock \url{https://docs.python.org/2/library/unittest.html}.
+
+\bibitem{virtualenv}
+\textbf{Python virtualenv}.
+\newblock \url{https://virtualenv.pypa.io/en/stable/}.
+
+\bibitem{quickstatements}
+\textbf{QuickStatements}.
+\newblock \url{https://www.wikidata.org/wiki/Help:QuickStatements}.
+\newblock Pagina Wikidata\cite{wikidata} dedicata (contentente anche la
+  descrizione completa della sintassi degli \qt{statements}).
+
+\bibitem{Q193660}
+\textbf{"Ramon Llull", Wikidata item}.
+\newblock \url{https://www.wikidata.org/wiki/Q193660}.
+
+\bibitem{P854}
+\textbf{"Reference URL", Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P854}.
+
+\bibitem{rest}
+\textbf{Representational State Transfer (REST)}.
+\newblock \url{https://it.wikipedia.org/wiki/Representational_State_Transfer}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata a REST.
+
+\bibitem{rdf}
+\textbf{Resource Description Framework (RDF)}.
+\newblock \url{https://www.w3.org/RDF/}.
+
+\bibitem{P813}
+\textbf{"Retrieved", Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P813}.
+
+\bibitem{simple-injector}
+\textbf{SimpleInjector}.
+\newblock \url{https://www.nuget.org/packages/SimpleInjector/}.
+\newblock Pagina Nuget \cite{nuget} dedicata.
+
+\bibitem{sparql-endpoint}
+\textbf{SPARQL endp-point}.
+\newblock
+  \url{https://query.wikidata.org/bigdata/namespace/wdq/sparql?query=<SPARQL>}.
+
+\bibitem{sparql-ui}
+\textbf{SPARQL interface}.
+\newblock \url{https://query.wikidata.org/}.
+\newblock Interfaccia online per lanciare query SPARQL\cite{sparql} su
+  Wikidata\cite{wikidata}.
+
+\bibitem{sparql-query}
+\textbf{SPARQL Query}.
+\newblock \url{https://www.w3.org/TR/rdf-sparql-query/}.
+
+\bibitem{spaziodati}
+\textbf{SpazioDati}.
+\newblock \url{https://spaziodati.eu/it/}.
+\newblock Home page del sito ufficiale.
+
+\bibitem{client-repo}
+\textbf{SpazioDati.Dandelion-eu repository}.
+\newblock \url{https://github.com/EdoardoLenzi9/SpazioDati.Dandelion-eu}.
+
+\bibitem{P248}
+\textbf{"Stated in", Wikidata property}.
+\newblock \url{https://www.wikidata.org/wiki/Property:P248}.
+
+\bibitem{strephit}
+\textbf{StrepHit}.
+\newblock \url{https://www.mediawiki.org/wiki/StrepHit}.
+\newblock Pagina MediaWiki\cite{mediawiki} con tutti i dettagli del progetto.
+
+\bibitem{tdd}
+\textbf{TDD (Test Driven Development)}.
+\newblock \url{https://it.wikipedia.org/wiki/Test_driven_development}.
+\newblock Pagina Wikipedia\cite{wikipedia} dedicata a TDD.
+
+\bibitem{w3c}
+\textbf{The World Wide Web Consortium (W3C)}.
+\newblock \url{https://www.w3.org/}.
+
+\bibitem{travis}
+\textbf{Travis}.
+\newblock \url{https://www.travis-ci.com/}.
+\newblock Pagina ufficiale.
+
+\bibitem{wikidata}
+\textbf{Wikidata}.
+\newblock \url{https://www.wikidata.org/wiki/Wikidata:Main_Page}.
+\newblock Main page del portale.
+
+\bibitem{wikimedia}
+\textbf{Wikimedia}.
+\newblock \url{https://www.wikimedia.org/}.
+\newblock Main page del portale.
+
+\bibitem{wyam}
+\textbf{Wyam}.
+\newblock \url{https://wyam.io/}.
+
+\bibitem{xunit}
+\textbf{XUnit}.
+\newblock \url{https://www.nuget.org/packages/xunit/}.
+\newblock Pagina Nuget \cite{nuget} dedicata.
+
+\bibitem{xunit-repo}
+\textbf{XUnit GitHub repository}.
+\newblock \url{https://github.com/xunit/xunit}.
+
+\end{thebibliography}

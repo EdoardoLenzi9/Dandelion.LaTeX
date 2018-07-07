@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  3 JUL 2018 20:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  7 JUL 2018 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -402,7 +402,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
-LaTeX Info: Redefining \u on input line 27.
+LaTeX Info: Redefining \u on input line 28.
 
 
 LaTeX Warning: Unused global option(s):
@@ -411,20 +411,20 @@ LaTeX Warning: Unused global option(s):
 (./lenzi_edoardo_laurea_2018.aux)
 \openout1 = `lenzi_edoardo_laurea_2018.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -493,7 +493,7 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \c@lstlisting=\count131
 \AtBeginShipoutBox=\box35
-Package hyperref Info: Link coloring OFF on input line 161.
+Package hyperref Info: Link coloring OFF on input line 162.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -503,9 +503,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count132
 )
-LaTeX Info: Redefining \ref on input line 161.
-LaTeX Info: Redefining \pageref on input line 161.
-LaTeX Info: Redefining \nameref on input line 161.
+LaTeX Info: Redefining \ref on input line 162.
+LaTeX Info: Redefining \pageref on input line 162.
+LaTeX Info: Redefining \nameref on input line 162.
 
 (./lenzi_edoardo_laurea_2018.out) (./lenzi_edoardo_laurea_2018.out)
 \@outlinefile=\write3
@@ -527,7 +527,7 @@ enter-eps-converted-to.pdf Sources/logo_unitn_black_center.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=127, 293.095pt x 126.
+<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=146, 293.095pt x 126.
 4725pt>
 File: Sources/logo_unitn_black_center-eps-converted-to.pdf Graphic file (type p
 df)
@@ -558,7 +558,7 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.166   \clearpage
+l.167   \clearpage
                    [2
 
 ] (./lenzi_edoardo_laurea_2018.toc)
@@ -574,29 +574,35 @@ l.166   \clearpage
 
 ] (./Chapters/chapter1.tex
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
+
+Overfull \hbox (2.23741pt too wide) in paragraph at lines 9--12
+[]\OT1/cmr/m/n/10.95 Dandelion ha an-che al-tre due RESTful-API[[], []] che per
+-me-t-tono di con-frontare due testi generando
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 41--42
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
@@ -629,13 +635,13 @@ File: lstlang3.sty 2013/08/26 1.5b listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-) [3] [4]
-Overfull \hbox (3.36287pt too wide) in paragraph at lines 112--116
+) [3]
+Overfull \hbox (3.36287pt too wide) in paragraph at lines 110--117
 []\OT1/cmr/m/n/10.95 Infine la di-ret-tiva []CMD speci-fica il co-mando che ver
 r^^Ra es-e-guito una volta finito il setup dell'ambiente,
  []
 
-[5]) [6] (./Chapters/chapter2.tex
+[4] [5]) [6] (./Chapters/chapter2.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -661,96 +667,201 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [8])
 [9] (./Chapters/chapter3.tex
 Chapter 3.
-[10] <Sources/Img/c02_01.png, id=410, 320.19624pt x 223.83624pt>
+[10] <Sources/Img/c02_01.png, id=523, 320.19624pt x 223.83624pt>
 File: Sources/Img/c02_01.png Graphic file (type png)
 
 <use Sources/Img/c02_01.png>
-Package pdftex.def Info: Sources/Img/c02_01.png used on input line 81.
+Package pdftex.def Info: Sources/Img/c02_01.png used on input line 86.
 (pdftex.def)             Requested size: 176.10846pt x 123.1103pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 82.
+(caption)                particular \caption on input line 87.
 See the caption package documentation for explanation.
 
-
-Overfull \hbox (14.53761pt too wide) in paragraph at lines 96--97
-\OT1/cmr/m/n/10.95 Nell'ipotesi in cui ab-bia una riga nel dump cos-ti-tuita da
-lla tu-pla $(\OML/cmm/m/it/10.95 a;  b;  c\OT1/cmr/m/n/10.95 )$ e vo-lessi trov
-are $\OML/cmm/m/it/10.95 relatedness\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a; 
-d\OT1/cmr/m/n/10.95 )$
- []
-
+[11 <./Sources/Img/c02_01.png (PNG copy)>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [11 <./Sources/Img/c02_01.png (PNG copy)>]
+) [12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-Underfull \vbox (badness 2310) has occurred while \output is active []
 
  [13]
 [14] [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4328) has occurred while \output is active []
 
  [16])
 [17] (./Chapters/chapter4.tex
 Chapter 4.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 9.
-
-
-Overfull \hbox (13.82617pt too wide) in paragraph at lines 20--21
-[]\OT1/cmr/m/n/10.95 Segue la pro-priet^^Ra che in-ter-essa mag-gior-mente []S8
-54[] [][][]"http://www.nndb.com/people/031/000097737/"
- []
+(hyperref)                than one, level fixed on input line 13.
 
 [18]
-Overfull \hbox (3.96992pt too wide) in paragraph at lines 76--78
+Overfull \hbox (7.65337pt too wide) in paragraph at lines 53--60
+\OT1/cmr/m/n/10.95 ID[[]]) []"031/000097737" (il val-ore es-trap-o-lato, peo-pl
+e ID) []S813 (retrieved[[]]) []2018[]-[]06[]-[]04T02:19:10Z/14
+ []
+
+
+Overfull \hbox (3.96992pt too wide) in paragraph at lines 92--94
 []\OT1/cmr/m/n/10.95 In SPARQL us-are una ricerca per stringa ^^Re cer-ta-mente
  una forzatura perch^^Re soli-ta-mente si conoscono
  []
 
-<Sources/Img/c04_01.png, id=694, 847.165pt x 585.18625pt>
+[19] <Sources/Img/c04_01.png, id=850, 847.165pt x 585.18625pt>
 File: Sources/Img/c04_01.png Graphic file (type png)
 
 <use Sources/Img/c04_01.png>
-Package pdftex.def Info: Sources/Img/c04_01.png used on input line 92.
+Package pdftex.def Info: Sources/Img/c04_01.png used on input line 110.
 (pdftex.def)             Requested size: 483.69687pt x 334.11324pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 93.
+(caption)                particular \caption on input line 111.
 See the caption package documentation for explanation.
 
+[20 <./Sources/Img/c04_01.png>]
+Overfull \hbox (26.98332pt too wide) in paragraph at lines 152--154
+[]\OT1/cmr/m/n/10.95 Se nei []map[]-[]pings non es-iste nes-suna en-try com-pat
+-i-bile con l'URL viene chiam-ato il metodo []new[]mapping()
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+) [21] (./Chapters/conclusion.tex
+Chapter 5.
+) [22] (./lenzi_edoardo_laurea_2018.bbl
 
- [19]
-[20 <./Sources/Img/c04_01.png>]) [21] (./Chapters/conclusion.tex) [22]
-No file lenzi_edoardo_laurea_2018.bbl.
-(./Chapters/attachments.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 223.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 223.
+LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 12.
+
+
+Underfull \hbox (badness 6641) in paragraph at lines 9--13
+[]\OT1/cmr/bx/n/10.95 Application Pro-gram-ming In-ter-face (API)\OT1/cmr/m/n/1
+0.95 .  []$\OT1/cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
+[]\OT1/cmr/bx/n/10.95 Dandelion, en-tity ex-trac-tion demo\OT1/cmr/m/n/10.95 . 
+ []$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+[]\OT1/cmr/bx/n/10.95 Dandelion, sen-ti-ment anal-y-sis\OT1/cmr/m/n/10.95 .  []
+$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
+[]\OT1/cmr/bx/n/10.95 Dandelion, text clas-si-fi-ca-tion demo\OT1/cmr/m/n/10.95
+ .  []$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
+[]\OT1/cmr/bx/n/10.95 Dandelion, text sim-i-lar-ity demo\OT1/cmr/m/n/10.95 .  [
+]$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 52--54
+[]\OT1/cmr/bx/n/10.95 Dandelion.Relatedness repos-i-tory\OT1/cmr/m/n/10.95 .  [
+]$\OT1/cmtt/m/n/10.95 https : / / github . com / EdoardoLenzi9 / Dandelion .
+ []
+
+
+LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 63.
+
+
+Underfull \hbox (badness 5403) in paragraph at lines 71--73
+[]\OT1/cmr/bx/n/10.95 DWikipedia.StrepHit repos-i-tory\OT1/cmr/m/n/10.95 .  []$
+\OT1/cmtt/m/n/10.95 https : / / github . com / EdoardoLenzi9 / Wikipedia .
+ []
+
+
+LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 109.
+
+[23
+
+]
+
+LaTeX Warning: Citation `wikipedia' on page 24 undefined on input line 119.
+
+
+LaTeX Warning: Citation `wikipedia' on page 24 undefined on input line 124.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--125
+[]\OT1/cmr/bx/n/10.95 Model-View-Controller (MVC)\OT1/cmr/m/n/10.95 .  []$\OT1/
+cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki /
+ []
+
+
+Underfull \hbox (badness 2529) in paragraph at lines 184--188
+[]\OT1/cmr/bx/n/10.95 QuickStatements\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.
+95 https : / / www . wikidata . org / wiki / Help : QuickStatements$[]\OT1/cmr/
+m/n/10.95 .  Pag-ina
+ []
+
+
+LaTeX Warning: Citation `wikipedia' on page 24 undefined on input line 200.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--201
+[]\OT1/cmr/bx/n/10.95 Representational State Trans-fer (REST)\OT1/cmr/m/n/10.95
+ .  []$\OT1/cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki /
+ []
+
+
+Underfull \hbox (badness 1210) in paragraph at lines 216--219
+[]\OT1/cmr/bx/n/10.95 SPARQL endp-point\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/1
+0.95 https : / / query . wikidata . org / bigdata / namespace / wdq / sparql ?
+ []
+
+
+LaTeX Warning: Citation `sparql' on page 24 undefined on input line 223.
+
+[24]
+
+LaTeX Warning: Citation `mediawiki' on page 25 undefined on input line 246.
+
+
+LaTeX Warning: Citation `wikipedia' on page 25 undefined on input line 251.
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 249--252
+[]\OT1/cmr/bx/n/10.95 TDD (Test Driven De-vel-op-ment)\OT1/cmr/m/n/10.95 .  []$
+\OT1/cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki / Test _ driven _
+ []
+
+) (./Chapters/attachments.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
+ [25]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
  (./lenzi_edoardo_laurea_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 223.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 223.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
 Package rerunfilecheck Info: File `lenzi_edoardo_laurea_2018.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 2720E2959E563A7104DCA55E37A8869E;1873.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 223.
+(rerunfilecheck)             Checksum: D6D9F3CEC133A9AC5B13432EE8B36C80;2139.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
  ) 
 Here is how much of TeX's memory you used:
- 13207 strings out of 495028
- 188197 string characters out of 6181497
- 364577 words of memory out of 5000000
- 15766 multiletter control sequences out of 15000+600000
- 20908 words of font info for 80 fonts, out of 8000000 for 9000
+ 13463 strings out of 495028
+ 191564 string characters out of 6181497
+ 360722 words of memory out of 5000000
+ 15917 multiletter control sequences out of 15000+600000
+ 20553 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 48i,18n,76p,736b,2868s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not ex
+ 48i,18n,76p,736b,2869s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
 t, replaced by a fixed one
@@ -816,13 +927,13 @@ cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-di
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lenzi_edoardo_laurea_2018.pdf (24 pages, 450554 bytes).
+Output written on lenzi_edoardo_laurea_2018.pdf (27 pages, 483263 bytes).
 PDF statistics:
- 888 PDF objects out of 1000 (max. 8388607)
- 832 compressed objects within 9 object streams
- 435 named destinations out of 1000 (max. 500000)
- 264 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1147 PDF objects out of 1200 (max. 8388607)
+ 1086 compressed objects within 11 object streams
+ 540 named destinations out of 1000 (max. 500000)
+ 304 words of extra memory for PDF output out of 10000 (max. 10000000)
 

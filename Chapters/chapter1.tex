@@ -1,28 +1,25 @@
-
 \chapter{Introduzione}
 \section{Dandelion}
 
 Dandelion è un servizio online fornito da SpazioDati che mette a disposizione dell'utente servizi di analisi semantica testuale; 
-grazie ad esso è possibile, dato un testo, estrarne le entità semantiche principali (\textit{Entity Extraction}), trovare la lingua in cui è stato 
-scritto (\textit{Language Detection}), classificarlo secondo modelli definiti dall'utente stesso (\textit{Text Classification}) e analizzarne la semantica 
-per capire i sentimenti che l'autore ci vuole trasmettere (\textit{Sentiment Analysis}). 
+grazie ad esso è possibile, dato un testo, estrarne le entità semantiche principali (\textit{Entity Extraction}\cite{entity-extraction-demo}), trovare la lingua in cui è stato 
+scritto (\textit{Language Detection}), classificarlo secondo modelli definiti dall'utente stesso (\textit{Text Classification}\cite{text-classification-demo}) e analizzarne la semantica 
+per capire i sentimenti che l'autore ci vuole trasmettere (\textit{Sentiment Analysis}\cite{sentiment-analysis-demo}). 
 
-Dandelion ha anche altre due RESTful-API\footnote{
-    \textbf{REST} è un tipo di architettura software per la trasmissione di dati tramite il protocollo HTTP. \href{https://it.wikipedia.org/wiki/Representational_State_Transfer
-    }{Fonte} 
-} che permettono di confrontare due testi generando un indice di similitudine fra i due (\textit{Text Similarity}) e
-un motore di ricerca di entità di Wikipedia (\textit{Wikisearch}), nel caso si voglia trovare il titolo di un contenuto senza conoscerlo a priori.
+Dandelion ha anche altre due RESTful-API\cite{rest, api} che permettono di confrontare due testi generando un indice di similitudine fra i due
+(\textit{Text Similarity}\cite{text-similarity-demo}) e un motore di ricerca di entità di Wikipedia (\textit{Wikisearch}), nel caso si voglia trovare il titolo 
+di un contenuto senza conoscerlo a priori.
 
-L'enciclopedia alla base di Dandelion è Wikipedia, anche se a volte fra i due si colloca come mediatore dbpedia\footnote{
-    \textbf{DBpedia} è un progetto che ha portato alla creazione di un OKG (Open Knowledge Graph) edificato su informazioni estratte da progetti \href{https://www.wikimedia.org/}{Wikimedia}. \href{https://wiki.dbpedia.org/about}{Fonte}   
-}, un progetto italiano per l'estrazione di 
-informazioni semi-strutturate da Wikimedia. 
+L'enciclopedia alla base di Dandelion è Wikipedia, anche se a volte fra i due si colloca come mediatore DBpedia\footnote{
+    \textbf{DBpedia}\cite{dbpedia} è un progetto che ha portato alla creazione di un OKG (Open Knowledge Graph) edificato su informazioni estratte da progetti Wikimedia\cite{wikimedia}. 
+}, un progetto italiano per l'estrazione di informazioni semi-strutturate da progetti Wikimedia. 
 
-Per poter usare gli end-point di Dandelion basta \href{https://dandelion.eu/accounts/register/}{registrarsi} sul portale dedicato e generare un token che andrà inserito come query parameter nelle chiamate https alle API\footnote{
+Per poter usare gli endpoint di Dandelion basta registrarsi\cite{dandelion-registration} sul portale dedicato e generare un token che andrà inserito come query parameter nelle 
+chiamate https alle API\footnote{
     La documentazione delle \textbf{API di Dandelion} è disponibile all'indirizzo: \href{https://dandelion.eu/docs/}{https://dandelion.eu/docs/}.
 }.
 
-[\textbf{TODO} descrizione dettagliata di Dandelion]
+% [\textbf{TODO} descrizione dettagliata di Dandelion]
 %\subsection{Entity Extraction}
 %\subsection{Text Similarity}
 %\subsection{Text Classification}
@@ -31,25 +28,25 @@ Per poter usare gli end-point di Dandelion basta \href{https://dandelion.eu/acco
 %\subsection{Wikisearch}
 
 \section{GitHub e Travis}
-Per il versioning del codice si è scelto di usare il software git\footnote{
-    \textbf{Git} è un software open source gratuito per gestire il versioning del codice. \href{https://git-scm.com/}{Sito ufficiale}   
+Per il versioning del codice si è scelto di usare il software Git\footnote{
+    \textbf{Git}\cite{git} è un software open source, gratuito, per gestire il versioning del codice.
 }, appoggiandosi alla piattaforma GitHub per creare repository pubbliche. 
 
 Le repository riguardanti il progetto di tesi sono:
 
 \begin{itemize}
-    \item Repository contenente il testo della tesi scritto in \LaTeX\footnote{\url{https://github.com/EdoardoLenzi9/Dandelion.LaTeX}} \\
-    \item Repository contenente lo script in Python per il progetto StrepHit\footnote{\url{https://github.com/EdoardoLenzi9/Wikipedia.StrepHit}} \\
-    \item Repository contenente il codice Java con le varie implementazioni dell'algoritmo per il calcolo della relatedness (la seconda parte del progetto)\footnote{\url{https://github.com/EdoardoLenzi9/Dandelion.Relatedness}} \\
-    \item Repository contenente il codice sorgente del client C$\#$\footnote{\url{https://github.com/EdoardoLenzi9/SpazioDati.Dandelion-eu}}\\
+    \item Repository contenente il testo della tesi scritto in \LaTeX\cite{latex-repo}\\
+    \item Repository contenente lo script in Python per il progetto StrepHit\cite{strephit-repo}\\
+    \item Repository contenente il codice Java con le varie implementazioni dell'algoritmo per il calcolo della relatedness (la seconda parte del progetto)\cite{dandelion-repo}\\
+    \item Repository contenente il codice sorgente del client C$\#$\cite{client-repo} \\
 \end{itemize} 
 
 Per quanto riguarda il testing automatico è stata scelta la piattaforma Travis che permette di agganciare una repository GitHub su cui eseguire automaticamente i test 
 ad ogni commit. 
 
-Per fare ciò è necessario inserire nella repository un file di configurazione chiamato .travis.yml con i comandi necessari ad eseguire i test. 
+Per fare ciò è necessario inserire nella repository un file di configurazione chiamato \code{.travis.yml} con i comandi necessari ad eseguire i test. 
 
-Per esempio nel caso del client C$\#$ il file yml contiene le seguenti istruzioni:
+Per esempio nel caso del client C$\#$ il file \code{.yml} contiene le seguenti istruzioni:
 
 \begin{lstlisting}[style=YmlStyle, caption=File configurazione travis.yml per progetti C$\#$]
     language: csharp
@@ -83,21 +80,21 @@ per installare e lanciare i test.
 
 \section{Docker}
 Per la seconda parte del progetto è stato usato Docker\footnote{
-    \textbf{Docker} è un progetto open source, cross-platform, che funge da \lq\lq container platform provider\rq\rq\; 
-    permette il deployment automatico di applicativi dentro ambienti virtuali chiamati container. \href{https://www.docker.com}{Sito ufficiale}
+    \textbf{Docker}\cite{docker} è un progetto open source, cross-platform, che funge da \qt{container platform provider}; 
+    permette il deployment automatico di applicativi dentro ambienti virtuali chiamati container.
 } per creare un ambiente "chiuso", ad hoc, dove poter testare al meglio gli algoritmi senza doversi preoccupare di fattori esterni che potrebbero falsare 
 il risultato del test. 
 
-Docker permette di creare un'immagine a partire da un file di testo chiamato \lq\lq Dockerfile\rq\rq\ il quale contiene tutte le informazioni per eseguire la build dell'immagine; in pratica 
-il Dockerfile è una sorta di descrittore dello stato di una macchina virtuale che genera, una volta lanciata la build, una macchina virtuale persistente chiamata immagine. 
+Docker permette di creare un'immagine a partire da un file di testo, chiamato \code{Dockerfile}, che contiene tutte le informazioni per eseguire la build dell'immagine; 
+in pratica il \code{Dockerfile} è una sorta di descrittore dello stato di una macchina virtuale che genera, una volta lanciata la build, una macchina virtuale persistente chiamata immagine. 
 
 Un container è un istanza di un'immagine che diventa quindi non persistente (qualsiasi modifica allo stato della VM verrà perso una volta chiuso il container). 
 
 Una delle caratteristiche più utili di Docker è la semplicità con cui è possibile interfacciare container diversi condividendo aree di memoria sul disco e porte TCP.
 
-L'idea di base per monitorare le prestazioni dell'algoritmo è stata quella di compilare il progetto Java con il tool \href{https://ant.apache.org/}{Ant} ed esportare il file Dandelion.jar; 
-è seguita la creazione di un Dockerfile basato sull'immagine \href{https://hub.docker.com/_/openjdk/}{openjdk}, 
-scaricata da \href{https://hub.docker.com/}{hub.docker}, contenente un'implementazione open source di Java SE (Java Platform, Standard Edition) a partire dalla versione 7. 
+L'idea di base per monitorare le prestazioni dell'algoritmo è stata quella di compilare il progetto Java con il tool Ant\cite{ant} ed esportare il file \code{Dandelion.jar}; 
+è seguita la creazione di un \code{Dockerfile} basato sull'immagine \code{openjdk}\cite{open-jdk}, 
+scaricata da hub.docker\cite{hub-docker}, contenente un'implementazione open source di Java SE (Java Platform, Standard Edition) a partire dalla versione 7. 
 
 \begin{lstlisting}[style=YmlStyle, caption=Dockerfile]
     FROM openjdk:latest
@@ -107,15 +104,19 @@ scaricata da \href{https://hub.docker.com/}{hub.docker}, contenente un'implement
 \end{lstlisting}
 
 La prima direttiva \code{FROM} specifica l'immagine di base su cui verrà edificata una nuova immagine, le successive due direttive \code{COPY} e \code{WORKDIR} servono rispettivamente a copiare 
-tutto il contenuto della cartella corrente dentro l'ambiente virtuale alla path specificata (\textit{/usr/src/dandelion}) e a settare quest'ultima come \textit{working directory} da cui partirà il container docker. 
+tutto il contenuto della cartella corrente dentro l'ambiente virtuale alla path specificata (\textit{/usr/src/dandelion}) e a settare quest'ultima come \textit{working directory} da cui 
+partirà il container docker. 
 
-Infine la direttiva \code{CMD} specifica il comando che verrà eseguito una volta finito il setup dell'ambiente, in questo caso viene eseguito Dandelion.jar con un particolare javaagent chiamato JMX\footnote{
-    \textbf{JMX Exporter} è un progetto \href{https://github.com/prometheus/jmx_exporter}{GitHub} open source che fornisce un javaagent capace di esportare ed esporre metrics per il software \href{https://prometheus.io/}{Prometheus}.
+Infine la direttiva \code{CMD} specifica il comando che verrà eseguito una volta finito il setup dell'ambiente, in questo caso verrà lanciato \code{Dandelion.jar} con un particolare
+\code{javaagent} chiamato JMX\footnote{
+    \textbf{JMX Exporter}\cite{jmx} è un progetto GitHub, open source, che fornisce un javaagent capace di esportare ed esporre metrics per il software 
+    Prometheus\cite{prometheus}.
 };
-questo javaagent è un exporter che si occupa di monitorare l'applicativo e di esportare in tempo reale le relative metrics che vengono esposte in un server locale su una porta a scelta (8080 in questo caso).
+questo tool è un exporter che si occupa di monitorare l'applicativo e di esportare in tempo reale le relative metrics che vengono esposte in un server locale su una porta a scelta 
+(8080 in questo caso).
 
-Per evitare di effettuare una build del Dockerfile ogni volta che modifichiamo il codice sorgente Java è possibile mappare la cartella corrente con la working directory dell'immagine tramite l'opzione \code{-v}
-che crea un volume condiviso; tramite l'opzione \code{-p} invece è possibile mappare una porta tcp interna al docker su una esterna.
+Per evitare di effettuare una build del \code{Dockerfile} ogni volta che modifichiamo il codice sorgente Java, è possibile mappare la cartella corrente con la working directory 
+dell'immagine tramite l'opzione \code{-v} che crea un volume condiviso; tramite l'opzione \code{-p} invece è possibile mappare una porta tcp interna al docker su una esterna.
 
 \begin{lstlisting}[style=YmlStyle, caption=Run Docker]
     docker run -it -p 8080:8080 -v <current-dir>.:<docker-working-dir> \
@@ -123,38 +124,43 @@ che crea un volume condiviso; tramite l'opzione \code{-p} invece è possibile ma
 \end{lstlisting}
 
 \section{Prometheus e Grafana}
-Parallelamente al primo container vengono istanziate altre due immagini, scaricate da \href{https://hub.docker.com/}{hub.docker}, chiamate \href{https://hub.docker.com/r/prom/prometheus/}{prom/prometheus} 
-e \href{https://hub.docker.com/r/grafana/grafana/}{grafana/grafana} le quali permettono di filtrare le metrics generate dall'exporter e di visualizzarle direttamente su dei grafici. 
+Parallelamente al primo container vengono istanziate altre due immagini, scaricate da hub.docker\cite{hub-docker}, chiamate \code{prom/prometheus}\cite{docker-prometheus} 
+e \code{grafana/grafana}\cite{docker-grafana} le quali permettono di filtrare le metrics generate dall'exporter e di visualizzarle direttamente su dei grafici. 
 
 \subsection{Prometheus}
-\href{https://prometheus.io/}{Prometheus} è un applicativo open source rilasciato sotto Apache 2 License su GitHub, permette di salvare in memoria e/o sul disco le metrics raccolte da un exporter e mette a disposizione 
-un linguaggio di query che permette di filtrare le metrics a piacimento. 
+Prometheus\cite{prometheus} è un applicativo open source rilasciato sotto Apache 2 License su GitHub; permette di salvare in memoria e/o sul disco le metrics raccolte 
+da un exporter (JMX in questo caso) e di filtrarle a piacimento tramite un apposito linguaggio di query. 
 
 È anche possibile rappresentare i risultati delle query direttamente su dei grafici statici tuttavia per questo aspetto si è scelto di usare Grafana.
 
 \subsection{Grafana}
-\href{https://grafana.com/}{Grafana} è anch'essa un software open source volto alla creazione di dashboard dinamiche tipicamente consistenti in grafici e widget di monitoraggio di vario tipo, funzionalmente molto completi 
-e gradevoli sotto il profilo estetico. 
+Grafana\cite{grafana} è anch'essa un software open source volto alla creazione di dashboard dinamiche, tipicamente popolate da grafici e vari widget di monitoraggio, 
+funzionalmente molto completi e gradevoli sotto il profilo estetico. 
 
 Grafana è nativamente predisposta per integrarsi con Prometheus, basta indicare la porta tcp su cui è settato Prometheus e la query che si desidera visualizzare.   
 
 \section{Wikidata e StrepHit}
-Wikidata è un progetto gratuito e open source legato a Wikipedia che mette a disposizione dell'utente un knowledge base accessibile sia dal portale wikidata.org che tramite un end-point SPARQL.
+Wikidata è un progetto gratuito e open source legato a Wikipedia che mette a disposizione dell'utente un knowledge base accessibile sia dal portale wikidata.org che tramite un endpoint SPARQL.
 
-I dati presenti nel knowledge base sono dati strutturati secondo le logiche del semantic web e adottano, quindi, il framework RDF (Resource Description Framework) proposto da W3C. 
+I dati presenti nel knowledge base sono dati strutturati secondo le logiche del semantic web e adottano, quindi, il framework RDF (Resource Description Framework) proposto da W3C; 
+pertanto è facilmente integrabile con qualsiasi altro knowledge base di terze parti che segua gli stessi schemi e modelli RDF.
 
-Questo servizio rende possibile l'interazione con il knowledge base di Wikidata direttamente tramite query veicolate da chiamate http ad un end-point SPARQL ed è facilmente integrabile 
-con qualsiasi altro knowledge base di terze parti che segua gli stessi schemi e modelli RDF.
+Questo servizio rende possibile l'interazione con il knowledge base direttamente esponendo un endpoint che accetta query SPARQL, veicolate da chiamate http. 
 
-\href{https://www.mediawiki.org/wiki/StrepHit}{StrepHit} è un progetto nato l'anno scorso, seguito da un team in FBK, coordinato da Marco Fossati; il progetto prevedeva la creazione di un applicativo scritto prevalentemente 
-in python capace di analizzare testi e tradurli in Wikidata statements (o QuickStatements).  
+\begin{lstlisting}[style=YmlStyle, caption=SPARQL endpoint]
+    https://query.wikidata.org/bigdata/namespace/wdq/sparql?query={SPARQL}
+\end{lstlisting}
 
-\href{https://www.mediawiki.org/wiki/StrepHit}{QuickStatemens} è un tool scritto da Magnus Manske che definisce un linguaggio volto a descrivere/modificare elementi Wikidata. Questo linguaggio è ormai diventato uno standard 
-per quanto riguarda Wikidata tant'è che la nomenclatura degli elementi del knowledge base seguono gli standard dettati da Quickstatements.
+\subsection{StrepHit}
+StrepHit\cite{strephit} è un progetto nato l'anno scorso, seguito da un team in FBK, coordinato da Marco Fossati; il progetto prevedeva la creazione di un applicativo, scritto prevalentemente 
+in Python, capace di analizzare testi e tradurli in Wikidata statements (o QuickStatements\cite{quickstatements}).  
+
+QuickStatements è un tool, scritto da Magnus Manske, che definisce un linguaggio volto a descrivere/modificare elementi Wikidata. Questo linguaggio è ormai diventato uno standard 
+per quanto riguarda Wikidata, tant'è che la nomenclatura degli elementi del knowledge base seguono gli standard dettati da Quickstatements.
 
 \subsection{SPARQL}
-\href{https://www.w3.org/TR/sparql11-query/}{SPARQL} è il linguaggio di query definito da W3C per RDF. Le query sono molto affini al SQL, infatti ne condividono molte key-word, la differenza sta nel fatto che i dati ora 
-seguono i modelli RDF pertanto avranno sempre un item, una property e un value.
+SPARQL è il linguaggio di query definito da W3C per RDF. Le query sono molto affini a quelle scritte in SQL, infatti ne condividono molte key-word, la differenza sta nel fatto che i dati ora 
+seguono i modelli RDF pertanto avranno sempre un \code{item}, una \code{property} e un \code{value}.
 
-Wikidata mette a disposizione \href{https://query.wikidata.org/}{un'interfaccia} che permette di lanciare manualmente query SPARQL sul knowledge base
-e un \href{https://query.wikidata.org/bigdata/namespace/wdq/sparql?query={SPARQL}}{end-point} per contattare lo stesso servizio con chiamate http. 
+Wikidata mette a disposizione un'interfaccia\cite{sparql-ui} che permette di lanciare manualmente query SPARQL sul knowledge base
+e un endpoint\cite{sparql-endpoint} per contattare lo stesso servizio con chiamate http. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  7 JUL 2018 15:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  8 JUL 2018 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -580,29 +580,29 @@ Overfull \hbox (2.23741pt too wide) in paragraph at lines 9--12
 -me-t-tono di con-frontare due testi generando
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 30.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
@@ -636,7 +636,7 @@ File: lstlang3.sty 2013/08/26 1.5b listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 ) [3]
-Overfull \hbox (3.36287pt too wide) in paragraph at lines 110--117
+Overfull \hbox (3.36287pt too wide) in paragraph at lines 102--109
 []\OT1/cmr/m/n/10.95 Infine la di-ret-tiva []CMD speci-fica il co-mando che ver
 r^^Ra es-e-guito una volta finito il setup dell'ambiente,
  []
@@ -671,12 +671,12 @@ Chapter 3.
 File: Sources/Img/c02_01.png Graphic file (type png)
 
 <use Sources/Img/c02_01.png>
-Package pdftex.def Info: Sources/Img/c02_01.png used on input line 86.
+Package pdftex.def Info: Sources/Img/c02_01.png used on input line 89.
 (pdftex.def)             Requested size: 176.10846pt x 123.1103pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 87.
+(caption)                particular \caption on input line 90.
 See the caption package documentation for explanation.
 
 [11 <./Sources/Img/c02_01.png (PNG copy)>]
@@ -689,14 +689,61 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [14] [15]
 Underfull \vbox (badness 4328) has occurred while \output is active []
 
- [16])
-[17] (./Chapters/chapter4.tex
+ [16]
+<Sources/Img/c03_01.png, id=758, 1080.035pt x 297.11pt>
+File: Sources/Img/c03_01.png Graphic file (type png)
+
+<use Sources/Img/c03_01.png>
+Package pdftex.def Info: Sources/Img/c03_01.png used on input line 435.
+(pdftex.def)             Requested size: 486.01126pt x 133.69826pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 436.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (2.31439pt too wide) in paragraph at lines 435--436
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
+
+ []
+
+
+Underfull \vbox (badness 6380) has occurred while \output is active []
+
+ [17 <./Sources/Img/c03_01.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 442--462
+
+ []
+
+<Sources/Img/c03_02.jpg, id=792, 196.48407pt x 610.53094pt>
+File: Sources/Img/c03_02.jpg Graphic file (type jpg)
+
+<use Sources/Img/c03_02.jpg>
+Package pdftex.def Info: Sources/Img/c03_02.jpg used on input line 475.
+(pdftex.def)             Requested size: 108.06656pt x 335.79306pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 476.
+See the caption package documentation for explanation.
+
+[18 <./Sources/Img/c03_02.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 482--484
+
+ []
+
+) [19] (./Chapters/chapter4.tex
 Chapter 4.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 13.
 
-[18]
+[20]
 Overfull \hbox (7.65337pt too wide) in paragraph at lines 53--60
 \OT1/cmr/m/n/10.95 ID[[]]) []"031/000097737" (il val-ore es-trap-o-lato, peo-pl
 e ID) []S813 (retrieved[[]]) []2018[]-[]06[]-[]04T02:19:10Z/14
@@ -708,7 +755,7 @@ Overfull \hbox (3.96992pt too wide) in paragraph at lines 92--94
  una forzatura perch^^Re soli-ta-mente si conoscono
  []
 
-[19] <Sources/Img/c04_01.png, id=850, 847.165pt x 585.18625pt>
+[21] <Sources/Img/c04_01.png, id=866, 847.165pt x 585.18625pt>
 File: Sources/Img/c04_01.png Graphic file (type png)
 
 <use Sources/Img/c04_01.png>
@@ -720,19 +767,15 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 111.
 See the caption package documentation for explanation.
 
-[20 <./Sources/Img/c04_01.png>]
+[22 <./Sources/Img/c04_01.png>]
 Overfull \hbox (26.98332pt too wide) in paragraph at lines 152--154
 []\OT1/cmr/m/n/10.95 Se nei []map[]-[]pings non es-iste nes-suna en-try com-pat
 -i-bile con l'URL viene chiam-ato il metodo []new[]mapping()
  []
 
-) [21] (./Chapters/conclusion.tex
+) [23] (./Chapters/conclusion.tex
 Chapter 5.
-) [22] (./lenzi_edoardo_laurea_2018.bbl
-
-LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 12.
-
-
+) [24] (./lenzi_edoardo_laurea_2018.bbl
 Underfull \hbox (badness 6641) in paragraph at lines 9--13
 []\OT1/cmr/bx/n/10.95 Application Pro-gram-ming In-ter-face (API)\OT1/cmr/m/n/1
 0.95 .  []$\OT1/cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki /
@@ -769,41 +812,18 @@ Underfull \hbox (badness 2245) in paragraph at lines 52--54
  []
 
 
-LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 63.
-
-
 Underfull \hbox (badness 5403) in paragraph at lines 71--73
 []\OT1/cmr/bx/n/10.95 DWikipedia.StrepHit repos-i-tory\OT1/cmr/m/n/10.95 .  []$
 \OT1/cmtt/m/n/10.95 https : / / github . com / EdoardoLenzi9 / Wikipedia .
  []
 
-
-LaTeX Warning: Citation `wikipedia' on page 23 undefined on input line 109.
-
-[23
+[25
 
 ]
-
-LaTeX Warning: Citation `wikipedia' on page 24 undefined on input line 119.
-
-
-LaTeX Warning: Citation `wikipedia' on page 24 undefined on input line 124.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 122--125
 []\OT1/cmr/bx/n/10.95 Model-View-Controller (MVC)\OT1/cmr/m/n/10.95 .  []$\OT1/
 cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki /
  []
-
-
-Underfull \hbox (badness 2529) in paragraph at lines 184--188
-[]\OT1/cmr/bx/n/10.95 QuickStatements\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.
-95 https : / / www . wikidata . org / wiki / Help : QuickStatements$[]\OT1/cmr/
-m/n/10.95 .  Pag-ina
- []
-
-
-LaTeX Warning: Citation `wikipedia' on page 24 undefined on input line 200.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 198--201
@@ -817,25 +837,15 @@ Underfull \hbox (badness 1210) in paragraph at lines 216--219
 0.95 https : / / query . wikidata . org / bigdata / namespace / wdq / sparql ?
  []
 
-
-LaTeX Warning: Citation `sparql' on page 24 undefined on input line 223.
-
-[24]
-
-LaTeX Warning: Citation `mediawiki' on page 25 undefined on input line 246.
-
-
-LaTeX Warning: Citation `wikipedia' on page 25 undefined on input line 251.
-
-
-Underfull \hbox (badness 1436) in paragraph at lines 249--252
+[26]
+Underfull \hbox (badness 1436) in paragraph at lines 248--251
 []\OT1/cmr/bx/n/10.95 TDD (Test Driven De-vel-op-ment)\OT1/cmr/m/n/10.95 .  []$
 \OT1/cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki / Test _ driven _
  []
 
 ) (./Chapters/attachments.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
- [25]
+ [27]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
  (./lenzi_edoardo_laurea_2018.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
@@ -843,17 +853,13 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
 Package rerunfilecheck Info: File `lenzi_edoardo_laurea_2018.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: D6D9F3CEC133A9AC5B13432EE8B36C80;2139.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
  ) 
 Here is how much of TeX's memory you used:
- 13463 strings out of 495028
- 191564 string characters out of 6181497
- 360722 words of memory out of 5000000
- 15917 multiletter control sequences out of 15000+600000
+ 13479 strings out of 495028
+ 191868 string characters out of 6181497
+ 363866 words of memory out of 5000000
+ 15922 multiletter control sequences out of 15000+600000
  20553 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  48i,18n,76p,736b,2869s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -930,10 +936,10 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lenzi_edoardo_laurea_2018.pdf (27 pages, 483263 bytes).
+Output written on lenzi_edoardo_laurea_2018.pdf (29 pages, 632656 bytes).
 PDF statistics:
- 1147 PDF objects out of 1200 (max. 8388607)
- 1086 compressed objects within 11 object streams
- 540 named destinations out of 1000 (max. 500000)
- 304 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1161 PDF objects out of 1200 (max. 8388607)
+ 1096 compressed objects within 11 object streams
+ 548 named destinations out of 1000 (max. 500000)
+ 314 words of extra memory for PDF output out of 10000 (max. 10000000)
 

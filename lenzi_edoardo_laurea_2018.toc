@@ -29,11 +29,12 @@
 \contentsline {subsubsection}{Stima implementazione di un grafo}{15}{subsubsection*.8}
 \contentsline {section}{\numberline {3.2}Implementazione con Hash Map}{15}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Codice}{16}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Test}{17}{subsection.3.2.2}
-\contentsline {subsubsection}{Generazione di un dump con dimensione arbitraria}{17}{subsubsection*.9}
+\contentsline {subsection}{\numberline {3.2.2}Generazione delle chiavi}{17}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Test}{18}{subsection.3.2.3}
+\contentsline {subsubsection}{Generazione di un dump con dimensione arbitraria}{18}{subsubsection*.9}
 \contentsline {subsubsection}{Test Hash Map}{18}{subsubsection*.10}
 \contentsline {chapter}{\numberline {4}StrepHit}{20}{chapter.4}
-\contentsline {subsection}{\numberline {4.0.3}Esempio di funzionamento}{20}{subsection.4.0.3}
+\contentsline {subsection}{\numberline {4.0.4}Esempio di funzionamento}{20}{subsection.4.0.4}
 \contentsline {section}{\numberline {4.1}SPARQL Query}{21}{section.4.1}
 \contentsline {section}{\numberline {4.2}Lo script}{22}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Struttura del progetto}{22}{subsection.4.2.1}

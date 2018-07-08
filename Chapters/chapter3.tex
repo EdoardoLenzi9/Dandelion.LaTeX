@@ -418,6 +418,33 @@ public RelatednessHashMap ReadDump(String dump) throws Exception {
 }
 \end{lstlisting}
 
+\subsection{Generazione delle chiavi}
+Inizialmente le chiavi per l'\code{HashMap} venivano generate come stringhe, concatenando gli identificativi delle entità. 
+
+Per rendere l'\code{HashMap} meno pesante in termini di occupazione di memoria e più semplice da computare si è scelto di concatenare i due numeri in un \code{long}, 
+aggiungendo degli zeri fra i due identificativi per evitare possibili conflitti.
+
+\begin{lstlisting}[style=JavaStyle, caption=Codice di generazione delle chiavi]
+    private long CreateHashKey(int a, int b)
+    {
+        StringBuilder key = new StringBuilder();
+        key.append(b);
+        int numberOfZeros = Localizations.numberOfDigits - (int)(Math.log(a) / Math.log(10));
+        for(int i = 0; i < numberOfZeros; i++)
+        {
+            key.append('0');
+        }
+        key.append(a);
+        return Long.parseLong(key.toString());
+    }
+\end{lstlisting}
+
+In pratica nel caso in cui l'id di un'entità abbia meno cifre di \code{maxId} (il cui numero di cifre è salvato nella costante \code{Localizations.numberOfDigits}),
+vengono aggiunti a sinistra dell'id tutti gli zeri che servono a colmare la differenza.
+
+Si è scelto di usare il tipo \code{long} perchè permette di rappresentare numeri a 19 cifre; nel caso reale \code{maxId} ha 8 cifre quindi con il tipo \code{int} non era 
+possible rappresentare due id concatenati. 
+
 \subsection{Test}
 
 \subsubsection{Generazione di un dump con dimensione arbitraria}
@@ -463,9 +490,9 @@ Per testare le nuove implementazioni sono stati eseguiti gli stessi test-cases s
 Sono stati eseguiti vari test, a macchina scarica, con entrambe le implementazioni su dump di dimensione sempre crescente. 
 Ogni test è stato replicato 10 volte e, con le medie dei risultati, è stata popolata la tabella sopra riportata.
 
-L'implementazione nativa sembra superare sotto ogni aspetto l'implementazione con HashMap.
+L'implementazione nativa sembra superare sotto ogni aspetto l'implementazione con \code{HashMap}.
 
-Come si può notare dalla tabella l'implementazione con HashMap impiega molto più tempo della nativa per leggere il dump e caricare in memoria la struttura dati;
+Come si può notare dalla tabella l'implementazione con \code{HashMap} impiega molto più tempo della nativa per leggere il dump e caricare in memoria la struttura dati;
 questo non sembrerebbe un grosso problema perchè il tempo di lettura non influisce sulle performance dell'algoritmo potrebbe essere un problema se la funzione di crescita 
 fosse esponenziale rispetto al numero di relatedness presenti nel dump. 
 
@@ -473,13 +500,13 @@ Anche se la funzione cresce molto velocemente, rappresentando i dati di test su 
 
 \begin{center}
     \includegraphics[scale=0.55]{Sources/Img/c03_02.jpg}
-    \captionof{figure}{Funzione di crescita del tempo di lettura del dump al crescere del numero correlazioni fra entità (in rosso implementazione con HashMap, in blu implementazione nativa)}
+    \captionof{figure}{Funzione di crescita del tempo di lettura del dump al crescere del numero correlazioni fra entità (in rosso implementazione con \code{HashMap}, in blu implementazione nativa)}
 \end{center}
 
-Il grosso problema dell'implementazione con HashMap è lo spreco di memoria, l'ultimo test, con \code{nodeSize = 30.000}, è fallito perchè alla lettura del dump il container docker aveva allocato il 
+Il grosso problema dell'implementazione con \code{HashMap} è lo spreco di memoria, l'ultimo test, con \code{nodeSize = 30.000}, è fallito perchè alla lettura del dump il container docker aveva allocato il 
 78$\%$ della memoria della macchina (con 16GB di ram) contro il 13$\%$ utilizzato dall'implementazione nativa. 
 
-Altra cosa inaspettata, al crescere del numero di correlazioni l'HashMap diventa così complessa da risolvere che, pur essendo stimato il tempo di look-up a $O(1)$, comunque supera il tempo 
+Altra cosa inaspettata, al crescere del numero di correlazioni l'\code{HashMap} diventa così complessa da risolvere che, pur essendo stimato il tempo di look-up a $O(1)$, comunque supera il tempo 
 di ricerca binaria ($O(lg_2(n)$)) con uno scostamento sempre crescente.\\
 
 Stima del numero di correlazioni nel dump originale: 
@@ -493,4 +520,4 @@ Stima del numero di correlazioni con \code{nodeSize = 29.000};
 \end{split}\end{equation}
 
 Nonostante ci sia un ordine di grandezza di differenza fra il numero di relatedness storicizzate nel dump originale e quello nel dump autogenerato (con \code{maxId = 30000} e \code{nodeSize = 29.000}), 
-l'implementazione con HashMap risulta estremamente inefficiente rispetto a quella nativa. 
+l'implementazione con \code{HashMap} risulta estremamente inefficiente rispetto a quella nativa. 

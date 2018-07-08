@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  8 JUL 2018 11:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  8 JUL 2018 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -527,7 +527,7 @@ enter-eps-converted-to.pdf Sources/logo_unitn_black_center.eps>
 (epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=146, 293.095pt x 126.
+<Sources/logo_unitn_black_center-eps-converted-to.pdf, id=150, 293.095pt x 126.
 4725pt>
 File: Sources/logo_unitn_black_center-eps-converted-to.pdf Graphic file (type p
 df)
@@ -667,7 +667,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [8])
 [9] (./Chapters/chapter3.tex
 Chapter 3.
-[10] <Sources/Img/c02_01.png, id=523, 320.19624pt x 223.83624pt>
+[10] <Sources/Img/c02_01.png, id=528, 320.19624pt x 223.83624pt>
 File: Sources/Img/c02_01.png Graphic file (type png)
 
 <use Sources/Img/c02_01.png>
@@ -690,54 +690,55 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 4328) has occurred while \output is active []
 
  [16]
-<Sources/Img/c03_01.png, id=758, 1080.035pt x 297.11pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+<Sources/Img/c03_01.png, id=807, 1080.035pt x 297.11pt>
 File: Sources/Img/c03_01.png Graphic file (type png)
 
 <use Sources/Img/c03_01.png>
-Package pdftex.def Info: Sources/Img/c03_01.png used on input line 435.
+Package pdftex.def Info: Sources/Img/c03_01.png used on input line 462.
 (pdftex.def)             Requested size: 486.01126pt x 133.69826pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 436.
+(caption)                particular \caption on input line 463.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.31439pt too wide) in paragraph at lines 435--436
+Overfull \hbox (2.31439pt too wide) in paragraph at lines 462--463
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
+Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
  []
 
 
-Underfull \vbox (badness 6380) has occurred while \output is active []
-
- [17 <./Sources/Img/c03_01.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 442--462
+Underfull \hbox (badness 10000) in paragraph at lines 469--489
 
  []
 
-<Sources/Img/c03_02.jpg, id=792, 196.48407pt x 610.53094pt>
+[18 <./Sources/Img/c03_01.png (PNG copy)>]
+<Sources/Img/c03_02.jpg, id=815, 196.48407pt x 610.53094pt>
 File: Sources/Img/c03_02.jpg Graphic file (type jpg)
 
 <use Sources/Img/c03_02.jpg>
-Package pdftex.def Info: Sources/Img/c03_02.jpg used on input line 475.
+Package pdftex.def Info: Sources/Img/c03_02.jpg used on input line 502.
 (pdftex.def)             Requested size: 108.06656pt x 335.79306pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 476.
+(caption)                particular \caption on input line 503.
 See the caption package documentation for explanation.
 
-[18 <./Sources/Img/c03_02.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 482--484
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--511
 
  []
 
-) [19] (./Chapters/chapter4.tex
+) [19 <./Sources/Img/c03_02.jpg>] (./Chapters/chapter4.tex
 Chapter 4.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
@@ -755,7 +756,7 @@ Overfull \hbox (3.96992pt too wide) in paragraph at lines 92--94
  una forzatura perch^^Re soli-ta-mente si conoscono
  []
 
-[21] <Sources/Img/c04_01.png, id=866, 847.165pt x 585.18625pt>
+[21] <Sources/Img/c04_01.png, id=885, 847.165pt x 585.18625pt>
 File: Sources/Img/c04_01.png Graphic file (type png)
 
 <use Sources/Img/c04_01.png>
@@ -852,14 +853,14 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
 Package rerunfilecheck Info: File `lenzi_edoardo_laurea_2018.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: D6D9F3CEC133A9AC5B13432EE8B36C80;2139.
+(rerunfilecheck)             Checksum: 5FED47FD027C9E5F154118B836D5D5E0;2217.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
  ) 
 Here is how much of TeX's memory you used:
- 13479 strings out of 495028
- 191868 string characters out of 6181497
- 363866 words of memory out of 5000000
- 15922 multiletter control sequences out of 15000+600000
+ 13514 strings out of 495028
+ 192375 string characters out of 6181497
+ 363895 words of memory out of 5000000
+ 15943 multiletter control sequences out of 15000+600000
  20553 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  48i,18n,76p,736b,2869s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -936,10 +937,10 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lenzi_edoardo_laurea_2018.pdf (29 pages, 632656 bytes).
+Output written on lenzi_edoardo_laurea_2018.pdf (29 pages, 635146 bytes).
 PDF statistics:
- 1161 PDF objects out of 1200 (max. 8388607)
- 1096 compressed objects within 11 object streams
- 548 named destinations out of 1000 (max. 500000)
- 314 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1182 PDF objects out of 1200 (max. 8388607)
+ 1116 compressed objects within 12 object streams
+ 562 named destinations out of 1000 (max. 500000)
+ 322 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -9,7 +9,7 @@
 \textbf{Application Programming Interface (API)}.
 \newblock
   \url{https://it.wikipedia.org/wiki/Application_programming_interface}.
-\newblock Pagina Wikipedia\cite{wikipedia} dedicata alle API.
+\newblock Pagina Wikipedia dedicata alle API.
 
 \bibitem{code-doc}
 \textbf{Code documentation}.
@@ -60,7 +60,7 @@
 \bibitem{dependency-injection}
 \textbf{Dependency Injection}.
 \newblock \url{https://en.wikipedia.org/wiki/Dependency_injection}.
-\newblock Pagina Wikipedia\cite{wikipedia} dedicata alla dependency injection.
+\newblock Pagina Wikipedia dedicata alla dependency injection.
 
 \bibitem{docker}
 \textbf{Docker}.
@@ -106,7 +106,7 @@
 \bibitem{inversion-of-control}
 \textbf{Inversion of control (IoC)}.
 \newblock \url{https://en.wikipedia.org/wiki/Inversion_of_control}.
-\newblock Pagina Wikipedia\cite{wikipedia} dedicata a IoC.
+\newblock Pagina Wikipedia dedicata a IoC.
 
 \bibitem{jmx}
 \textbf{JMX Exporter}.
@@ -116,12 +116,12 @@
 \bibitem{lucene}
 \textbf{Lucene}.
 \newblock \url{https://it.wikipedia.org/wiki/Lucene}.
-\newblock Pagina Wikipedia\cite{wikipedia} dedicata a Lucene.
+\newblock Pagina Wikipedia dedicata a Lucene.
 
 \bibitem{mvc}
 \textbf{Model-View-Controller (MVC)}.
 \newblock \url{https://it.wikipedia.org/wiki/Model-view-controller}.
-\newblock Pagina Wikipedia\cite{wikipedia} dedicata a MVC.
+\newblock Pagina Wikipedia dedicata a MVC.
 
 \bibitem{Q207628}
 \textbf{"Musical composition", Wikidata item}.
@@ -130,7 +130,7 @@
 \bibitem{newtonsoft-json}
 \textbf{Newtonsoft.Json}.
 \newblock \url{https://www.nuget.org/packages/newtonsoft.json/}.
-\newblock Pagina Nuget \cite{nuget} dedicata.
+\newblock Pagina Nuget dedicata.
 
 \bibitem{P1263}
 \textbf{"NNDB people ID", Wikidata property}.
@@ -183,8 +183,8 @@
 \bibitem{quickstatements}
 \textbf{QuickStatements}.
 \newblock \url{https://www.wikidata.org/wiki/Help:QuickStatements}.
-\newblock Pagina Wikidata\cite{wikidata} dedicata (contentente anche la
-  descrizione completa della sintassi degli \qt{statements}).
+\newblock Pagina Wikidata dedicata (contentente anche la descrizione completa
+  della sintassi degli \qt{statements}).
 
 \bibitem{Q193660}
 \textbf{"Ramon Llull", Wikidata item}.
@@ -197,7 +197,7 @@
 \bibitem{rest}
 \textbf{Representational State Transfer (REST)}.
 \newblock \url{https://it.wikipedia.org/wiki/Representational_State_Transfer}.
-\newblock Pagina Wikipedia\cite{wikipedia} dedicata a REST.
+\newblock Pagina Wikipedia dedicata a REST.
 
 \bibitem{rdf}
 \textbf{Resource Description Framework (RDF)}.
@@ -210,7 +210,7 @@
 \bibitem{simple-injector}
 \textbf{SimpleInjector}.
 \newblock \url{https://www.nuget.org/packages/SimpleInjector/}.
-\newblock Pagina Nuget \cite{nuget} dedicata.
+\newblock Pagina Nuget dedicata.
 
 \bibitem{sparql-endpoint}
 \textbf{SPARQL endp-point}.
@@ -220,8 +220,7 @@
 \bibitem{sparql-ui}
 \textbf{SPARQL interface}.
 \newblock \url{https://query.wikidata.org/}.
-\newblock Interfaccia online per lanciare query SPARQL\cite{sparql} su
-  Wikidata\cite{wikidata}.
+\newblock Interfaccia online per lanciare query SPARQL su Wikidata.
 
 \bibitem{sparql-query}
 \textbf{SPARQL Query}.
@@ -243,12 +242,12 @@
 \bibitem{strephit}
 \textbf{StrepHit}.
 \newblock \url{https://www.mediawiki.org/wiki/StrepHit}.
-\newblock Pagina MediaWiki\cite{mediawiki} con tutti i dettagli del progetto.
+\newblock Pagina MediaWiki con tutti i dettagli del progetto.
 
 \bibitem{tdd}
 \textbf{TDD (Test Driven Development)}.
 \newblock \url{https://it.wikipedia.org/wiki/Test_driven_development}.
-\newblock Pagina Wikipedia\cite{wikipedia} dedicata a TDD.
+\newblock Pagina Wikipedia dedicata a TDD.
 
 \bibitem{w3c}
 \textbf{The World Wide Web Consortium (W3C)}.
@@ -276,7 +275,7 @@
 \bibitem{xunit}
 \textbf{XUnit}.
 \newblock \url{https://www.nuget.org/packages/xunit/}.
-\newblock Pagina Nuget \cite{nuget} dedicata.
+\newblock Pagina Nuget dedicata.
 
 \bibitem{xunit-repo}
 \textbf{XUnit GitHub repository}.

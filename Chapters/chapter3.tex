@@ -37,7 +37,8 @@ pertanto il fine dell'analisi sarebbe quello di studiare/testare implementazioni
 ...
 \end{lstlisting}
 
-Leggendo le prime righe di un dump si nota che le prime cinque righe sono valori di inizializzazione mentre dalla sesta riga in poi troviamo le righe della matrice.
+Analizzando la parte iniziale di un dump si nota che sulle prime cinque righe ci sono valori di inizializzazione mentre dalla sesta riga in poi troviamo i valori della matrice.
+
 Il primo numero intero, denominato \code{max$\_$id}, indica il limite massimo che gli id delle entità possono assumere; 
 dato che gli id delle entità non sono necessariamente sequenziali 
 (fra due di essi potrei avere dei \lq\lq buchi\rq\rq, degli intervalli in cui gli identificativi non sono associati ad alcuna entità) 
@@ -47,13 +48,14 @@ Il secondo intero, denominato \code{nodesSize} è il valore massimo che la funzi
 
 \begin{equation}\begin{split}
     map():\ \mathbb{N} & \rightarrow \mathbb{N}\\
-            [0,max\_id] & \rightarrow [0, nodeSize], max\_id \geq nodeSize\\
+            [0,max\_id] & \rightarrow [0, nodeSize],\ max\_id \geq nodeSize\\
 \end{split}\end{equation}
 
-Continuando a leggere il dump troviamo la relatedness minima considerata \code{minRel} (sotto la quale i valori di correlazione non vengono salvati) 
+Continuando a leggere il dump troviamo la relatedness minima considerata \code{minRel} (sotto la quale i valori di correlazione non vengono salvati nel dump) 
 e altri valori di configurazione quali \code{minIntersection} e \code{threshold} che tuttavia non ci interessano particolarmente.
 
-La funzione map in un certo senso mappa \lq\lq al contrario\rq\rq\ gli id; infatti l'id massimo verrà mappato su 0, il penultimo id verrà mappato su 1 e così via.
+La funzione \code{map} in un certo senso mappa \lq\lq al contrario\rq\rq\ gli id; infatti l'id massimo verrà mappato su 0, il penultimo id verrà mappato su 1 e così via.
+
 Nel caso del dump in questione abbiamo:
 
 \begin{lstlisting}[style=TeXStyle, caption=Esempio di funzione map e postingList]
@@ -73,7 +75,8 @@ NodeSize = 4922289
 \end{lstlisting}
 
 Dalla sesta riga del dump in poi inizia la definizione della matrice, ogni riga è composta da tre valori separati da uno spazio. 
-Ad esempio se consideriamo la riga:
+
+Consideriamo una riga qualsiasi:
 \begin{lstlisting}[style=TeXStyle, caption=Riga del dump]
 53676164 5 NnAwQT/ZvTVJ05MeSfcdI0rMrg1LBmUH
 \end{lstlisting}
@@ -94,8 +97,9 @@ Questa codifica, pertanto, permette di gestire set di entità con id \lq\lq mapp
 di correlazione appartenenti all'intervallo $[0,\ 255]$.
 
 Bisogna precisare che l'array di byte, denominato \code{postingList}, è ordinato per valore crescente delle chiavi e, dato che \code{rel(a, b) = rel(b, a)},
-si è deciso di salvare una sola volta il valore di correlazione imponendo la relazione: $a > b$. Le righe del dump, invece, non sono necessariamente ordiante per identificativo 
-dell'entità.
+si è deciso di salvare una sola volta il valore di correlazione imponendo la relazione: $a > b$. 
+
+Le righe del dump, invece, non sono necessariamente ordiante per identificativo dell'entità.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Esempio}
@@ -106,7 +110,7 @@ Con una ricerca binaria sulla \code{postingList c} bisogna trovare un gruppo di 
 ed il quarto byte sarà il valore di correlazione voluto. 
 
 Ovviamente è possibile che \code{c} sia \code{null} (l'entità con id \code{a} non ha nessuna correlazione con altre entità i cui id \lq\lq mappati\rq\rq\ siano inferiori a \code{b}) oppure 
-che nella posting non sia presente nessuna chiave corrispondente a \code{map(d)}, in questi casi \code{$relatedness(a,d) = 0$}. 
+che nella \code{postingList} non sia presente nessuna chiave corrispondente a \code{map(d)}, in questi casi \code{$relatedness(a,d) = 0$}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Il Codice Nativo}
@@ -229,8 +233,10 @@ La funzione map viene salvata in un array di interi (\code{data.map}) mentre la 
 array bidimensionale di byte (\code{data.matrix}).
 
 Il metodo \code{rel(int a, int b)} calcola la funzione \code{map} sugli id \code{a} e \code{b}, dopodichè fa una binary search sulla \code{postingList} 
-ottenuta da \code{matrix[map(a)]} (assumendo $map(a) > map(b)$). Se la ricerca binaria ha successo il valore di relatedness ottenuto va riscalato su una scala di valori 
-$[0, 255]$, convertito in float e riscalato nuovamente in base al valore di relatedness minima considerata (per escludere i valori al di sotto della relatedness minima,
+ottenuta da \code{matrix[map(a)]} (assumendo $map(a) > map(b)$). 
+
+Se la ricerca binaria ha successo il valore di relatedness ottenuto va riscalato su una scala di valori $[0, 255]$, 
+convertito in float e riscalato nuovamente in base al valore di relatedness minima considerata (per escludere i valori al di sotto della relatedness minima,
 che non verranno mai usati).  
 
 \begin{lstlisting}[style=JavaStyle, caption=Conversione della relatedness da byte a float]
@@ -252,7 +258,7 @@ Il codice nativo per il calcolo della relatedness costa $O(lg_2(n))$ (con $n=nod
 istruzioni precedenti e successive a quest'ultima.
 
 Tolta una piccola modifica al codice che portebbe ad evitare tre moltiplicazioni per ciclo nella binary search (non è necessario dividere e poi moltiplicare per 
-\code{RelatednessMatrix.EL$\_$SIZE}), non sembra si possono migliorare di molto le prestazioni dell'algoritmo senza cambiare struttura dati.
+\code{RelatednessMatrix.EL$\_$SIZE}), non sembra si possano migliorare di molto le prestazioni dell'algoritmo senza cambiare struttura dati.
 
 Una via percorribile per non \lq\lq pagare\rq\rq\ $O(lg_2(n))$ per la binary search potrebbe essere quella di allocare direttamente in memoria la matrice 
 completa (in questo caso avrei un algoritmo di tempo costante O(1)). Questa soluzione però andrebbe a peggiorare drasticamente lo spreco di memoria.
@@ -262,7 +268,7 @@ non occupano quindi sempre $(nodeSize -1) \cdot 4\ Byte$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Stima della Memoria Allocata}
 Se consideriamo le prime righe del dump in questione possiamo stimare che mediamente il $57\%$ degli id hanno postingList vuota (null) ed il restante $43\%$ ha un numero 
-medio di relatedness per id pari allo $0,000101\%$ di nodeSize.
+medio di relatedness per id pari allo $0,0101\%$ di nodeSize.
 
 L'implementazione attuale alloca in memoria per l'array di interi map circa:
 \begin{center}
@@ -286,7 +292,7 @@ più della metà dei valori nella matrice non sarebbero valorizzati), come Spars
 si basano su liste; in questo caso però difficilmente si otterrebbero prestazioni migliori di quelle dell'implementazione attuale dato che il tempo di lookup 
 sarebbe sempre $O(lg_2(noseSize))$. 
 
-In conclusione, a meno di uno spreco di memoria ulteriore, difficilmente otterrebbero buoni risultati mantenendo come struttura dati di riferimento la matrice. 
+In conclusione, a meno di uno spreco di memoria ulteriore, difficilmente si otterrebbero buoni risultati mantenendo come struttura dati di riferimento la matrice. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Stima del problema inverso}
@@ -294,7 +300,7 @@ Una via praticabile potrebbe essere quella di vedere il problema al contrario, c
 per minimizzare lo spreco di memoria si potrebbe pensare all'allocazione di 256 array in cui si storicizzano tutte le coppie di id che hanno la stessa relatedness. 
 In questo modo eliminerei la ridondanza costituita da valori uguali di relatedness salvati nel dump migliaia di volte.
 
-Ci si accorge subito che anche questa via non è praticabile dato che per risparmiare 1 Byte (il valore della relatedness) dovrei allocarne altri 8 per le coppie di id di tipo intero. 
+Ci si accorge subito che anche questa via non è praticabile dato che per risparmiare 1 Byte (il valore della relatedness) dovrei allocarne altri 8 per le coppie di id (di tipo intero). 
 Andrei ad occupare $0.43 \cdot 4 \cdot 10^6 \cdot 404 \cdot 2 \cdot 4 = 5.6 GB$, il doppio rispetto all'implementazione nativa, senza contare che 
 le performance peggiorerebbero.
 
@@ -413,5 +419,78 @@ public RelatednessHashMap ReadDump(String dump) throws Exception {
 \end{lstlisting}
 
 \subsection{Test}
-Per testare al meglio le varie implementazioni è stata creata 
-[\textbf{TODO} implementazione alternativa fastutils e metrics di Prometheus e Grafana]
+
+\subsubsection{Generazione di un dump con dimensione arbitraria}
+Per testare al meglio le varie implementazioni è stato creato un metodo per generare automaticamente un dump con dati random, della dimensione che si desidera;
+il metodo \code{CreateDump()} accetta come parametri \code{maxId}, \code{nodeSize} e \code{nullPercentage} (la percentuale di righe con \code{postingList = null}) e genera: un dump 
+analogo a quello reale, un dump con \code{postingList} non codificata in Base64 (utile per debug) e un file contenente una serie di test-cases della forma: 
+\code{$<entityId; entityId; relatedness>$}.
+
+Per essere più fedeli possibile all'originale le \code{postingList == null} sono uniformemente distribuite fra le righe (non tutte ammassate all'inizio o alla fine) e la lunghezza delle restanti 
+è direttamente proporzionale al valore dell'id della riga (questo per poter avere casi di test su \code{postingList} di lunghezza massima e minima). 
+Con questo metodo è anche molto facile stimare il numero di relazioni presenti nel dataset, basta calcolare l'area del triangolo che ha altezza e base pari a \code{nodeSize} (togliendo 
+le \code{postingList null}).
+
+\begin{center}
+    \includegraphics[scale=0.45]{Sources/Img/c03_01.png}
+    \captionof{figure}{Dump con struttura a triangolo}
+\end{center}
+
+\subsubsection{Test Hash Map}
+Per testare le nuove implementazioni sono stati eseguiti gli stessi test-cases sullo stesso dump e messi a confronto tempi di risposta e occupazione di memoria della struttura dati.\\
+
+\begin{tabular}{|l|l|l|l|l|}
+    \hline
+    \textbf{Type}    &   \textbf{MaxId - NodeSize}   &   \textbf{$\#$ test-cases}   &   \textbf{Read dump time}  &   \textbf{Testing time}            \\      
+    \hline
+    Native              &   1.000 - 900              &   1.000.000                  &   0.09s               &   0.90s                       \\
+    HashMap             &   1.000 - 900              &   1.000.000                  &   0.17s               &   1.05s                       \\         
+    \hline
+    Native              &   10.000 - 9.000           &   1.000.000                  &   1.73s               &   1.16s                       \\
+    HashMap             &   10.000 - 9.000           &   1.000.000                  &   20.24s              &   2.00s                       \\ 
+    \hline
+    Native              &   15.000 - 14.000          &   1.000.000                  &   4.91s               &   1.26s                       \\
+    HashMap             &   15.000 - 14.000          &   1.000.000                  &   72.26s              &   2.42s                       \\ 
+    \hline
+    Native              &   20.000 - 19.000          &   1.000.000                  &   8.87s               &   1.32s                       \\
+    HashMap             &   20.000 - 19.000          &   1.000.000                  &   133.32s             &   3.29s                       \\ 
+    \hline
+    Native              &   30.000 - 29.000          &   1.000.000                  &   19.71s              &   1.49s                       \\
+    HashMap             &   30.000 - 29.000          &   1.000.000                  &   out of memory       &   out of memory               \\
+    \hline                                    
+\end{tabular}\\
+
+Sono stati eseguiti vari test, a macchina scarica, con entrambe le implementazioni su dump di dimensione sempre crescente. 
+Ogni test è stato replicato 10 volte e, con le medie dei risultati, è stata popolata la tabella sopra riportata.
+
+L'implementazione nativa sembra superare sotto ogni aspetto l'implementazione con HashMap.
+
+Come si può notare dalla tabella l'implementazione con HashMap impiega molto più tempo della nativa per leggere il dump e caricare in memoria la struttura dati;
+questo non sembrerebbe un grosso problema perchè il tempo di lettura non influisce sulle performance dell'algoritmo potrebbe essere un problema se la funzione di crescita 
+fosse esponenziale rispetto al numero di relatedness presenti nel dump. 
+
+Anche se la funzione cresce molto velocemente, rappresentando i dati di test su un grafico, sembra sia comunque lineare (per il dump reale si stima che impieghi meno di un ora).
+
+\begin{center}
+    \includegraphics[scale=0.55]{Sources/Img/c03_02.jpg}
+    \captionof{figure}{Funzione di crescita del tempo di lettura del dump al crescere del numero correlazioni fra entità (in rosso implementazione con HashMap, in blu implementazione nativa)}
+\end{center}
+
+Il grosso problema dell'implementazione con HashMap è lo spreco di memoria, l'ultimo test, con \code{nodeSize = 30.000}, è fallito perchè alla lettura del dump il container docker aveva allocato il 
+78$\%$ della memoria della macchina (con 16GB di ram) contro il 13$\%$ utilizzato dall'implementazione nativa. 
+
+Altra cosa inaspettata, al crescere del numero di correlazioni l'HashMap diventa così complessa da risolvere che, pur essendo stimato il tempo di look-up a $O(1)$, comunque supera il tempo 
+di ricerca binaria ($O(lg_2(n)$)) con uno scostamento sempre crescente.\\
+
+Stima del numero di correlazioni nel dump originale: 
+\begin{equation}\begin{split}
+    49.22289 \cdot (4922289 \cdot 0,000101) \cdot 0.43 = 1.041.843.947\\
+\end{split}\end{equation}
+
+Stima del numero di correlazioni con \code{nodeSize = 29.000}; 
+\begin{equation}\begin{split}
+    29.000 \cdot 29.000 \cdot 0.5 \cdot 0.43 = 180.815.000 \\
+\end{split}\end{equation}
+
+Nonostante ci sia un ordine di grandezza di differenza fra il numero di relatedness storicizzate nel dump originale e quello nel dump autogenerato (con \code{maxId = 30000} e \code{nodeSize = 29.000}), 
+l'implementazione con HashMap risulta estremamente inefficiente rispetto a quella nativa. 

@@ -20,7 +20,7 @@
 \contentsline {chapter}{\numberline {3}Calcolo della Relatedness}{10}{chapter.3}
 \contentsline {section}{\numberline {3.1}Implementazione Iniziale}{10}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Il Dump}{10}{subsection.3.1.1}
-\contentsline {subsubsection}{Esempio}{11}{subsubsection*.4}
+\contentsline {subsubsection}{Esempio}{12}{subsubsection*.4}
 \contentsline {subsection}{\numberline {3.1.2}Il Codice Nativo}{12}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}Osservazioni}{14}{subsection.3.1.3}
 \contentsline {subsubsection}{Stima della Memoria Allocata}{14}{subsubsection*.5}
@@ -30,12 +30,14 @@
 \contentsline {section}{\numberline {3.2}Implementazione con Hash Map}{15}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Codice}{16}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Test}{17}{subsection.3.2.2}
-\contentsline {chapter}{\numberline {4}StrepHit}{18}{chapter.4}
-\contentsline {subsection}{\numberline {4.0.3}Esempio di funzionamento}{18}{subsection.4.0.3}
-\contentsline {section}{\numberline {4.1}SPARQL Query}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}Lo script}{20}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Struttura del progetto}{20}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Algoritmo}{20}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Refresh delle URL}{21}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}Conclusioni}{22}{chapter.5}
-\contentsline {chapter}{Bibliografia}{23}{chapter.5}
+\contentsline {subsubsection}{Generazione di un dump con dimensione arbitraria}{17}{subsubsection*.9}
+\contentsline {subsubsection}{Test Hash Map}{18}{subsubsection*.10}
+\contentsline {chapter}{\numberline {4}StrepHit}{20}{chapter.4}
+\contentsline {subsection}{\numberline {4.0.3}Esempio di funzionamento}{20}{subsection.4.0.3}
+\contentsline {section}{\numberline {4.1}SPARQL Query}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Lo script}{22}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Struttura del progetto}{22}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Algoritmo}{22}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Refresh delle URL}{23}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}Conclusioni}{24}{chapter.5}
+\contentsline {chapter}{Bibliografia}{25}{chapter.5}

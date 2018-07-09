@@ -24,18 +24,6 @@ pertanto il fine dell'analisi sarebbe quello di studiare/testare implementazioni
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Il Dump}
-\begin{lstlisting}[style=TeXStyle, caption=Estratto del dump]
-53676192
-4922289
-0.01
-2
-1.0
-53676158 7 null
-53676164 5 NnAwQT/ZvTVJ05MeSfcdI0rMrg1LBmUH
-53676016 13 RDsFRUkyASRLFf3T
-53675811 16 null
-...
-\end{lstlisting}
 
 Analizzando la parte iniziale di un dump si nota che sulle prime cinque righe ci sono valori di inizializzazione mentre dalla sesta riga in poi troviamo i valori della matrice.
 
@@ -51,8 +39,23 @@ Il secondo intero, denominato \code{nodesSize} è il valore massimo che la funzi
             [0,max\_id] & \rightarrow [0, nodeSize],\ max\_id \geq nodeSize\\
 \end{split}\end{equation}
 
-Continuando a leggere il dump troviamo la relatedness minima considerata \code{minRel} (sotto la quale i valori di correlazione non vengono salvati nel dump) 
-e altri valori di configurazione quali \code{minIntersection} e \code{threshold} che tuttavia non ci interessano particolarmente.
+Continuando a leggere il dump troviamo la relatedness minima considerata \code{minRel}
+
+\begin{lstlisting}[style=TeXStyle, caption=Estratto del dump]
+53676192
+4922289
+0.01
+2
+1.0
+53676158 7 null
+53676164 5 NnAwQT/ZvTVJ05MeSfcdI0rMrg1LBmUH
+53676016 13 RDsFRUkyASRLFf3T
+53675811 16 null
+...
+\end{lstlisting}
+(sotto la quale i valori di correlazione non vengono salvati nel dump) e altri valori di configurazione quali 
+\code{minIntersection} e \code{threshold} che tuttavia non ci interessano particolarmente.
+
 
 La funzione \code{map} in un certo senso mappa \lq\lq al contrario\rq\rq\ gli id; infatti l'id massimo verrà mappato su 0, il penultimo id verrà mappato su 1 e così via.
 
@@ -329,7 +332,7 @@ di fatto sarei tornato all'implementazione iniziale senza trarre alcun giovament
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Implementazione con Hash Map}
 Sembra che l'unica via praticabile per mantenere tutti i dati in memoria, diminuendo la memoria occupata e massimizzando le prestazioni sia una funzione di Hash Map, 
-che mappi gli id concatenati sul valore della relatedness; se la funzione fosse ben ottimizzata otterrei in O(1) la relatedness (guadagno prestazionale)
+che mappi gli id concatenati sul valore della relatedness; se la funzione fosse ben ottimizzata si otterrebbe in O(1) la relatedness (guadagno prestazionale)
 e potenzialmente potrebbe occupare meno memoria della matrice iniziale.
 
 Purtroppo è molto difficile stimare a priori lo spazio occupato da un Hash Map, 

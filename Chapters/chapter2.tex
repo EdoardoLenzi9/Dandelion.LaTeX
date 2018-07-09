@@ -6,44 +6,44 @@
 
 Per l'implementazione si è cercato di seguire le best practices, dettate dalle linee guida Microsoft, per la stesura del codice.
 Sono stati adottati, come pattern di programmazione, dependency injection\footnote{
-    \textbf{Dependency injection}\cite{dependency-injection} è un pattern di programmazione che prevede la risoluzione automatica delle dipendenze delle classi 
+    \textbf{Dependency injection}~\cite{dependency-injection} è un pattern di programmazione che prevede la risoluzione automatica delle dipendenze delle classi 
     (può essere usata direttamente nel costruttore o nei metodi) tramite un injector (inversion of control).
 
-        \textbf{Inversion of control}\cite{inversion-of-control} è una macro categoria di pattern (ingloba al suo interno anche dependency injection)
+        \textbf{Inversion of control}~\cite{inversion-of-control} è una macro categoria di pattern (ingloba al suo interno anche dependency injection)
         secondo cui, in certi punti del codice, si riceve il controllo di determinate funzioni di un framework.
 }, MVC\footnote{
-    \textbf{Model-View-Controller (MVC)}\cite{mvc} è un pattern di programmazione che prevede un architettura multi-tier con una netta divisione fra modelli, 
+    \textbf{Model-View-Controller (MVC)}~\cite{mvc} è un pattern di programmazione che prevede un architettura multi-tier con una netta divisione fra modelli, 
     business logic e interfaccia utente (in questo caso praticamente assente).
 } (per quanto possibile) e TDD, appoggiandosi a librerie esterne Nuget\footnote{
-    \textbf{Nuget}\cite{nuget} è un package manager per .NET.
-} quali \code{Newtonsoft.Json}\cite{newtonsoft-json} e \code{SimpleInjector}\cite{simple-injector}. 
+    \textbf{Nuget}~\cite{nuget} è un package manager per .NET.
+} quali \code{Newtonsoft.Json}~\cite{newtonsoft-json} e \code{SimpleInjector}~\cite{simple-injector}. 
 
 Si è cercato di adottare il più possibile i dettami della programmazione asincrona e di rendere il client thread-safe.
 
-La solution\footnote{
+Il file solution\footnote{
     \textbf{Solution} è un file, con estensione \code{.sln}, che serve per raggruppare più progetti C$\#$ in un unico macro contenitore.  
-} è stata partizionata in vari progetti; il progetto \code{Business} contiene la business-logic 
+} è stato partizionato in vari progetti; il progetto \code{Business} contiene la business-logic 
 (comprendente servizi, metodi estensione, l'implementazione del client e un wrapper del \code{Container} di \code{SimpleInjector}) e utilizza i modelli di \code{Domain}.
 
 In \code{Test} sono contenute le classi di testing e le fixture \code{XUnit}\footnote{
-    \textbf{XUnit}\cite{xunit-repo} è una libreria Nuget\cite{xunit} che mette a disposizione un tool per eseguire unit test.     
+    \textbf{XUnit}~\cite{xunit-repo} è una libreria Nuget~\cite{xunit} che mette a disposizione un tool per eseguire unit test.     
 }, mentre in \code{Documentation} sono presenti i file generati dal tool Wyam\footnote{
-    \textbf{Wyam}\cite{wyam} è un tool che permette l'esportazione della documentazione del codice C$\#$ 
-    (sottoforma di tag xml\cite{code-doc}) in pagine html.
+    \textbf{Wyam}~\cite{wyam} è un tool che permette l'esportazione della documentazione del codice C$\#$ 
+    (sottoforma di tag xml~\cite{code-doc}) in pagine html.
 } per la documentazione.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Il Client}
 
-Dalla documentazione ufficale\cite{dandelion-doc} delle API di Dandelion si evince che ogni endpoint richiede uno o più testi da analizzare ed una serie di parametri, 
+Dalla documentazione ufficiale~\cite{dandelion-doc} delle API di Dandelion si evince che ogni endpoint richiede uno o più testi da analizzare ed una serie di parametri, 
 alcuni obbligatori ed altri opzionali; 
 pertanto sono stati creati dei modelli, coerenti con tali definizioni, che, passati in argomento a dei servizi, ritornano i DTO delle risposte degli endpoint di Dandelion.
 
-Ogni servizio controlla che i parametri inseriti dall'utente rispettino i constraints definiti nella documentazione e costruisce, tramite i metodi \code{ContentBuilder()} e  
+Ogni servizio controlla che i parametri inseriti dall'utente rispettino i vincoli definiti nella documentazione e costruisce, tramite i metodi \code{ContentBuilder()} e  
 \code{UriBuilder()}, un dizionario di parametri e l'URI che identifica l'endpoint. 
 
 Infine il servizio chiama il metodo generico \code{CallApiAsync()}, passandogli il content, la URI ed il metodo HTTP; 
-nel metodo di chiamata si è scelto di gestire separatamente i metodi HTTP GET e DELETE dato che essi non permettono il passaggio parametri nel boby 
+nel metodo di chiamata si è scelto di gestire separatamente i metodi HTTP GET e DELETE dato che essi non permettono il passaggio parametri nel body 
 della chiamata. Pertanto è stato necessario inviare il content come query parameter facendone il percent-encoding.
 
 Dandelion ammette sia chiamate GET che POST ai servizi, tuttavia nel caso del metodo GET non è garantito il corretto 
@@ -113,7 +113,7 @@ public Task<T> CallApiAsync<T>(string uri, List<KeyValuePair<string, string>> co
 La maggior parte dei servizi è stata testata tramite il tool XUnit; principalmente sono stati eseguiti test di validazione, data la natura della libreria, appoggiandosi 
 ad una fixture comune a tutti i test per l'inizializzazione dei servizi.
 
-è stato usato fin da subito il servizio online di testing automatico Travis, tramite il quale è stato possibile validare ogni rilascio facendo 
+É stato usato fin da subito il servizio online di testing automatico Travis, tramite il quale è stato possibile validare ogni rilascio facendo 
 partire automaticamente i test con l'evento di push di Git. 
 
 \section{Documentazione}

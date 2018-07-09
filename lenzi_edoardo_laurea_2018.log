@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  8 JUL 2018 12:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.3.25)  9 JUL 2018 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -370,11 +370,29 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@uldp=\dimen138
 \SOUL@ulht=\dimen139
 )
-(/usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
+ (./italian.ldf
+Language: italian 1999/05/01 v1.2l Italian support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
+\babel@savecnt=\count123
+\U@D=\dimen140
+)
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language `Italian' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for english instead on input line 30.
+
+\l@italian = a dialect from \language0
+)) (/usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks33
-\footnotemargin=\dimen140
-\c@pp@next@reset=\count123
+\footnotemargin=\dimen141
+\c@pp@next@reset=\count124
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -390,19 +408,19 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen141
-\captionmargin@=\dimen142
-\captionwidth=\dimen143
-\caption@tempdima=\dimen144
-\caption@indent=\dimen145
-\caption@parindent=\dimen146
-\caption@hangindent=\dimen147
+\captionmargin=\dimen142
+\captionmargin@=\dimen143
+\captionwidth=\dimen144
+\caption@tempdima=\dimen145
+\caption@indent=\dimen146
+\caption@parindent=\dimen147
+\caption@hangindent=\dimen148
 )
-\c@ContinuedFloat=\count124
+\c@ContinuedFloat=\count125
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
-LaTeX Info: Redefining \u on input line 28.
+LaTeX Info: Redefining \u on input line 29.
 
 
 LaTeX Warning: Unused global option(s):
@@ -411,33 +429,33 @@ LaTeX Warning: Unused global option(s):
 (./lenzi_edoardo_laurea_2018.aux)
 \openout1 = `lenzi_edoardo_laurea_2018.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 163.
+LaTeX Font Info:    ... okay on input line 163.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count125
-\scratchdimen=\dimen148
+\scratchcounter=\count126
+\scratchdimen=\dimen149
 \scratchbox=\box34
-\nofMPsegments=\count126
-\nofMParguments=\count127
+\nofMPsegments=\count127
+\nofMParguments=\count128
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count128
-\MPscratchDim=\dimen149
-\MPnumerator=\count129
-\makeMPintoPDFobject=\count130
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen150
+\MPnumerator=\count130
+\makeMPintoPDFobject=\count131
 \everyMPtoPDFconversion=\toks35
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -491,9 +509,9 @@ e
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-\c@lstlisting=\count131
+\c@lstlisting=\count132
 \AtBeginShipoutBox=\box35
-Package hyperref Info: Link coloring OFF on input line 162.
+Package hyperref Info: Link coloring OFF on input line 163.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -501,11 +519,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count132
+\c@section@level=\count133
 )
-LaTeX Info: Redefining \ref on input line 162.
-LaTeX Info: Redefining \pageref on input line 162.
-LaTeX Info: Redefining \nameref on input line 162.
+LaTeX Info: Redefining \ref on input line 163.
+LaTeX Info: Redefining \pageref on input line 163.
+LaTeX Info: Redefining \nameref on input line 163.
 
 (./lenzi_edoardo_laurea_2018.out) (./lenzi_edoardo_laurea_2018.out)
 \@outlinefile=\write3
@@ -558,7 +576,7 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.167   \clearpage
+l.168   \clearpage
                    [2
 
 ] (./lenzi_edoardo_laurea_2018.toc)
@@ -573,13 +591,7 @@ l.167   \clearpage
 (./Chapters/summary.tex) [2
 
 ] (./Chapters/chapter1.tex
-Chapter 1.
-
-Overfull \hbox (2.23741pt too wide) in paragraph at lines 9--12
-[]\OT1/cmr/m/n/10.95 Dandelion ha an-che al-tre due RESTful-API[[], []] che per
--me-t-tono di con-frontare due testi generando
- []
-
+Capitolo 1.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 30.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -635,13 +647,8 @@ File: lstlang3.sty 2013/08/26 1.5b listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-) [3]
-Overfull \hbox (3.36287pt too wide) in paragraph at lines 102--109
-[]\OT1/cmr/m/n/10.95 Infine la di-ret-tiva []CMD speci-fica il co-mando che ver
-r^^Ra es-e-guito una volta finito il setup dell'ambiente,
- []
-
-[4] [5]) [6] (./Chapters/chapter2.tex
+) [3] [4] [5])
+[6] (./Chapters/chapter2.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -650,7 +657,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-Chapter 2.
+Capitolo 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 3.
@@ -666,17 +673,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8])
 [9] (./Chapters/chapter3.tex
-Chapter 3.
+Capitolo 3.
 [10] <Sources/Img/c02_01.png, id=528, 320.19624pt x 223.83624pt>
 File: Sources/Img/c02_01.png Graphic file (type png)
 
 <use Sources/Img/c02_01.png>
-Package pdftex.def Info: Sources/Img/c02_01.png used on input line 89.
+Package pdftex.def Info: Sources/Img/c02_01.png used on input line 92.
 (pdftex.def)             Requested size: 176.10846pt x 123.1103pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 90.
+(caption)                particular \caption on input line 93.
 See the caption package documentation for explanation.
 
 [11 <./Sources/Img/c02_01.png (PNG copy)>]
@@ -697,26 +704,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: Sources/Img/c03_01.png Graphic file (type png)
 
 <use Sources/Img/c03_01.png>
-Package pdftex.def Info: Sources/Img/c03_01.png used on input line 462.
+Package pdftex.def Info: Sources/Img/c03_01.png used on input line 465.
 (pdftex.def)             Requested size: 486.01126pt x 133.69826pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 463.
+(caption)                particular \caption on input line 466.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.31439pt too wide) in paragraph at lines 462--463
+Overfull \hbox (2.31439pt too wide) in paragraph at lines 465--466
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 467--468
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--489
+Underfull \hbox (badness 10000) in paragraph at lines 472--492
 
  []
 
@@ -725,35 +732,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 469--489
 File: Sources/Img/c03_02.jpg Graphic file (type jpg)
 
 <use Sources/Img/c03_02.jpg>
-Package pdftex.def Info: Sources/Img/c03_02.jpg used on input line 502.
+Package pdftex.def Info: Sources/Img/c03_02.jpg used on input line 505.
 (pdftex.def)             Requested size: 108.06656pt x 335.79306pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 503.
+(caption)                particular \caption on input line 506.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--511
+Underfull \hbox (badness 10000) in paragraph at lines 512--514
 
  []
 
 ) [19 <./Sources/Img/c03_02.jpg>] (./Chapters/chapter4.tex
-Chapter 4.
+Capitolo 4.
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 13.
+Underfull \hbox (badness 1742) in paragraph at lines 11--11
+[][]\OT1/cmr/bx/n/9 Schema del-la URL\OT1/cmr/m/n/9 , in Wiki-da-ta es-iste una
+ pro-pri-et^^Ra []P1630 (for-mat-ter URL [[]]) che definisce un
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 11--11
+\OT1/cmr/m/n/9 tem-plate gen-erale per una cat-e-go-ria di URL. Per es-em-pio u
+na \OT1/cmr/m/it/9 for-mat-ter URL \OT1/cmr/m/n/9 pu^^Ro es-sere la seguente:
+ []
+
+
+Overfull \hbox (4.42752pt too wide) in paragraph at lines 19--24
+[]\OT1/cmr/m/n/10.95 Notiamo una pri-ma re-lazione se-man-ti-ca []Q193660 (Ra-m
+on Llull [[]]) []P106 (oc-cu-pa-tion [[]]) []Q207628
+ []
 
 [20]
-Overfull \hbox (7.65337pt too wide) in paragraph at lines 53--60
-\OT1/cmr/m/n/10.95 ID[[]]) []"031/000097737" (il val-ore es-trap-o-lato, peo-pl
-e ID) []S813 (retrieved[[]]) []2018[]-[]06[]-[]04T02:19:10Z/14
+Overfull \hbox (12.52003pt too wide) in paragraph at lines 53--60
+\OT1/cmr/m/n/10.95 ID [[]]) []"031/000097737" (il val-ore es-trap-o-la-to, peo-
+ple ID) []S813 (re-trieved [[]]) []2018[]-[]06[]-[]04T02:19:10Z/14
  []
 
 
 Overfull \hbox (3.96992pt too wide) in paragraph at lines 92--94
-[]\OT1/cmr/m/n/10.95 In SPARQL us-are una ricerca per stringa ^^Re cer-ta-mente
- una forzatura perch^^Re soli-ta-mente si conoscono
+[]\OT1/cmr/m/n/10.95 In SPAR-QL us-are una ricer-ca per stringa ^^Re cer-ta-men
+te una forzatu-ra perch^^Re soli-ta-mente si conoscono
  []
 
 [21] <Sources/Img/c04_01.png, id=885, 847.165pt x 585.18625pt>
@@ -771,11 +792,11 @@ See the caption package documentation for explanation.
 [22 <./Sources/Img/c04_01.png>]
 Overfull \hbox (26.98332pt too wide) in paragraph at lines 152--154
 []\OT1/cmr/m/n/10.95 Se nei []map[]-[]pings non es-iste nes-suna en-try com-pat
--i-bile con l'URL viene chiam-ato il metodo []new[]mapping()
+-i-bile con l'URL viene chiam-a-to il meto-do []new[]mapping()
  []
 
 ) [23] (./Chapters/conclusion.tex
-Chapter 5.
+Capitolo 5.
 ) [24] (./lenzi_edoardo_laurea_2018.bbl
 Underfull \hbox (badness 6641) in paragraph at lines 9--13
 []\OT1/cmr/bx/n/10.95 Application Pro-gram-ming In-ter-face (API)\OT1/cmr/m/n/1
@@ -784,8 +805,8 @@ Underfull \hbox (badness 6641) in paragraph at lines 9--13
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 28--30
-[]\OT1/cmr/bx/n/10.95 Dandelion, en-tity ex-trac-tion demo\OT1/cmr/m/n/10.95 . 
- []$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
+[]\OT1/cmr/bx/n/10.95 Dandelion, en-ti-ty ex-trac-tion de-mo\OT1/cmr/m/n/10.95 
+.  []$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
  []
 
 
@@ -796,26 +817,26 @@ $\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 40--42
-[]\OT1/cmr/bx/n/10.95 Dandelion, text clas-si-fi-ca-tion demo\OT1/cmr/m/n/10.95
- .  []$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
+[]\OT1/cmr/bx/n/10.95 Dandelion, text clas-si-fi-ca-tion de-mo\OT1/cmr/m/n/10.9
+5 .  []$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 44--46
-[]\OT1/cmr/bx/n/10.95 Dandelion, text sim-i-lar-ity demo\OT1/cmr/m/n/10.95 .  [
-]$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
+[]\OT1/cmr/bx/n/10.95 Dandelion, text sim-i-lar-i-ty de-mo\OT1/cmr/m/n/10.95 . 
+ []$\OT1/cmtt/m/n/10.95 https : / / dandelion . eu / semantic-[]text /
  []
 
 
 Underfull \hbox (badness 2245) in paragraph at lines 52--54
-[]\OT1/cmr/bx/n/10.95 Dandelion.Relatedness repos-i-tory\OT1/cmr/m/n/10.95 .  [
-]$\OT1/cmtt/m/n/10.95 https : / / github . com / EdoardoLenzi9 / Dandelion .
+[]\OT1/cmr/bx/n/10.95 Dandelion.Relatedness repos-i-to-ry\OT1/cmr/m/n/10.95 .  
+[]$\OT1/cmtt/m/n/10.95 https : / / github . com / EdoardoLenzi9 / Dandelion .
  []
 
 
 Underfull \hbox (badness 5403) in paragraph at lines 71--73
-[]\OT1/cmr/bx/n/10.95 DWikipedia.StrepHit repos-i-tory\OT1/cmr/m/n/10.95 .  []$
-\OT1/cmtt/m/n/10.95 https : / / github . com / EdoardoLenzi9 / Wikipedia .
+[]\OT1/cmr/bx/n/10.95 DWikipedia.StrepHit repos-i-to-ry\OT1/cmr/m/n/10.95 .  []
+$\OT1/cmtt/m/n/10.95 https : / / github . com / EdoardoLenzi9 / Wikipedia .
  []
 
 [25
@@ -827,9 +848,23 @@ cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki /
  []
 
 
+Underfull \hbox (badness 2529) in paragraph at lines 184--188
+[]\OT1/cmr/bx/n/10.95 QuickStatements\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.
+95 https : / / www . wikidata . org / wiki / Help : QuickStatements$[]\OT1/cmr/
+m/n/10.95 .  Pag-i-na
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 198--201
 []\OT1/cmr/bx/n/10.95 Representational State Trans-fer (REST)\OT1/cmr/m/n/10.95
  .  []$\OT1/cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki /
+ []
+
+
+Underfull \hbox (badness 2103) in paragraph at lines 211--214
+[]\OT1/cmr/bx/n/10.95 SimpleInjector\OT1/cmr/m/n/10.95 .  []$\OT1/cmtt/m/n/10.9
+5 https : / / www . nuget . org / packages / SimpleInjector/$[]\OT1/cmr/m/n/10.
+95 .  Pag-i-na Nuget
  []
 
 
@@ -840,30 +875,30 @@ Underfull \hbox (badness 1210) in paragraph at lines 216--219
 
 [26]
 Underfull \hbox (badness 1436) in paragraph at lines 248--251
-[]\OT1/cmr/bx/n/10.95 TDD (Test Driven De-vel-op-ment)\OT1/cmr/m/n/10.95 .  []$
-\OT1/cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki / Test _ driven _
+[]\OT1/cmr/bx/n/10.95 TDD (Test Driv-en De-vel-op-ment)\OT1/cmr/m/n/10.95 .  []
+$\OT1/cmtt/m/n/10.95 https : / / it . wikipedia . org / wiki / Test _ driven _
  []
 
 ) (./Chapters/attachments.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 224.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
  [27]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 224.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
  (./lenzi_edoardo_laurea_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 224.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 224.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
 Package rerunfilecheck Info: File `lenzi_edoardo_laurea_2018.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 5FED47FD027C9E5F154118B836D5D5E0;2217.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 224.
+(rerunfilecheck)             Checksum: D647B66774BE57889FB0B159122284AE;2212.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 225.
  ) 
 Here is how much of TeX's memory you used:
- 13514 strings out of 495028
- 192375 string characters out of 6181497
- 363895 words of memory out of 5000000
- 15943 multiletter control sequences out of 15000+600000
+ 13890 strings out of 495028
+ 196959 string characters out of 6181497
+ 372390 words of memory out of 5000000
+ 16305 multiletter control sequences out of 15000+600000
  20553 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 48i,18n,76p,736b,2869s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,18n,76p,736b,2896s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -937,7 +972,7 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on lenzi_edoardo_laurea_2018.pdf (29 pages, 635146 bytes).
+Output written on lenzi_edoardo_laurea_2018.pdf (29 pages, 635387 bytes).
 PDF statistics:
  1182 PDF objects out of 1200 (max. 8388607)
  1116 compressed objects within 12 object streams

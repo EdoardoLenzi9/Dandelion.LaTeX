@@ -1,3 +1,4 @@
+\select@language {italian}
 \contentsline {chapter}{Sommario}{2}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Dandelion}{3}{section.1.1}
@@ -34,11 +35,11 @@
 \contentsline {subsubsection}{Generazione di un dump con dimensione arbitraria}{18}{subsubsection*.9}
 \contentsline {subsubsection}{Test Hash Map}{18}{subsubsection*.10}
 \contentsline {chapter}{\numberline {4}StrepHit}{20}{chapter.4}
-\contentsline {subsection}{\numberline {4.0.4}Esempio di funzionamento}{20}{subsection.4.0.4}
-\contentsline {section}{\numberline {4.1}SPARQL Query}{21}{section.4.1}
-\contentsline {section}{\numberline {4.2}Lo script}{22}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Struttura del progetto}{22}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Algoritmo}{22}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Refresh delle URL}{23}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.1}Esempio di funzionamento}{20}{section.4.1}
+\contentsline {section}{\numberline {4.2}SPARQL Query}{21}{section.4.2}
+\contentsline {section}{\numberline {4.3}Lo script}{22}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Struttura del progetto}{22}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Algoritmo}{22}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Refresh delle URL}{23}{subsection.4.3.3}
 \contentsline {chapter}{\numberline {5}Conclusioni}{24}{chapter.5}
 \contentsline {chapter}{Bibliografia}{25}{chapter.5}

@@ -3,23 +3,23 @@
 La terza parte del progetto consiste nell'implementazione di uno script in Python (versione 2.7) che, dato in input un dataset di QuickStatements, deve restituire in output il dataset
 arricchito con nuovi riferimenti.
 
-Ogni riga del dataset di input presenta una proprietà \code{P854} (reference URL\cite{P854}) con abbinata l'URL di riferimento della risorsa; 
+Ogni riga del dataset di input presenta una proprietà \code{P854} (reference URL~\cite{P854}) con abbinata l'URL di riferimento della risorsa; 
 lo script deve eseguire una query SPARQL per trovare l'item nel knowledge-base di Wikidata che corrisponde/identifica il dominio della URL. 
 Se questo item di Wikidata esiste allora si cerca anche una e la proprietà di tale item che definisca uno schema\footnote{
-    \textbf{Schema della URL}, in Wikidata esiste una proprietà \code{P1630} (formatter URL\cite{P1630}) che definisce un template generale per una categoria di URL. 
+    \textbf{Schema della URL}, in Wikidata esiste una proprietà \code{P1630} (formatter URL~\cite{P1630}) che definisce un template generale per una categoria di URL. 
     Per esempio una \textit{formatter URL} può essere la seguente: \code{http://www.nndb.com/people/$\$$1/} dove $\$1$ è un placeholder che rappresenta una qualsiasi stringa.  
 } valido per l'URL in questione.
 
-\subsection{Esempio di funzionamento}
+\section{Esempio di funzionamento}
 Per esempio dato il seguente Quickstatement in input:
 \begin{lstlisting}[style=QuickstatementsStyle, caption=Riga del dump]
     Q193660	P106	Q207628	S854	"http://www.nndb.com/people/031/000097737/"
 \end{lstlisting}
 
 Notiamo una prima relazione semantica 
-\code{Q193660} (Ramon Llull\cite{Q193660}) 
-\code{P106} (occupation\cite{P106}) 
-\code{Q207628} (musical composition\cite{Q207628}) 
+\code{Q193660} (Ramon Llull~\cite{Q193660}) 
+\code{P106} (occupation~\cite{P106}) 
+\code{Q207628} (musical composition~\cite{Q207628}) 
 che ci dice semplicemente che \qt{Ramon Llull lavora come compositore musicale}.
 
 Segue la proprietà, di maggiore interesse, \code{S854 "http://www.nndb.com/people/031/000097737/"} che indica la provenienza dell'informazione. 
@@ -27,12 +27,12 @@ Segue la proprietà, di maggiore interesse, \code{S854 "http://www.nndb.com/peop
 Lo script procede estrapolando il dominio dalla reference url (\code{www.nndb.com}) e, con una query SPARQL, cerca un item di riferimento per tale dominio in Wikidata 
 (non è sempre garantita la presenza).
 
-In questo esempio l'item di riferimento è \code{Q1373513} (NNDB\cite{Q1373513}) perchè presenta la proprietà \code{P856} (official website\cite{P856}) che corrisponde al dominio cercato;
+In questo esempio l'item di riferimento è \code{Q1373513} (NNDB~\cite{Q1373513}) perchè presenta la proprietà \code{P856} (official website~\cite{P856}) che corrisponde al dominio cercato;
 lo stesso item ha anche una proprietà chiamata \qt{Wikidata property} (\code{P1687}) con abbinato l'identificativo di un'altra proprietà chiamata  
 \qt{NNDB people ID} (\code{P1263}).
 
-Se andiamo ad analizzare la proprietà \qt{NNDB people ID} (\code{P1263}\cite{P1263}) notiamo che presenta a sua volta una proprietà 
-\qt{formatter URL} (\code{P1630}\cite{P1630}) il cui valore è \code{http://www.nndb.com/people/$\$1/$}. 
+Se andiamo ad analizzare la proprietà \qt{NNDB people ID} (\code{P1263}~\cite{P1263}) notiamo che presenta a sua volta una proprietà 
+\qt{formatter URL} (\code{P1630}~\cite{P1630}) il cui valore è \code{http://www.nndb.com/people/$\$1/$}. 
 Il valore finale \code{$\$1$} nella \textit{formatter URL}\rq\rq\ è un placeholder che sta ad indicare la parte della URL che corrisponde al valore della proprietà prescelta. 
 
 In questo esempio avremmo:
@@ -51,11 +51,11 @@ con questa informazione aggiuntiva.
 \end{lstlisting}
 
 I riferimenti aggiuntivi sono: 
-\code{S248} (stated in\cite{P248})
-\code{Q1373513} (NNDB\cite{Q1373513})
-\code{S1263} (NNDB people ID\cite{P1263})
+\code{S248} (stated in~\cite{P248})
+\code{Q1373513} (NNDB~\cite{Q1373513})
+\code{S1263} (NNDB people ID~\cite{P1263})
 \code{"031/000097737"} (il valore estrapolato, people ID)
-\code{S813} (retrieved\cite{P813})
+\code{S813} (retrieved~\cite{P813})
 \code{2018-06-04T02:19:10Z/14} (timestamp).
 
 \section{SPARQL Query}
@@ -120,11 +120,11 @@ nella cartella \qt{business} sono contenuti i servizi, i metodi di utilità e le
 La cartella \qt{domain} contiene i modelli e le localizations (nel file \code{localizations.py} sono definite anche una serie di costanti da settare a seconda 
 delle esigenze per configurare lo script). 
 
-In \qt{tests} abbiamo tutte le classi di test basate sulla libreria unittest\cite{unittest}; come per il Client $C\#$ anche in questo caso è stato configurato Travis per far eseguire i test 
+In \qt{tests} abbiamo tutte le classi di test basate sulla libreria unittest~\cite{unittest}; come per il Client $C\#$ anche in questo caso è stato configurato Travis per far eseguire i test 
 automaticamente ad ogni pull-request. 
 
 Infine nella root del progetto abbiamo l'entry point dello script (\code{main.py}) e l'entry point dei test (\code{test.py}), i requirement per il package manager 
-e il file di configurazione \code{strephit.py}, nel caso si voglia lanciare lo script in un virtualenv\cite{virtualenv} tramite la libreria Click\cite{click}.
+e il file di configurazione \code{strephit.py}, nel caso si voglia lanciare lo script in un virtualenv~\cite{virtualenv} tramite la libreria Click~\cite{click}.
 
 \subsection{Algoritmo}
 Istanziando l'oggetto \code{QuickStatementsService} vengono caricati automaticamente in memoria i \code{mappings} presenti nella cartella \qt{assets}; 
